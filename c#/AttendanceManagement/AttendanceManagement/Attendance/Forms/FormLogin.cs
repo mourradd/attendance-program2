@@ -95,9 +95,21 @@ namespace AttendanceManagement.Attendance.Forms
                     if (textBoxName.Text.Trim() == item.Email && textBoxPassword.Text.Trim() == item.PassWord)
                     {
                         FormDashborad FD = new FormDashborad();
+
+                        FD.Username = item.Name;
+                        FD.Role = "admin";
+                        textBoxName.Clear();
+                        textBoxPassword.Clear();
+                        pictureBoxHide_Click(sender, e);
+                        textBoxName.Focus();
+                        pictureBoxError.Hide();
+                        labelError.Hide();
                         FD.ShowDialog();
 
-
+                    }else
+                    {
+                        pictureBoxError.Show();
+                        labelError.Show();
                     }
 
                 }
@@ -130,6 +142,11 @@ namespace AttendanceManagement.Attendance.Forms
                 //    pictureBoxError.Show();
                 //    labelError.Show();
                 //}
+            }
+            else
+            {
+                pictureBoxError.Show();
+                labelError.Show();
             }
         }
     }
