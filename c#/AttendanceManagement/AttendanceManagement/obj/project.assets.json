@@ -8,19 +8,19 @@
     "net8.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\lap0\\.nuget\\packages\\": {}
+    "C:\\Users\\moust\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lap0\\OneDrive\\Desktop\\C#Project\\attendance-program2\\c#\\AttendanceManagement\\AttendanceManagement\\AttendanceManagement.csproj",
+      "projectUniqueName": "D:\\attendnce project\\attendance-program\\attendance-program2\\c#\\AttendanceManagement\\AttendanceManagement\\AttendanceManagement.csproj",
       "projectName": "AttendanceManagement",
-      "projectPath": "C:\\Users\\lap0\\OneDrive\\Desktop\\C#Project\\attendance-program2\\c#\\AttendanceManagement\\AttendanceManagement\\AttendanceManagement.csproj",
-      "packagesPath": "C:\\Users\\lap0\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lap0\\OneDrive\\Desktop\\C#Project\\attendance-program2\\c#\\AttendanceManagement\\AttendanceManagement\\obj\\",
+      "projectPath": "D:\\attendnce project\\attendance-program\\attendance-program2\\c#\\AttendanceManagement\\AttendanceManagement\\AttendanceManagement.csproj",
+      "packagesPath": "C:\\Users\\moust\\.nuget\\packages\\",
+      "outputPath": "D:\\attendnce project\\attendance-program\\attendance-program2\\c#\\AttendanceManagement\\AttendanceManagement\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\lap0\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\moust\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

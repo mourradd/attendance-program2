@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<attendance_system>
+	<users>
+		<!-- Admin Users -->
+		<admin>
+			<id>1</id>
+			<name>Admin Name</name>
+			<age>40</age>
+			<date_of_joining>2020-01-01</date_of_joining>
+			<email>admin@admin.com</email>
+			<password>Admin123#</password>
+		</admin>
+		<!-- Teachers -->
+		<teachers>
+			<teacher>
+				<id>101</id>
+				<name>Naser</name>
+				<age>40</age>
+				<date_of_joining>2008-08-15</date_of_joining>
+				<email>Naser@ITI.com</email>
+				<password>Naser123#</password>
+			</teacher>
+			<teacher>
+				<id>102</id>
+				<name>Eman</name>
+				<age>40</age>
+				<date_of_joining>2008-03-10</date_of_joining>
+				<email>Eman@ITI.com</email>
+				<password>Eman123#</password>
+			</teacher>
+			<teacher>
+				<id>103</id>
+				<name>Ayman</name>
+				<age>45</age>
+				<date_of_joining>2003-03-10</date_of_joining>
+				<email>Ayman@ITI.com</email>
+				<password>Ayman123#</password>
+			</teacher>
+		</teachers>
+		<!-- Students -->
+		<students>
+			<student>
+				<id>201</id>
+				<name>Student Name 1</name>
+				<age>18</age>
+				<date_of_joining>2022-09-01</date_of_joining>
+				<email>student1@example.com</email>
+				<password>Student1#</password>
+				<class_id>1000</class_id>
+			</student>
+			<student>
+				<id>202</id>
+				<name>Student Name 2</name>
+				<age>17</age>
+				<date_of_joining>2023-01-15</date_of_joining>
+				<email>student2@example.com</email>
+				<password>Student2#</password>
+				<class_id>1001</class_id>
+			</student>
+			<student>
+				<id>203</id>
+				<name>Student Name 3</name>
+				<age>17</age>
+				<date_of_joining>2023-01-15</date_of_joining>
+				<email>student2@example.com</email>
+				<password>Student3#</password>
+				<class_id>1002</class_id>
+			</student>
+			<student>
+				<id>1000</id>
+				<name>Ali emad aboshosha</name>
+				<age>25</age>
+				<date_of_joining>2024-02-16</date_of_joining>
+				<email>ali@gmail.com.com</email>
+				<password>AliEmad123#</password>
+				<class_id>1000</class_id>
+			</student>
+		</students>
+	</users>
+	<courses>
+		<course>
+			<id>1</id>
+			<name>C#</name>
+			<details>this course will help you to be good at C# programming language</details>
+		</course>
+		<course>
+			<id>2</id>
+			<name>JavaScript</name>
+			<details>this course will help you to be good at JavaScript programming language</details>
+		</course>
+	</courses>
+	<teachers_Courses>
+		<teacherCourses>
+			<teacher_id>101</teacher_id>
+			<courses>
+				<course_id>1</course_id>
+				<course_id>2</course_id>
+			</courses>
+		</teacherCourses>
+		<teacherCourses>
+			<teacher_id>102</teacher_id>
+			<courses>
+				<course_id>1</course_id>
+			</courses>
+		</teacherCourses>
+		<teacherCourses>
+			<teacher_id>103</teacher_id>
+			<courses>
+				<course_id>2</course_id>
+			</courses>
+		</teacherCourses>
+	</teachers_Courses>
+	<Classes>
+		<Class>
+			<id>1000</id>
+			<name>PD</name>
+		</Class>
+		<Class>
+			<id>1001</id>
+			<name>OS</name>
+		</Class>
+		<Class>
+			<id>1002</id>
+			<name>AI</name>
+		</Class>
+	</Classes>
+	<ClassesCourses>
+		<ClassCourses>
+			<Class_id>1000</Class_id>
+			<courses>
+				<course>
+					<id>1</id>
+					<teacher_id>103</teacher_id>
+					<Lecture_number>12</Lecture_number>
+				</course>
+				<course>
+					<id>2</id>
+					<teacher_id>101</teacher_id>
+					<Lecture_number>10</Lecture_number>
+				</course>
+			</courses>
+		</ClassCourses>
+		<ClassCourses>
+			<Class_id>1001</Class_id>
+			<courses>
+				<course>
+					<id>2</id>
+					<teacher_id>102</teacher_id>
+					<Lecture_number>8</Lecture_number>
+				</course>
+			</courses>
+		</ClassCourses>
+	</ClassesCourses>
+
+
+	<students_Attendance>
+
+		<attendace>
+			<date>2024-1-8</date>
+			<Courses_attendance>
+				<Course_attendance>
+					<course>1</course>
+					<students>
+						<student_id>201</student_id>
+						<student_id>1000</student_id>
+					</students>
+				</Course_attendance>
+
+				<Course_attendance>
+					<course>2</course>
+					<students>
+						<student_id>202</student_id>
+					</students>
+				</Course_attendance>
+			</Courses_attendance>
+		</attendace>
+
+		<attendace>
+			<date>2024-1-9</date>
+			<Courses_attendance>
+
+				<Course_attendance>
+					<course>1</course>
+					<students>
+						<student_id>201</student_id>
+						<student_id>1000</student_id>
+					</students>
+				</Course_attendance>
+
+				<Course_attendance>
+					<course>2</course>
+					<students>
+						<student_id>202</student_id>
+					</students>
+				</Course_attendance>
+
+			</Courses_attendance>
+		</attendace>
+
+		<attendace>
+			<date>2024-1-11</date>
+			<Courses_attendance>
+
+				<Course_attendance>
+					<course>1</course>
+					<students>
+						<student_id>201</student_id>
+					</students>
+				</Course_attendance>
+
+			</Courses_attendance>
+		</attendace>
+
+
+	</students_Attendance>
+
+
+</attendance_system>
