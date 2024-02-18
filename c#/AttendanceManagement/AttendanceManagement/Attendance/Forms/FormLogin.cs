@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AttendanceManagement.Resources;
+using static AttendanceManagement.Resources.UsersOfSystem;
 
 namespace AttendanceManagement.Attendance.Forms
 {
@@ -38,6 +40,7 @@ namespace AttendanceManagement.Attendance.Forms
         private void pictureBoxMinimize_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
+
         }
 
         private void pictureBoxShow_MouseHover(object sender, EventArgs e)
@@ -85,36 +88,47 @@ namespace AttendanceManagement.Attendance.Forms
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-            if(textBoxName.Text.Trim() != string.Empty && textBoxPassword.Text.Trim() != string.Empty ) { 
-
-                if(textBoxName.Text.Trim() == "mohamed" && textBoxPassword.Text.Trim() == "123" || textBoxName.Text.Trim() == "ali" && textBoxPassword.Text.Trim() == "123")
+            if(textBoxName.Text.Trim() != string.Empty && textBoxPassword.Text.Trim() != string.Empty ) {
+                foreach (var item in students)
                 {
-                    FormDashborad FD = new FormDashborad();
+                    if(textBoxName.Text.Trim() == item.Email && textBoxPassword.Text.Trim() == item.PassWord)
+                    {
+                        FormDashborad FD = new FormDashborad();
+                            FD.ShowDialog();
 
 
-                    if (textBoxName.Text.Trim() == "mohamed")
-                    {
-                        FD.Role = "Admin";
                     }
-                    else
-                    {
-                        FD.Role = "Teacher";
-                    }
-                    FD.Username = textBoxName.Text;
-                    textBoxName.Clear();
-                    textBoxPassword.Clear();
-                    pictureBoxHide_Click(sender, e);
-                    textBoxName.Focus();
-                    pictureBoxError.Hide();
-                    labelError.Hide();
-                    FD.ShowDialog();
 
                 }
-                else
-                {
-                    pictureBoxError.Show();
-                    labelError.Show();
-                }
+                //if (textBoxName.Text.Trim() == "mohamed" && textBoxPassword.Text.Trim() == "123" || textBoxName.Text.Trim() == "ali" && textBoxPassword.Text.Trim() == "123")
+                //{
+                  
+                //    FormDashborad FD = new FormDashborad();
+
+
+                //    if (textBoxName.Text.Trim() == "mohamed")
+                //    {
+                //        FD.Role = "Admin";
+                //    }
+                //    else
+                //    {
+                //        FD.Role = "Teacher";
+                //    }
+                //    FD.Username = textBoxName.Text;
+                //    textBoxName.Clear();
+                //    textBoxPassword.Clear();
+                //    pictureBoxHide_Click(sender, e);
+                //    textBoxName.Focus();
+                //    pictureBoxError.Hide();
+                //    labelError.Hide();
+                //    FD.ShowDialog();
+
+                //}
+                //else
+                //{
+                //    pictureBoxError.Show();
+                //    labelError.Show();
+                //}
             }
         }
     }

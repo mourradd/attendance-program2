@@ -1,0 +1,5 @@
+C:\Users\lap0\OneDrive\Desktop\C#Project\attendance-program2\c#\nmnmnm\nmnmnm\obj\Debug\net8.0\nmnmnm.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lap0\OneDrive\Desktop\C#Project\attendance-program2\c#\nmnmnm\nmnmnm\obj\Debug\net8.0\nmnmnm.AssemblyInfoInputs.cache
+C:\Users\lap0\OneDrive\Desktop\C#Project\attendance-program2\c#\nmnmnm\nmnmnm\obj\Debug\net8.0\nmnmnm.AssemblyInfo.cs
+C:\Users\lap0\OneDrive\Desktop\C#Project\attendance-program2\c#\nmnmnm\nmnmnm\obj\Debug\net8.0\nmnmnm.csproj.CoreCompileInputs.cache
+C:\Users\lap0\OneDrive\Desktop\C#Project\attendance-program2\c#\nmnmnm\nmnmnm\obj\Debug\net8.0\nmnmnm.sourcelink.json

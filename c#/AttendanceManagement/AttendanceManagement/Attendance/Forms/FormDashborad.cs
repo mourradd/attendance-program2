@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+// using static AttendanceManagement.Properties.Resources.UsersOfSystem;
 
 namespace AttendanceManagement.Attendance.Forms
 {

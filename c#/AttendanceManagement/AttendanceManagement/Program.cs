@@ -1,7 +1,11 @@
+using AttendanceManagement.Resources;
+using static AttendanceManagement.Resources.UsersOfSystem;
+
 namespace AttendanceManagement.Attendance.Forms
 {
     internal static class Program
     {
+
         /// <summary>
         ///  The main entry point for the application.
         /// </summary>
@@ -12,6 +16,7 @@ namespace AttendanceManagement.Attendance.Forms
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             Application.Run(new FormLogin());
+            //students;
         }
     }
 }
