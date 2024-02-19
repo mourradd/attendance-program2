@@ -7,5 +7,8 @@
     <Compile Update="Attendance\Forms\FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Attendance\TeacherDashborad\TeacherDashborad.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

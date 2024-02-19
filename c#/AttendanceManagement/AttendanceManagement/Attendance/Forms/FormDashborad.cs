@@ -30,14 +30,7 @@ namespace AttendanceManagement.Attendance.Forms
             labelUsername.Text = Username;
             labelRole.Text = Role;
 
-            if(Role == "Teacher")
-            {
-                Dashborad.Hide();
-                buttonSetting.Hide();
-                buttonAddTeacher.Hide();
-                buttonAddCourse.Hide();
-            }
-
+           
 
         }
 
@@ -61,6 +54,7 @@ namespace AttendanceManagement.Attendance.Forms
             panelExpand.Hide();
             WindowState = FormWindowState.Minimized;
         }
+        
 
         private void timerDateAndTime_Tick(object sender, EventArgs e)
         {
@@ -114,10 +108,17 @@ namespace AttendanceManagement.Attendance.Forms
 
         private void pictureBoxExpand_Click(object sender, EventArgs e)
         {
-            if (panelExpand.Visible) {
-            panelExpand.Visible = false;
-            }else
+            if (panelExpand.Visible)
+            {
+                panelExpand.Visible = false;
+            }
+            else
                 panelExpand.Visible = true;
+        }
+
+        private void panelSide_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
