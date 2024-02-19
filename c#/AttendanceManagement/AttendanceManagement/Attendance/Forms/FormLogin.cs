@@ -8,8 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using AttendanceManagement.AllClasses;
-using static AttendanceManagement.Resources.UsersOfSystem;
-
+using AttendanceManagement.Attendance.Teacher;
+//using static AttendanceManagement.Resources.UsersOfSystem;
+using static AttendanceManagement.AllClasses.LoadUserFromXML;
 namespace AttendanceManagement.Attendance.Forms
 {
     public partial class FormLogin : Form
@@ -88,65 +89,50 @@ namespace AttendanceManagement.Attendance.Forms
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
+            string filepath = "C:\\Users\\lap0\\OneDrive\\Desktop\\C#\\attendance-program2\\c#\\AttendanceManagement\\AttendanceManagement\\xml\\SystemData.xml";
+
+            List<User> allUsers = LoadUsersFromXml(filepath);
+
             if (textBoxName.Text.Trim() != string.Empty && textBoxPassword.Text.Trim() != string.Empty)
             {
-                foreach (var item in students)
+                foreach (var item in allUsers)
                 {
                     if (textBoxName.Text.Trim() == item.Email && textBoxPassword.Text.Trim() == item.Password)
                     {
-                        FormDashborad FD = new FormDashborad();
+                        if (item.UserType == "admin")
+                        {
+                            FormDashborad FD = new FormDashborad();
+                            FD.Username = item.Name;
+                            FD.Role = item.UserType;
+                            FD.ShowDialog();
+                        }
+                        else if (item.UserType == "teacher")
+                        {
+                            TeacherDashborad TD = new TeacherDashborad();
+                            TD.Username = item.Name;
+                            TD.Role = item.UserType;
+                            TD.ShowDialog();
+                        }
+                        else
+                        {
+                            pictureBoxError.Hide();
+                            labelError.Hide();
 
-                        FD.Username = item.Name;
-                        FD.Role = "admin";
+                        }
+
                         textBoxName.Clear();
                         textBoxPassword.Clear();
                         pictureBoxHide_Click(sender, e);
                         textBoxName.Focus();
-                        pictureBoxError.Hide();
-                        labelError.Hide();
-                        FD.ShowDialog();
 
-                    }else
+                    }
+                    else
                     {
-                        pictureBoxError.Show();
-                        labelError.Show();
+                        MessageBox.Show("Please Enter email and password");
                     }
 
                 }
-                //if (textBoxName.Text.Trim() == "mohamed" && textBoxPassword.Text.Trim() == "123" || textBoxName.Text.Trim() == "ali" && textBoxPassword.Text.Trim() == "123")
-                //{
 
-                //    FormDashborad FD = new FormDashborad();
-
-
-                //    if (textBoxName.Text.Trim() == "mohamed")
-                //    {
-                //        FD.Role = "Admin";
-                //    }
-                //    else
-                //    {
-                //        FD.Role = "Teacher";
-                //    }
-                //    FD.Username = textBoxName.Text;
-                //    textBoxName.Clear();
-                //    textBoxPassword.Clear();
-                //    pictureBoxHide_Click(sender, e);
-                //    textBoxName.Focus();
-                //    pictureBoxError.Hide();
-                //    labelError.Hide();
-                //    FD.ShowDialog();
-
-                //}
-                //else
-                //{
-                //    pictureBoxError.Show();
-                //    labelError.Show();
-                //}
-            }
-            else
-            {
-                pictureBoxError.Show();
-                labelError.Show();
             }
         }
     }

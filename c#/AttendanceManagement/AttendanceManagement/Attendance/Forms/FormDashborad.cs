@@ -31,15 +31,6 @@ namespace AttendanceManagement.Attendance.Forms
             labelRole.Text = Role;
 
 
-            // if (Role == "Teacher")
-            // {
-               // Dashborad.Hide();
-               // buttonSetting.Hide();
-               // buttonAddTeacher.Hide();
-               // buttonAddCourse.Hide();
-            // }
-
-
         }
 
         private void buttonLogOut_Click(object sender, EventArgs e)

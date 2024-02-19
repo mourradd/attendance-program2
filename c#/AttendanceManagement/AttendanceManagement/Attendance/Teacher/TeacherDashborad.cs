@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
-namespace AttendanceManagement.Attendance.TeacherDashborad
+namespace AttendanceManagement.Attendance.Teacher
 {
     public partial class TeacherDashborad : Form
     {
-        public string Username, Role;
+        public string Username, Role,course;
         public TeacherDashborad()
         {
             InitializeComponent();
@@ -25,6 +25,7 @@ namespace AttendanceManagement.Attendance.TeacherDashborad
             panelExp.Hide();
             labelUsername.Text = Username;
             labelRole.Text = Role;
+            CourseName.Text = course;
         }
 
         private void MoveSidePanel(Control button)

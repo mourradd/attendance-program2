@@ -1,4 +1,4 @@
-﻿namespace AttendanceManagement.Attendance.TeacherDashborad
+﻿namespace AttendanceManagement.Attendance.Teacher
 {
     partial class TeacherDashborad
     {
@@ -53,7 +53,7 @@
             panel6 = new Panel();
             pictureBox3 = new PictureBox();
             panelTop = new Panel();
-            label3 = new Label();
+            CourseName = new Label();
             Course = new Label();
             labelRole = new Label();
             label6 = new Label();
@@ -391,7 +391,7 @@
             // panelTop
             // 
             panelTop.BackColor = Color.FromArgb(51, 154, 240);
-            panelTop.Controls.Add(label3);
+            panelTop.Controls.Add(CourseName);
             panelTop.Controls.Add(Course);
             panelTop.Controls.Add(labelRole);
             panelTop.Controls.Add(label6);
@@ -404,17 +404,17 @@
             panelTop.Size = new Size(916, 102);
             panelTop.TabIndex = 0;
             // 
-            // label3
+            // CourseName
             // 
-            label3.AutoSize = true;
-            label3.BackColor = Color.FromArgb(51, 154, 240);
-            label3.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
-            label3.ForeColor = Color.White;
-            label3.Location = new Point(490, 18);
-            label3.Name = "label3";
-            label3.Size = new Size(37, 23);
-            label3.TabIndex = 2;
-            label3.Text = "(?)";
+            CourseName.AutoSize = true;
+            CourseName.BackColor = Color.FromArgb(51, 154, 240);
+            CourseName.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
+            CourseName.ForeColor = Color.White;
+            CourseName.Location = new Point(490, 18);
+            CourseName.Name = "CourseName";
+            CourseName.Size = new Size(37, 23);
+            CourseName.TabIndex = 2;
+            CourseName.Text = "(?)";
             // 
             // Course
             // 
@@ -556,7 +556,7 @@
         private Panel panel6;
         private PictureBox pictureBoxExp;
         private Button buttonMinimiz;
-        private Label label3;
+        private Label CourseName;
         private Label Course;
     }
 }
