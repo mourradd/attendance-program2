@@ -12,7 +12,11 @@ namespace AttendanceManagement.AllClasses
     {
         
         public static List<Student> students;
+<<<<<<< HEAD
         public static readonly string filePath = "C:\\Users\\lap0\\OneDrive\\Desktop\\C#\\attendance-program2\\c#\\AttendanceManagement\\AttendanceManagement\\xml\\SystemData.xml";
+=======
+        public static readonly string filePath = "C:\\Users\\lap0\\OneDrive\\Desktop\\C#\\attendance-program2\\xml\\SystemData.xml";
+>>>>>>> 56ceb819a22515df11b75679e9c09e737f9351f9
     static StudentsListGenerators()
     {
         students = LoadStudentsFromXml(filePath);
