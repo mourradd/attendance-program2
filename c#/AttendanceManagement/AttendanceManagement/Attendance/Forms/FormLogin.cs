@@ -92,7 +92,7 @@ namespace AttendanceManagement.Attendance.Forms
             {
                 foreach (var item in students)
                 {
-                    if (textBoxName.Text.Trim() == item.Email && textBoxPassword.Text.Trim() == item.PassWord)
+                    if (textBoxName.Text.Trim() == item.Email && textBoxPassword.Text.Trim() == item.Password)
                     {
                         FormDashborad FD = new FormDashborad();
                         FD.ShowDialog();
@@ -101,35 +101,35 @@ namespace AttendanceManagement.Attendance.Forms
                     }
 
                 }
-                //if (textBoxName.Text.Trim() == "mohamed" && textBoxPassword.Text.Trim() == "123" || textBoxName.Text.Trim() == "ali" && textBoxPassword.Text.Trim() == "123")
-                //{
+                if (textBoxName.Text.Trim() == "mohamed" && textBoxPassword.Text.Trim() == "123" || textBoxName.Text.Trim() == "ali" && textBoxPassword.Text.Trim() == "123")
+                {
 
-                //    FormDashborad FD = new FormDashborad();
+                    FormDashborad FD = new FormDashborad();
 
 
-                //    if (textBoxName.Text.Trim() == "mohamed")
-                //    {
-                //        FD.Role = "Admin";
-                //    }
-                //    else
-                //    {
-                //        FD.Role = "Teacher";
-                //    }
-                //    FD.Username = textBoxName.Text;
-                //    textBoxName.Clear();
-                //    textBoxPassword.Clear();
-                //    pictureBoxHide_Click(sender, e);
-                //    textBoxName.Focus();
-                //    pictureBoxError.Hide();
-                //    labelError.Hide();
-                //    FD.ShowDialog();
+                    if (textBoxName.Text.Trim() == "mohamed")
+                    {
+                        FD.Role = "Admin";
+                    }
+                    else
+                    {
+                        FD.Role = "Teacher";
+                    }
+                    FD.Username = textBoxName.Text;
+                    textBoxName.Clear();
+                    textBoxPassword.Clear();
+                    pictureBoxHide_Click(sender, e);
+                    textBoxName.Focus();
+                    pictureBoxError.Hide();
+                    labelError.Hide();
+                    FD.ShowDialog();
 
-                //}
-                //else
-                //{
-                //    pictureBoxError.Show();
-                //    labelError.Show();
-                //}
+                }
+                else
+                {
+                    pictureBoxError.Show();
+                    labelError.Show();
+                }
             }
         }
     }

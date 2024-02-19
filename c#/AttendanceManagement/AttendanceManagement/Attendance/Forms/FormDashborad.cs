@@ -30,7 +30,7 @@ namespace AttendanceManagement.Attendance.Forms
             labelUsername.Text = Username;
             labelRole.Text = Role;
 
-            if(Role == "Teacher")
+            if (Role == "Teacher")
             {
                 Dashborad.Hide();
                 buttonSetting.Hide();
@@ -114,10 +114,17 @@ namespace AttendanceManagement.Attendance.Forms
 
         private void pictureBoxExpand_Click(object sender, EventArgs e)
         {
-            if (panelExpand.Visible) {
-            panelExpand.Visible = false;
-            }else
+            if (panelExpand.Visible)
+            {
+                panelExpand.Visible = false;
+            }
+            else
                 panelExpand.Visible = true;
+        }
+
+        private void panelBack_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

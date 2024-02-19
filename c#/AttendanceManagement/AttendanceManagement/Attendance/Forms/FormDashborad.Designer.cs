@@ -254,7 +254,7 @@
             label2.ForeColor = SystemColors.ButtonHighlight;
             label2.Location = new Point(97, 140);
             label2.Name = "label2";
-            label2.Size = new Size(67, 19);
+            label2.Size = new Size(55, 17);
             label2.TabIndex = 0;
             label2.Text = "System";
             // 
@@ -265,7 +265,7 @@
             label1.ForeColor = SystemColors.ButtonHighlight;
             label1.Location = new Point(23, 115);
             label1.Name = "label1";
-            label1.Size = new Size(220, 19);
+            label1.Size = new Size(183, 17);
             label1.TabIndex = 0;
             label1.Text = "Attendance Management";
             // 
@@ -291,6 +291,7 @@
             panelBack.Name = "panelBack";
             panelBack.Size = new Size(940, 180);
             panelBack.TabIndex = 0;
+            panelBack.Paint += panelBack_Paint;
             // 
             // panelExpand
             // 
@@ -383,7 +384,7 @@
             labelTime.ForeColor = Color.FromArgb(51, 154, 240);
             labelTime.Location = new Point(24, 23);
             labelTime.Name = "labelTime";
-            labelTime.Size = new Size(35, 23);
+            labelTime.Size = new Size(28, 18);
             labelTime.TabIndex = 0;
             labelTime.Text = "(?)";
             // 
@@ -408,7 +409,7 @@
             labelRole.ForeColor = Color.White;
             labelRole.Location = new Point(160, 56);
             labelRole.Name = "labelRole";
-            labelRole.Size = new Size(37, 23);
+            labelRole.Size = new Size(30, 19);
             labelRole.TabIndex = 0;
             labelRole.Text = "(?)";
             // 
@@ -420,7 +421,7 @@
             label6.ForeColor = Color.White;
             label6.Location = new Point(50, 57);
             label6.Name = "label6";
-            label6.Size = new Size(59, 23);
+            label6.Size = new Size(46, 19);
             label6.TabIndex = 0;
             label6.Text = "Role:";
             // 
@@ -432,7 +433,7 @@
             labelUsername.ForeColor = Color.White;
             labelUsername.Location = new Point(160, 22);
             labelUsername.Name = "labelUsername";
-            labelUsername.Size = new Size(37, 23);
+            labelUsername.Size = new Size(30, 19);
             labelUsername.TabIndex = 0;
             labelUsername.Text = "(?)";
             // 
@@ -444,7 +445,7 @@
             label4.ForeColor = Color.White;
             label4.Location = new Point(50, 22);
             label4.Name = "label4";
-            label4.Size = new Size(110, 23);
+            label4.Size = new Size(87, 19);
             label4.TabIndex = 0;
             label4.Text = "Welcome:";
             // 
@@ -454,7 +455,7 @@
             // 
             // FormDashborad
             // 
-            AutoScaleDimensions = new SizeF(12F, 23F);
+            AutoScaleDimensions = new SizeF(9F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1200, 720);
