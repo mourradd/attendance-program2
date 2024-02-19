@@ -37,9 +37,9 @@ namespace AttendanceManagement.AllClasses
                     Id = (int)student.Element("id"),
                     Name = (string)student.Element("name"),
                     Age = (int)student.Element("age"),
-                    DateOfJoining = (string)student.Element("date_of_joining"),
+                    DateOfJoining = (DateTime)student.Element("date_of_joining"),
                     Email = (string)student.Element("email"),
-                    PassWord = (string)student.Element("password"),
+                    Password = (string)student.Element("password"),
                     ClassID = (string)student.Element("class_id")
                 }
             ).ToList();
@@ -68,7 +68,7 @@ namespace AttendanceManagement.AllClasses
             new XElement("age", newStudent.Age),
             new XElement("date_of_joining", newStudent.DateOfJoining),
             new XElement("email", newStudent.Email),
-            new XElement("password", newStudent.PassWord),
+            new XElement("password", newStudent.Password),
             new XElement("class_id", newStudent.ClassID)
         );
 

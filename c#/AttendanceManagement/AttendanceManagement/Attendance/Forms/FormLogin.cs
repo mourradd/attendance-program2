@@ -92,7 +92,7 @@ namespace AttendanceManagement.Attendance.Forms
             {
                 foreach (var item in students)
                 {
-                    if (textBoxName.Text.Trim() == item.Email && textBoxPassword.Text.Trim() == item.PassWord)
+                    if (textBoxName.Text.Trim() == item.Email && textBoxPassword.Text.Trim() == item.Password)
                     {
                         FormDashborad FD = new FormDashborad();
 
