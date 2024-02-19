@@ -46,8 +46,6 @@ C:\Users\lap0\OneDrive\Desktop\C#\attendance-program2\c#\AttendanceManagement\At
 C:\Users\lap0\OneDrive\Desktop\C#\attendance-program2\c#\AttendanceManagement\AttendanceManagement\bin\Debug\net8.0-windows\AttendanceManagement.runtimeconfig.json
 C:\Users\lap0\OneDrive\Desktop\C#\attendance-program2\c#\AttendanceManagement\AttendanceManagement\bin\Debug\net8.0-windows\AttendanceManagement.dll
 C:\Users\lap0\OneDrive\Desktop\C#\attendance-program2\c#\AttendanceManagement\AttendanceManagement\bin\Debug\net8.0-windows\AttendanceManagement.pdb
-C:\Users\lap0\OneDrive\Desktop\C#\attendance-program2\c#\AttendanceManagement\AttendanceManagement\obj\Debug\net8.0-windows\AttendanceManagement.Attendance.Forms.FormDashborad.resources
-C:\Users\lap0\OneDrive\Desktop\C#\attendance-program2\c#\AttendanceManagement\AttendanceManagement\obj\Debug\net8.0-windows\AttendanceManagement.Attendance.Forms.FormLogin.resources
 >>>>>>> 56ceb819a22515df11b75679e9c09e737f9351f9
 C:\Users\lap0\OneDrive\Desktop\C#\attendance-program2\c#\AttendanceManagement\AttendanceManagement\obj\Debug\net8.0-windows\AttendanceManagement.Properties.Resources.resources
 C:\Users\lap0\OneDrive\Desktop\C#\attendance-program2\c#\AttendanceManagement\AttendanceManagement\obj\Debug\net8.0-windows\AttendanceManagement.csproj.GenerateResource.cache
@@ -59,13 +57,5 @@ C:\Users\lap0\OneDrive\Desktop\C#\attendance-program2\c#\AttendanceManagement\At
 C:\Users\lap0\OneDrive\Desktop\C#\attendance-program2\c#\AttendanceManagement\AttendanceManagement\obj\Debug\net8.0-windows\AttendanceManagement.dll
 C:\Users\lap0\OneDrive\Desktop\C#\attendance-program2\c#\AttendanceManagement\AttendanceManagement\obj\Debug\net8.0-windows\refint\AttendanceManagement.dll
 C:\Users\lap0\OneDrive\Desktop\C#\attendance-program2\c#\AttendanceManagement\AttendanceManagement\obj\Debug\net8.0-windows\AttendanceManagement.pdb
-<<<<<<< HEAD
-C:\Users\lap0\OneDrive\Desktop\C#\attendance-program2\c#\AttendanceManagement\AttendanceManagement\bin\Debug\net8.0-windows\AttendanceManagement.exe
-C:\Users\lap0\OneDrive\Desktop\C#\attendance-program2\c#\AttendanceManagement\AttendanceManagement\bin\Debug\net8.0-windows\AttendanceManagement.deps.json
-C:\Users\lap0\OneDrive\Desktop\C#\attendance-program2\c#\AttendanceManagement\AttendanceManagement\bin\Debug\net8.0-windows\AttendanceManagement.runtimeconfig.json
-C:\Users\lap0\OneDrive\Desktop\C#\attendance-program2\c#\AttendanceManagement\AttendanceManagement\bin\Debug\net8.0-windows\AttendanceManagement.dll
-C:\Users\lap0\OneDrive\Desktop\C#\attendance-program2\c#\AttendanceManagement\AttendanceManagement\bin\Debug\net8.0-windows\AttendanceManagement.pdb
-=======
->>>>>>> 56ceb819a22515df11b75679e9c09e737f9351f9
 C:\Users\lap0\OneDrive\Desktop\C#\attendance-program2\c#\AttendanceManagement\AttendanceManagement\obj\Debug\net8.0-windows\AttendanceManagement.genruntimeconfig.cache
 C:\Users\lap0\OneDrive\Desktop\C#\attendance-program2\c#\AttendanceManagement\AttendanceManagement\obj\Debug\net8.0-windows\ref\AttendanceManagement.dll
