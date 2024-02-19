@@ -1,14 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace AttendanceManagement.Attendance.Forms
+﻿namespace AttendanceManagement.Attendance.Forms
 {
     public partial class FormDashborad : Form
     {
@@ -53,7 +43,7 @@ namespace AttendanceManagement.Attendance.Forms
             panelExpand.Hide();
             WindowState = FormWindowState.Minimized;
         }
-        
+
 
         private void timerDateAndTime_Tick(object sender, EventArgs e)
         {
@@ -115,10 +105,7 @@ namespace AttendanceManagement.Attendance.Forms
                 panelExpand.Visible = true;
         }
 
-//       private void panelSide_Paint(object sender, PaintEventArgs e)
-
-        private void panelBack_Paint(object sender, PaintEventArgs e)
-
+        private void panelSide_Paint(object sender, PaintEventArgs e)
         {
 
         }

@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            timerDateAndTime = new System.Windows.Forms.Timer(components);
             pictureBoxExpand = new PictureBox();
             pictureBox2 = new PictureBox();
             labelTime = new Label();
@@ -60,6 +59,7 @@
             labelUsername = new Label();
             label4 = new Label();
             panel1 = new Panel();
+            timerDateAndTime = new System.Windows.Forms.Timer(components);
             ((System.ComponentModel.ISupportInitialize)pictureBoxExpand).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panelExpand.SuspendLayout();
@@ -491,6 +491,10 @@
             panel1.Size = new Size(284, 720);
             panel1.TabIndex = 2;
             // 
+            // timerDateAndTime
+            // 
+            timerDateAndTime.Tick += timerDateAndTime_Tick_1;
+            // 
             // TeacherDashborad
             // 
             AutoScaleDimensions = new SizeF(12F, 23F);
@@ -526,8 +530,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Timer timerDateAndTime;
         private PictureBox pictureBoxExpand;
         private PictureBox pictureBox2;
         private Label labelTime;
@@ -558,5 +560,6 @@
         private Button buttonMinimiz;
         private Label CourseName;
         private Label Course;
+        private System.Windows.Forms.Timer timerDateAndTime;
     }
 }

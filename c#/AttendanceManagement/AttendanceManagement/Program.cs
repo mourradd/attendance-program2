@@ -1,3 +1,5 @@
+using AttendanceManagement.Attendance.Teacher;
+
 namespace AttendanceManagement.Attendance.Forms
 {
     internal static class Program

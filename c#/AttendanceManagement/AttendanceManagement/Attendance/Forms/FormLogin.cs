@@ -89,51 +89,69 @@ namespace AttendanceManagement.Attendance.Forms
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-            string filepath = "C:\\Users\\lap0\\OneDrive\\Desktop\\C#\\attendance-program2\\c#\\AttendanceManagement\\AttendanceManagement\\xml\\SystemData.xml";
+            string filepath = "C:\\Users\\lap0\\OneDrive\\Desktop\\Main\\attendance-program2\\c#\\AttendanceManagement\\AttendanceManagement\\xml\\SystemData.xml";
 
             List<User> allUsers = LoadUsersFromXml(filepath);
 
-            if (textBoxName.Text.Trim() != string.Empty && textBoxPassword.Text.Trim() != string.Empty)
+            string email = textBoxName.Text.Trim();
+            string password = textBoxPassword.Text.Trim();
+
+            if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password))
             {
-                foreach (var item in allUsers)
-                {
-                    if (textBoxName.Text.Trim() == item.Email && textBoxPassword.Text.Trim() == item.Password)
-                    {
-                        if (item.UserType == "admin")
-                        {
-                            FormDashborad FD = new FormDashborad();
-                            FD.Username = item.Name;
-                            FD.Role = item.UserType;
-                            FD.ShowDialog();
-                        }
-                        else if (item.UserType == "teacher")
-                        {
-                            TeacherDashborad TD = new TeacherDashborad();
-                            TD.Username = item.Name;
-                            TD.Role = item.UserType;
-                            TD.ShowDialog();
-                        }
-                        else
-                        {
-                            pictureBoxError.Hide();
-                            labelError.Hide();
-
-                        }
-
-                        textBoxName.Clear();
-                        textBoxPassword.Clear();
-                        pictureBoxHide_Click(sender, e);
-                        textBoxName.Focus();
-
-                    }
-                    else
-                    {
-                        MessageBox.Show("Please Enter email and password");
-                    }
-
-                }
-
+                MessageBox.Show("Please Enter email and password");
+                return;
             }
+
+            foreach (var user in allUsers)
+            {
+                if (user.Email == email && user.Password == password)
+                {
+                    if (user.UserType == "admin")
+                    {
+                        OpenDashboardForm(user.Name, user.UserType);
+                    }
+                    else if (user.UserType == "teacher")
+                    {
+                        OpenTeacherDashboardForm(user.Name, user.UserType);
+                    }
+
+                    ClearInputFields();
+                    return;
+                }
+            }
+
+            ShowError();
         }
+
+        private void OpenDashboardForm(string username, string role)
+        {
+            FormDashborad dashboard = new FormDashborad();
+            dashboard.Username = username;
+            dashboard.Role = role;
+            dashboard.ShowDialog();
+        }
+
+        private void OpenTeacherDashboardForm(string username, string role)
+        {
+            TeacherDashborad teacherDashboard = new TeacherDashborad();
+            teacherDashboard.Username = username;
+            teacherDashboard.Role = role;
+            teacherDashboard.ShowDialog();
+        }
+
+        private void ClearInputFields()
+        {
+            textBoxName.Clear();
+            textBoxPassword.Clear();
+            textBoxPassword.UseSystemPasswordChar = true;
+            textBoxName.Focus();
+        }
+
+        private void ShowError()
+        {
+            pictureBoxError.Show();
+            labelError.Show();
+        }
+
     }
 }

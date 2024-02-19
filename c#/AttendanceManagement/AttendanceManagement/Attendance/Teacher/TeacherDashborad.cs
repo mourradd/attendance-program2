@@ -13,7 +13,7 @@ namespace AttendanceManagement.Attendance.Teacher
 {
     public partial class TeacherDashborad : Form
     {
-        public string Username, Role,course;
+        public string Username, Role, course;
         public TeacherDashborad()
         {
             InitializeComponent();
@@ -33,11 +33,7 @@ namespace AttendanceManagement.Attendance.Teacher
             panelSide.Location = new Point(button.Location.X - button.Location.X, button.Location.Y - 180);
         }
 
-        private void timerDateAndTime_Tick(object sender, EventArgs e)
-        {
-            DateTime now = DateTime.Now;
-            labelTime.Text = now.ToString();
-        }
+       
 
 
         private void Dashborad_Click(object sender, EventArgs e)
@@ -90,7 +86,7 @@ namespace AttendanceManagement.Attendance.Teacher
 
 
 
-        
+
 
         private void buttonAttendance_Click(object sender, EventArgs e)
         {
@@ -102,8 +98,11 @@ namespace AttendanceManagement.Attendance.Teacher
             MoveSidePanel(buttonReport);
         }
 
-        
+        private void timerDateAndTime_Tick_1(object sender, EventArgs e)
+        {
+            DateTime now = DateTime.Now;
+            labelTime.Text = now.ToString();
 
-        
+        }
     }
 }
