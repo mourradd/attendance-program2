@@ -13,7 +13,8 @@ namespace AttendanceManagement.Resources
     {
         // public static List<Student> Students;
         public static List<Student> students;
-        public static readonly string filePath = "D:\\attendnce project\\attendance-program\\attendance-program2\\c#\\AttendanceManagement\\AttendanceManagement\\xml\\SystemData.xml";
+        public static readonly string filePath = "C:\\Users\\lap0\\OneDrive\\Desktop\\C#\\attendance-program2\\c#\\AttendanceManagement\\AttendanceManagement\\xml\\SystemData.xml";
+
         static UsersOfSystem()
         {
             students = LoadStudentsFromXml(filePath);

@@ -235,6 +235,7 @@
             panelSide.Name = "panelSide";
             panelSide.Size = new Size(8, 47);
             panelSide.TabIndex = 1;
+            panelSide.Paint += panelSide_Paint;
             // 
             // panel2
             // 
@@ -319,7 +320,7 @@
             buttonLogOut.Image = Properties.Resources.logout1;
             buttonLogOut.Location = new Point(0, 53);
             buttonLogOut.Name = "buttonLogOut";
-            buttonLogOut.Size = new Size(198, 48);
+            buttonLogOut.Size = new Size(198, 50);
             buttonLogOut.TabIndex = 0;
             buttonLogOut.Text = "    Log Out";
             buttonLogOut.TextImageRelation = TextImageRelation.ImageBeforeText;
