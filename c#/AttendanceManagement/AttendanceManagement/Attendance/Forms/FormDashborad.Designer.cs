@@ -57,6 +57,7 @@
             labelUsername = new Label();
             label4 = new Label();
             timerDateAndTime = new System.Windows.Forms.Timer(components);
+            userControlAdmin1 = new AdminDashborad.UserControlAdmin();
             panel1.SuspendLayout();
             panel4.SuspendLayout();
             panel2.SuspendLayout();
@@ -82,8 +83,9 @@
             panel1.Controls.Add(panel2);
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
+            panel1.Margin = new Padding(4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(260, 720);
+            panel1.Size = new Size(303, 845);
             panel1.TabIndex = 0;
             // 
             // buttonSetting
@@ -95,9 +97,10 @@
             buttonSetting.ForeColor = Color.White;
             buttonSetting.Image = Properties.Resources.browser_settings1;
             buttonSetting.ImageAlign = ContentAlignment.MiddleLeft;
-            buttonSetting.Location = new Point(8, 462);
+            buttonSetting.Location = new Point(9, 541);
+            buttonSetting.Margin = new Padding(4);
             buttonSetting.Name = "buttonSetting";
-            buttonSetting.Size = new Size(252, 47);
+            buttonSetting.Size = new Size(294, 55);
             buttonSetting.TabIndex = 0;
             buttonSetting.Text = "     Setting";
             buttonSetting.TextAlign = ContentAlignment.MiddleLeft;
@@ -114,9 +117,10 @@
             buttonReport.ForeColor = Color.White;
             buttonReport.Image = Properties.Resources.report;
             buttonReport.ImageAlign = ContentAlignment.MiddleLeft;
-            buttonReport.Location = new Point(8, 415);
+            buttonReport.Location = new Point(9, 486);
+            buttonReport.Margin = new Padding(4);
             buttonReport.Name = "buttonReport";
-            buttonReport.Size = new Size(252, 47);
+            buttonReport.Size = new Size(294, 55);
             buttonReport.TabIndex = 0;
             buttonReport.Text = "     Reports";
             buttonReport.TextAlign = ContentAlignment.MiddleLeft;
@@ -133,9 +137,10 @@
             buttonAddCourse.ForeColor = Color.White;
             buttonAddCourse.Image = Properties.Resources.homework;
             buttonAddCourse.ImageAlign = ContentAlignment.MiddleLeft;
-            buttonAddCourse.Location = new Point(8, 368);
+            buttonAddCourse.Location = new Point(9, 431);
+            buttonAddCourse.Margin = new Padding(4);
             buttonAddCourse.Name = "buttonAddCourse";
-            buttonAddCourse.Size = new Size(252, 47);
+            buttonAddCourse.Size = new Size(294, 55);
             buttonAddCourse.TabIndex = 0;
             buttonAddCourse.Text = "     Add Course";
             buttonAddCourse.TextAlign = ContentAlignment.MiddleLeft;
@@ -152,9 +157,10 @@
             buttonAddTeacher.ForeColor = Color.White;
             buttonAddTeacher.Image = Properties.Resources.teacher;
             buttonAddTeacher.ImageAlign = ContentAlignment.MiddleLeft;
-            buttonAddTeacher.Location = new Point(8, 321);
+            buttonAddTeacher.Location = new Point(9, 376);
+            buttonAddTeacher.Margin = new Padding(4);
             buttonAddTeacher.Name = "buttonAddTeacher";
-            buttonAddTeacher.Size = new Size(252, 47);
+            buttonAddTeacher.Size = new Size(294, 55);
             buttonAddTeacher.TabIndex = 0;
             buttonAddTeacher.Text = "     Add Teacher";
             buttonAddTeacher.TextAlign = ContentAlignment.MiddleLeft;
@@ -171,9 +177,10 @@
             buttonAddStudent.ForeColor = Color.White;
             buttonAddStudent.Image = Properties.Resources.reading1;
             buttonAddStudent.ImageAlign = ContentAlignment.MiddleLeft;
-            buttonAddStudent.Location = new Point(8, 274);
+            buttonAddStudent.Location = new Point(9, 321);
+            buttonAddStudent.Margin = new Padding(4);
             buttonAddStudent.Name = "buttonAddStudent";
-            buttonAddStudent.Size = new Size(252, 47);
+            buttonAddStudent.Size = new Size(294, 55);
             buttonAddStudent.TabIndex = 0;
             buttonAddStudent.Text = "     Add Student";
             buttonAddStudent.TextAlign = ContentAlignment.MiddleLeft;
@@ -190,9 +197,10 @@
             buttonAttendance.ForeColor = Color.White;
             buttonAttendance.Image = Properties.Resources.assessment;
             buttonAttendance.ImageAlign = ContentAlignment.MiddleLeft;
-            buttonAttendance.Location = new Point(8, 227);
+            buttonAttendance.Location = new Point(9, 266);
+            buttonAttendance.Margin = new Padding(4);
             buttonAttendance.Name = "buttonAttendance";
-            buttonAttendance.Size = new Size(252, 47);
+            buttonAttendance.Size = new Size(294, 55);
             buttonAttendance.TabIndex = 0;
             buttonAttendance.Text = "     Attendance";
             buttonAttendance.TextAlign = ContentAlignment.MiddleLeft;
@@ -209,9 +217,10 @@
             Dashborad.ForeColor = Color.White;
             Dashborad.Image = Properties.Resources.home3;
             Dashborad.ImageAlign = ContentAlignment.MiddleLeft;
-            Dashborad.Location = new Point(8, 180);
+            Dashborad.Location = new Point(9, 211);
+            Dashborad.Margin = new Padding(4);
             Dashborad.Name = "Dashborad";
-            Dashborad.Size = new Size(252, 47);
+            Dashborad.Size = new Size(294, 55);
             Dashborad.TabIndex = 0;
             Dashborad.Text = "     Dashborad";
             Dashborad.TextAlign = ContentAlignment.MiddleLeft;
@@ -223,17 +232,19 @@
             // 
             panel4.Controls.Add(panelSide);
             panel4.Dock = DockStyle.Left;
-            panel4.Location = new Point(0, 180);
+            panel4.Location = new Point(0, 211);
+            panel4.Margin = new Padding(4);
             panel4.Name = "panel4";
-            panel4.Size = new Size(8, 540);
+            panel4.Size = new Size(9, 634);
             panel4.TabIndex = 0;
             // 
             // panelSide
             // 
             panelSide.BackColor = Color.White;
             panelSide.Location = new Point(0, 0);
+            panelSide.Margin = new Padding(4);
             panelSide.Name = "panelSide";
-            panelSide.Size = new Size(8, 47);
+            panelSide.Size = new Size(9, 55);
             panelSide.TabIndex = 1;
             panelSide.Paint += panelSide_Paint;
             // 
@@ -244,38 +255,42 @@
             panel2.Controls.Add(pictureBox1);
             panel2.Dock = DockStyle.Top;
             panel2.Location = new Point(0, 0);
+            panel2.Margin = new Padding(4);
             panel2.Name = "panel2";
-            panel2.Size = new Size(260, 180);
+            panel2.Size = new Size(303, 211);
             panel2.TabIndex = 0;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Century Gothic", 10F, FontStyle.Bold);
+            label2.Font = new Font("Century Gothic", 11F, FontStyle.Bold);
             label2.ForeColor = SystemColors.ButtonHighlight;
-            label2.Location = new Point(97, 140);
+            label2.Location = new Point(113, 164);
+            label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(67, 19);
+            label2.Size = new Size(75, 23);
             label2.TabIndex = 0;
             label2.Text = "System";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Century Gothic", 10F, FontStyle.Bold);
+            label1.Font = new Font("Century Gothic", 11F, FontStyle.Bold);
             label1.ForeColor = SystemColors.ButtonHighlight;
-            label1.Location = new Point(23, 115);
+            label1.Location = new Point(27, 135);
+            label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(220, 19);
+            label1.Size = new Size(251, 23);
             label1.TabIndex = 0;
             label1.Text = "Attendance Management";
             // 
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.user;
-            pictureBox1.Location = new Point(81, 6);
+            pictureBox1.Location = new Point(94, 7);
+            pictureBox1.Margin = new Padding(4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(93, 87);
+            pictureBox1.Size = new Size(108, 102);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
@@ -288,9 +303,10 @@
             panelBack.Controls.Add(labelTime);
             panelBack.Controls.Add(panelTop);
             panelBack.Dock = DockStyle.Top;
-            panelBack.Location = new Point(260, 0);
+            panelBack.Location = new Point(303, 0);
+            panelBack.Margin = new Padding(4);
             panelBack.Name = "panelBack";
-            panelBack.Size = new Size(940, 180);
+            panelBack.Size = new Size(1097, 211);
             panelBack.TabIndex = 0;
             // 
             // panelExpand
@@ -301,9 +317,10 @@
             panelExpand.Controls.Add(buttonLogOut);
             panelExpand.Controls.Add(buttonMinimize);
             panelExpand.Controls.Add(panel3);
-            panelExpand.Location = new Point(728, 73);
+            panelExpand.Location = new Point(849, 86);
+            panelExpand.Margin = new Padding(4);
             panelExpand.Name = "panelExpand";
-            panelExpand.Size = new Size(200, 107);
+            panelExpand.Size = new Size(233, 125);
             panelExpand.TabIndex = 2;
             panelExpand.Paint += panel3_Paint;
             // 
@@ -317,9 +334,10 @@
             buttonLogOut.Font = new Font("Century Gothic", 10F, FontStyle.Bold);
             buttonLogOut.ForeColor = Color.FromArgb(51, 154, 240);
             buttonLogOut.Image = Properties.Resources.logout1;
-            buttonLogOut.Location = new Point(0, 53);
+            buttonLogOut.Location = new Point(0, 62);
+            buttonLogOut.Margin = new Padding(4);
             buttonLogOut.Name = "buttonLogOut";
-            buttonLogOut.Size = new Size(198, 50);
+            buttonLogOut.Size = new Size(231, 59);
             buttonLogOut.TabIndex = 0;
             buttonLogOut.Text = "    Log Out";
             buttonLogOut.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -336,9 +354,10 @@
             buttonMinimize.Font = new Font("Century Gothic", 10F);
             buttonMinimize.ForeColor = Color.FromArgb(51, 154, 240);
             buttonMinimize.Image = Properties.Resources.minus;
-            buttonMinimize.Location = new Point(0, 5);
+            buttonMinimize.Location = new Point(0, 6);
+            buttonMinimize.Margin = new Padding(4);
             buttonMinimize.Name = "buttonMinimize";
-            buttonMinimize.Size = new Size(198, 48);
+            buttonMinimize.Size = new Size(231, 56);
             buttonMinimize.TabIndex = 0;
             buttonMinimize.Text = "    Minimize";
             buttonMinimize.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -349,8 +368,9 @@
             // 
             panel3.Dock = DockStyle.Top;
             panel3.Location = new Point(0, 0);
+            panel3.Margin = new Padding(4);
             panel3.Name = "panel3";
-            panel3.Size = new Size(198, 5);
+            panel3.Size = new Size(231, 6);
             panel3.TabIndex = 0;
             // 
             // pictureBoxExpand
@@ -358,9 +378,10 @@
             pictureBoxExpand.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             pictureBoxExpand.Cursor = Cursors.Hand;
             pictureBoxExpand.Image = Properties.Resources.down_arrow;
-            pictureBoxExpand.Location = new Point(795, 50);
+            pictureBoxExpand.Location = new Point(927, 59);
+            pictureBoxExpand.Margin = new Padding(4);
             pictureBoxExpand.Name = "pictureBoxExpand";
-            pictureBoxExpand.Size = new Size(27, 24);
+            pictureBoxExpand.Size = new Size(31, 28);
             pictureBoxExpand.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBoxExpand.TabIndex = 4;
             pictureBoxExpand.TabStop = false;
@@ -370,9 +391,10 @@
             // 
             pictureBox2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             pictureBox2.Image = Properties.Resources.icons8_account_1001;
-            pictureBox2.Location = new Point(729, 16);
+            pictureBox2.Location = new Point(850, 19);
+            pictureBox2.Margin = new Padding(4);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(60, 58);
+            pictureBox2.Size = new Size(70, 68);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 3;
             pictureBox2.TabStop = false;
@@ -382,7 +404,8 @@
             labelTime.AutoSize = true;
             labelTime.Font = new Font("Century Gothic", 11F, FontStyle.Bold);
             labelTime.ForeColor = Color.FromArgb(51, 154, 240);
-            labelTime.Location = new Point(24, 23);
+            labelTime.Location = new Point(28, 27);
+            labelTime.Margin = new Padding(4, 0, 4, 0);
             labelTime.Name = "labelTime";
             labelTime.Size = new Size(35, 23);
             labelTime.TabIndex = 0;
@@ -396,9 +419,10 @@
             panelTop.Controls.Add(labelUsername);
             panelTop.Controls.Add(label4);
             panelTop.Dock = DockStyle.Bottom;
-            panelTop.Location = new Point(0, 80);
+            panelTop.Location = new Point(0, 94);
+            panelTop.Margin = new Padding(4);
             panelTop.Name = "panelTop";
-            panelTop.Size = new Size(940, 100);
+            panelTop.Size = new Size(1097, 117);
             panelTop.TabIndex = 0;
             // 
             // labelRole
@@ -407,7 +431,8 @@
             labelRole.BackColor = Color.FromArgb(51, 154, 240);
             labelRole.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
             labelRole.ForeColor = Color.White;
-            labelRole.Location = new Point(160, 56);
+            labelRole.Location = new Point(187, 66);
+            labelRole.Margin = new Padding(4, 0, 4, 0);
             labelRole.Name = "labelRole";
             labelRole.Size = new Size(37, 23);
             labelRole.TabIndex = 0;
@@ -419,7 +444,8 @@
             label6.BackColor = Color.FromArgb(51, 154, 240);
             label6.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
             label6.ForeColor = Color.White;
-            label6.Location = new Point(50, 57);
+            label6.Location = new Point(58, 67);
+            label6.Margin = new Padding(4, 0, 4, 0);
             label6.Name = "label6";
             label6.Size = new Size(59, 23);
             label6.TabIndex = 0;
@@ -431,7 +457,8 @@
             labelUsername.BackColor = Color.FromArgb(51, 154, 240);
             labelUsername.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
             labelUsername.ForeColor = Color.White;
-            labelUsername.Location = new Point(160, 22);
+            labelUsername.Location = new Point(187, 26);
+            labelUsername.Margin = new Padding(4, 0, 4, 0);
             labelUsername.Name = "labelUsername";
             labelUsername.Size = new Size(37, 23);
             labelUsername.TabIndex = 0;
@@ -443,7 +470,8 @@
             label4.BackColor = Color.FromArgb(51, 154, 240);
             label4.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
             label4.ForeColor = Color.White;
-            label4.Location = new Point(50, 22);
+            label4.Location = new Point(58, 26);
+            label4.Margin = new Padding(4, 0, 4, 0);
             label4.Name = "label4";
             label4.Size = new Size(110, 23);
             label4.TabIndex = 0;
@@ -453,17 +481,30 @@
             // 
             timerDateAndTime.Tick += timerDateAndTime_Tick;
             // 
+            // userControlAdmin1
+            // 
+            userControlAdmin1.BackColor = Color.White;
+            userControlAdmin1.Dock = DockStyle.Fill;
+            userControlAdmin1.Font = new Font("Century Gothic", 10F);
+            userControlAdmin1.Location = new Point(303, 211);
+            userControlAdmin1.Margin = new Padding(4);
+            userControlAdmin1.Name = "userControlAdmin1";
+            userControlAdmin1.Size = new Size(1097, 634);
+            userControlAdmin1.TabIndex = 0;
+            userControlAdmin1.Load += userControlAdmin1_Load;
+            // 
             // FormDashborad
             // 
-            AutoScaleDimensions = new SizeF(12F, 23F);
+            AutoScaleDimensions = new SizeF(14F, 27F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1200, 720);
+            ClientSize = new Size(1400, 845);
+            Controls.Add(userControlAdmin1);
             Controls.Add(panelBack);
             Controls.Add(panel1);
-            Font = new Font("Century Gothic", 12F, FontStyle.Bold);
+            Font = new Font("Century Gothic", 14F, FontStyle.Bold);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(3, 2, 3, 2);
+            Margin = new Padding(4, 2, 4, 2);
             Name = "FormDashborad";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Dashborad";
@@ -514,5 +555,6 @@
         private Button buttonAddStudent;
         private Button buttonSetting;
         private System.Windows.Forms.Timer timerDateAndTime;
+        private AdminDashborad.UserControlAdmin userControlAdmin1;
     }
 }
