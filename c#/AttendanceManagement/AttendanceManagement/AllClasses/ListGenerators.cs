@@ -13,7 +13,11 @@ namespace AttendanceManagement.AllClasses
         
         public static List<Student> students;
 
+<<<<<<< HEAD
         public static readonly string filePath = "D:\\attendnce project\\attendance-program\\attendance-program2\\xml\\SystemData.xml";
+=======
+        public static readonly string filePath = "C:\\Users\\lap0\\OneDrive\\Desktop\\Main\\attendance-program2\\c#\\AttendanceManagement\\AttendanceManagement\\xml\\SystemData.xml";
+>>>>>>> dc5a80cc4b06398c3643758135c2acdee03b7283
 
     static StudentsListGenerators()
     {
@@ -28,6 +32,7 @@ namespace AttendanceManagement.AllClasses
         {
             XDocument doc = XDocument.Load(filePath);
 
+
             loadedStudents = (
                 from users in doc.Root.Elements("users")
                 from student in users.Elements("students").Elements("student")
@@ -37,12 +42,13 @@ namespace AttendanceManagement.AllClasses
                     Id = (int)student.Element("id"),
                     Name = (string)student.Element("name"),
                     Age = (int)student.Element("age"),
-                    DateOfJoining = (DateTime)student.Element("date_of_joining"),
+                    //DateOfJoining = (DateTime)student.Element("date_of_joining"),
                     Email = (string)student.Element("email"),
                     Password = (string)student.Element("password"),
                     ClassID = (string)student.Element("class_id")
                 }
             ).ToList();
+
         }
         catch (Exception ex)
         {
@@ -73,7 +79,9 @@ namespace AttendanceManagement.AllClasses
         );
 
         // Add the new student element to the XML document
+#pragma warning disable CS8602 // Dereference of a possibly null reference.
         doc.Root.Element("users").Element("students").Add(newStudentElement);
+#pragma warning restore CS8602 // Dereference of a possibly null reference.
 
         // Save the modified XML document back to the file
         doc.Save(xmlFilePath);

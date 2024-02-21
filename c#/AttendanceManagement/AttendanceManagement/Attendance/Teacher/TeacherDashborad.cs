@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
-namespace AttendanceManagement.Attendance.TeacherDashborad
+namespace AttendanceManagement.Attendance.Teacher
 {
     public partial class TeacherDashborad : Form
     {
-        public string Username, Role;
+        public string Username, Role, course;
         public TeacherDashborad()
         {
             InitializeComponent();
@@ -25,6 +25,7 @@ namespace AttendanceManagement.Attendance.TeacherDashborad
             panelExp.Hide();
             labelUsername.Text = Username;
             labelRole.Text = Role;
+            CourseName.Text = course;
         }
 
         private void MoveSidePanel(Control button)
@@ -32,11 +33,7 @@ namespace AttendanceManagement.Attendance.TeacherDashborad
             panelSide.Location = new Point(button.Location.X - button.Location.X, button.Location.Y - 180);
         }
 
-        private void timerDateAndTime_Tick(object sender, EventArgs e)
-        {
-            DateTime now = DateTime.Now;
-            labelTime.Text = now.ToString();
-        }
+       
 
 
         private void Dashborad_Click(object sender, EventArgs e)
@@ -101,6 +98,15 @@ namespace AttendanceManagement.Attendance.TeacherDashborad
             MoveSidePanel(buttonReport);
         }
 
+<<<<<<< HEAD:c#/AttendanceManagement/AttendanceManagement/Attendance/TeacherDashborad/TeacherDashborad.cs
         
+=======
+        private void timerDateAndTime_Tick_1(object sender, EventArgs e)
+        {
+            DateTime now = DateTime.Now;
+            labelTime.Text = now.ToString();
+
+        }
+>>>>>>> dc5a80cc4b06398c3643758135c2acdee03b7283:c#/AttendanceManagement/AttendanceManagement/Attendance/Teacher/TeacherDashborad.cs
     }
 }

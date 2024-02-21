@@ -6,19 +6,34 @@ using System.Threading.Tasks;
 
 namespace AttendanceManagement.AllClasses
 {
+
+
     public class User
     {
         public int Id { get; set; }
         public string Name { get; set; }
         public int Age { get; set; }
-        public DateTime DateOfJoining { get; set; }
+        public string DateOfJoining { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
-        public override string ToString()
-        {
-            return $"{Id}:{Name}:{Age}:{DateOfJoining}:{Email}:{Password}";
-        }
-
-
+        public string UserType { get; set; } // type of user
     }
+
+    public class Students : User
+    {
+        public string ClassID { get; set; }
+    }
+
+    public class Teachers : User
+    {
+        public List<int> CoursesTaught { get; set; }
+    }
+
+    public class Admins : User
+    {
+        
+    }
+
 }
+
+

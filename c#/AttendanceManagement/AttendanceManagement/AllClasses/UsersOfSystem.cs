@@ -13,7 +13,7 @@ namespace AttendanceManagement.Resources
     {
         // public static List<Student> Students;
         public static List<Student> students;
-        public static readonly string filePath = "C:\\Users\\lap0\\OneDrive\\Desktop\\C#\\attendance-program2\\c#\\AttendanceManagement\\AttendanceManagement\\xml\\SystemData.xml";
+        public static readonly string filePath = "C:\\Users\\lap0\\OneDrive\\Desktop\\Main\\attendance-program2\\c#\\AttendanceManagement\\AttendanceManagement\\xml\\SystemData.xml";
 
         static UsersOfSystem()
         {
@@ -28,6 +28,7 @@ namespace AttendanceManagement.Resources
             {
                 XDocument doc = XDocument.Load(filePath);
 
+ 
                 loadedStudents = (
                     from users in doc.Root.Elements("users")
                     from student in users.Elements("students").Elements("student")
@@ -37,12 +38,13 @@ namespace AttendanceManagement.Resources
                         Id = (int)student.Element("id"),
                         Name = (string)student.Element("name"),
                         Age = (int)student.Element("age"),
-                        DateOfJoining = (DateTime)student.Element("date_of_joining"),
+                        //DateOfJoining = (DateTime)student.Element("date_of_joining"),
                         Email = (string)student.Element("email"),
                         Password = (string)student.Element("password"),
                         ClassID = (string)student.Element("class_id")
                     }
                 ).ToList();
+
             }
             catch (Exception ex)
             {

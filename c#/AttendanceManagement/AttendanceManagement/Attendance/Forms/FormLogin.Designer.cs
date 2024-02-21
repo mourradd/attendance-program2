@@ -62,9 +62,9 @@
             pictureBoxClose.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             pictureBoxClose.Cursor = Cursors.Hand;
             pictureBoxClose.Image = Properties.Resources.icons8_cross_50;
-            pictureBoxClose.Location = new Point(1157, 13);
+            pictureBoxClose.Location = new Point(1157, 12);
             pictureBoxClose.Name = "pictureBoxClose";
-            pictureBoxClose.Size = new Size(31, 34);
+            pictureBoxClose.Size = new Size(31, 31);
             pictureBoxClose.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBoxClose.TabIndex = 0;
             pictureBoxClose.TabStop = false;
@@ -76,9 +76,9 @@
             pictureBoxMinimize.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             pictureBoxMinimize.Cursor = Cursors.Hand;
             pictureBoxMinimize.Image = Properties.Resources.icons8_minimize_48;
-            pictureBoxMinimize.Location = new Point(1120, 13);
+            pictureBoxMinimize.Location = new Point(1120, 12);
             pictureBoxMinimize.Name = "pictureBoxMinimize";
-            pictureBoxMinimize.Size = new Size(31, 34);
+            pictureBoxMinimize.Size = new Size(31, 31);
             pictureBoxMinimize.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBoxMinimize.TabIndex = 1;
             pictureBoxMinimize.TabStop = false;
@@ -98,10 +98,10 @@
             groupBox1.Controls.Add(label1);
             groupBox1.Controls.Add(pictureBoxHide);
             groupBox1.Controls.Add(pictureBoxShow);
-            groupBox1.Font = new Font("Century Gothic", 10F);
-            groupBox1.Location = new Point(107, 176);
+            groupBox1.Font = new Font("Century Gothic", 12F);
+            groupBox1.Location = new Point(107, 162);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(452, 378);
+            groupBox1.Size = new Size(452, 348);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "Please Login First";
@@ -112,7 +112,7 @@
             labelFP.Cursor = Cursors.Hand;
             labelFP.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold);
             labelFP.ForeColor = Color.FromArgb(51, 154, 240);
-            labelFP.Location = new Point(159, 279);
+            labelFP.Location = new Point(159, 257);
             labelFP.Name = "labelFP";
             labelFP.Size = new Size(152, 19);
             labelFP.TabIndex = 8;
@@ -123,7 +123,7 @@
             labelError.AutoSize = true;
             labelError.Font = new Font("Century Gothic", 9F);
             labelError.ForeColor = Color.FromArgb(234, 73, 73);
-            labelError.Location = new Point(126, 241);
+            labelError.Location = new Point(126, 222);
             labelError.Name = "labelError";
             labelError.Size = new Size(230, 20);
             labelError.TabIndex = 7;
@@ -133,9 +133,9 @@
             // 
             pictureBoxError.Cursor = Cursors.Hand;
             pictureBoxError.Image = Properties.Resources.icons8_important_32;
-            pictureBoxError.Location = new Point(92, 240);
+            pictureBoxError.Location = new Point(92, 221);
             pictureBoxError.Name = "pictureBoxError";
-            pictureBoxError.Size = new Size(25, 27);
+            pictureBoxError.Size = new Size(25, 25);
             pictureBoxError.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBoxError.TabIndex = 6;
             pictureBoxError.TabStop = false;
@@ -143,9 +143,9 @@
             // 
             // textBoxPassword
             // 
-            textBoxPassword.Location = new Point(95, 185);
+            textBoxPassword.Location = new Point(95, 170);
             textBoxPassword.Name = "textBoxPassword";
-            textBoxPassword.Size = new Size(241, 28);
+            textBoxPassword.Size = new Size(241, 32);
             textBoxPassword.TabIndex = 2;
             textBoxPassword.UseSystemPasswordChar = true;
             // 
@@ -153,7 +153,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold);
-            label2.Location = new Point(92, 148);
+            label2.Location = new Point(92, 136);
             label2.Name = "label2";
             label2.Size = new Size(92, 19);
             label2.TabIndex = 5;
@@ -166,9 +166,9 @@
             buttonLogin.FlatAppearance.BorderSize = 0;
             buttonLogin.FlatStyle = FlatStyle.Flat;
             buttonLogin.ForeColor = Color.White;
-            buttonLogin.Location = new Point(159, 320);
+            buttonLogin.Location = new Point(159, 294);
             buttonLogin.Name = "buttonLogin";
-            buttonLogin.Size = new Size(150, 41);
+            buttonLogin.Size = new Size(150, 38);
             buttonLogin.TabIndex = 2;
             buttonLogin.Text = "Login";
             buttonLogin.UseVisualStyleBackColor = false;
@@ -176,16 +176,16 @@
             // 
             // textBoxName
             // 
-            textBoxName.Location = new Point(95, 100);
+            textBoxName.Location = new Point(95, 92);
             textBoxName.Name = "textBoxName";
-            textBoxName.Size = new Size(265, 28);
+            textBoxName.Size = new Size(265, 32);
             textBoxName.TabIndex = 1;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold);
-            label1.Location = new Point(92, 64);
+            label1.Location = new Point(92, 59);
             label1.Name = "label1";
             label1.Size = new Size(96, 19);
             label1.TabIndex = 0;
@@ -196,9 +196,9 @@
             pictureBoxHide.BorderStyle = BorderStyle.FixedSingle;
             pictureBoxHide.Cursor = Cursors.Hand;
             pictureBoxHide.Image = Properties.Resources.icons8_blind_26;
-            pictureBoxHide.Location = new Point(337, 185);
+            pictureBoxHide.Location = new Point(337, 170);
             pictureBoxHide.Name = "pictureBoxHide";
-            pictureBoxHide.Size = new Size(25, 28);
+            pictureBoxHide.Size = new Size(25, 26);
             pictureBoxHide.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBoxHide.TabIndex = 4;
             pictureBoxHide.TabStop = false;
@@ -210,9 +210,9 @@
             pictureBoxShow.BorderStyle = BorderStyle.FixedSingle;
             pictureBoxShow.Cursor = Cursors.Hand;
             pictureBoxShow.Image = Properties.Resources.icons8_eye_26;
-            pictureBoxShow.Location = new Point(337, 185);
+            pictureBoxShow.Location = new Point(337, 170);
             pictureBoxShow.Name = "pictureBoxShow";
-            pictureBoxShow.Size = new Size(25, 28);
+            pictureBoxShow.Size = new Size(25, 26);
             pictureBoxShow.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBoxShow.TabIndex = 3;
             pictureBoxShow.TabStop = false;
@@ -223,9 +223,9 @@
             // 
             panel1.Anchor = AnchorStyles.None;
             panel1.BackColor = SystemColors.Control;
-            panel1.Location = new Point(696, 177);
+            panel1.Location = new Point(696, 163);
             panel1.Name = "panel1";
-            panel1.Size = new Size(10, 522);
+            panel1.Size = new Size(10, 480);
             panel1.TabIndex = 0;
             panel1.Paint += panel1_Paint;
             // 
@@ -233,9 +233,9 @@
             // 
             pictureBoxPicture.Anchor = AnchorStyles.None;
             pictureBoxPicture.Image = Properties.Resources.icons8_account_100;
-            pictureBoxPicture.Location = new Point(845, 200);
+            pictureBoxPicture.Location = new Point(845, 184);
             pictureBoxPicture.Name = "pictureBoxPicture";
-            pictureBoxPicture.Size = new Size(212, 237);
+            pictureBoxPicture.Size = new Size(212, 218);
             pictureBoxPicture.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBoxPicture.TabIndex = 2;
             pictureBoxPicture.TabStop = false;
@@ -246,7 +246,7 @@
             label3.AutoSize = true;
             label3.Font = new Font("Century Gothic", 16F, FontStyle.Bold);
             label3.ForeColor = Color.FromArgb(51, 154, 240);
-            label3.Location = new Point(781, 448);
+            label3.Location = new Point(781, 412);
             label3.Name = "label3";
             label3.Size = new Size(354, 32);
             label3.TabIndex = 9;
@@ -258,7 +258,7 @@
             label4.AutoSize = true;
             label4.Font = new Font("Century Gothic", 16F, FontStyle.Bold);
             label4.ForeColor = Color.FromArgb(51, 154, 240);
-            label4.Location = new Point(906, 500);
+            label4.Location = new Point(906, 460);
             label4.Name = "label4";
             label4.Size = new Size(106, 32);
             label4.TabIndex = 10;
@@ -270,7 +270,7 @@
             label5.AutoSize = true;
             label5.Font = new Font("Century Gothic", 10F);
             label5.ForeColor = Color.Black;
-            label5.Location = new Point(12, 689);
+            label5.Location = new Point(12, 634);
             label5.Name = "label5";
             label5.Size = new Size(305, 21);
             label5.TabIndex = 11;
@@ -278,10 +278,10 @@
             // 
             // FormLogin
             // 
-            AutoScaleDimensions = new SizeF(12F, 25F);
+            AutoScaleDimensions = new SizeF(12F, 23F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1200, 720);
+            ClientSize = new Size(1200, 662);
             Controls.Add(groupBox1);
             Controls.Add(label5);
             Controls.Add(label4);
@@ -290,7 +290,7 @@
             Controls.Add(panel1);
             Controls.Add(pictureBoxMinimize);
             Controls.Add(pictureBoxClose);
-            Font = new Font("Microsoft Sans Serif", 12F);
+            Font = new Font("Century Gothic", 12F);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(3, 2, 3, 2);
             Name = "FormLogin";

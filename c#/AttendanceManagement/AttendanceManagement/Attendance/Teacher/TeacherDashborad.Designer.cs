@@ -1,4 +1,4 @@
-﻿namespace AttendanceManagement.Attendance.TeacherDashborad
+﻿namespace AttendanceManagement.Attendance.Teacher
 {
     partial class TeacherDashborad
     {
@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            timerDateAndTime = new System.Windows.Forms.Timer(components);
             pictureBoxExpand = new PictureBox();
             pictureBox2 = new PictureBox();
             labelTime = new Label();
@@ -53,13 +52,14 @@
             panel6 = new Panel();
             pictureBox3 = new PictureBox();
             panelTop = new Panel();
-            label3 = new Label();
+            CourseName = new Label();
             Course = new Label();
             labelRole = new Label();
             label6 = new Label();
             labelUsername = new Label();
             label4 = new Label();
             panel1 = new Panel();
+            timerDateAndTime = new System.Windows.Forms.Timer(components);
             ((System.ComponentModel.ISupportInitialize)pictureBoxExpand).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panelExpand.SuspendLayout();
@@ -391,7 +391,7 @@
             // panelTop
             // 
             panelTop.BackColor = Color.FromArgb(51, 154, 240);
-            panelTop.Controls.Add(label3);
+            panelTop.Controls.Add(CourseName);
             panelTop.Controls.Add(Course);
             panelTop.Controls.Add(labelRole);
             panelTop.Controls.Add(label6);
@@ -404,8 +404,9 @@
             panelTop.Size = new Size(916, 102);
             panelTop.TabIndex = 0;
             // 
-            // label3
+            // CourseName
             // 
+<<<<<<< HEAD:c#/AttendanceManagement/AttendanceManagement/Attendance/TeacherDashborad/TeacherDashborad.Designer.cs
             label3.AutoSize = true;
             label3.BackColor = Color.FromArgb(51, 154, 240);
             label3.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
@@ -415,6 +416,17 @@
             label3.Size = new Size(30, 19);
             label3.TabIndex = 2;
             label3.Text = "(?)";
+=======
+            CourseName.AutoSize = true;
+            CourseName.BackColor = Color.FromArgb(51, 154, 240);
+            CourseName.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
+            CourseName.ForeColor = Color.White;
+            CourseName.Location = new Point(490, 18);
+            CourseName.Name = "CourseName";
+            CourseName.Size = new Size(37, 23);
+            CourseName.TabIndex = 2;
+            CourseName.Text = "(?)";
+>>>>>>> dc5a80cc4b06398c3643758135c2acdee03b7283:c#/AttendanceManagement/AttendanceManagement/Attendance/Teacher/TeacherDashborad.Designer.cs
             // 
             // Course
             // 
@@ -491,6 +503,10 @@
             panel1.Size = new Size(284, 720);
             panel1.TabIndex = 2;
             // 
+            // timerDateAndTime
+            // 
+            timerDateAndTime.Tick += timerDateAndTime_Tick_1;
+            // 
             // TeacherDashborad
             // 
             AutoScaleDimensions = new SizeF(9F, 19F);
@@ -526,8 +542,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Timer timerDateAndTime;
         private PictureBox pictureBoxExpand;
         private PictureBox pictureBox2;
         private Label labelTime;
@@ -556,7 +570,8 @@
         private Panel panel6;
         private PictureBox pictureBoxExp;
         private Button buttonMinimiz;
-        private Label label3;
+        private Label CourseName;
         private Label Course;
+        private System.Windows.Forms.Timer timerDateAndTime;
     }
 }
