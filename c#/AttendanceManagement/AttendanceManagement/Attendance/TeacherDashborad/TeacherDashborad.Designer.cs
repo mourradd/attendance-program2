@@ -106,7 +106,7 @@
             labelTime.ForeColor = Color.FromArgb(51, 154, 240);
             labelTime.Location = new Point(26, 19);
             labelTime.Name = "labelTime";
-            labelTime.Size = new Size(35, 23);
+            labelTime.Size = new Size(28, 18);
             labelTime.TabIndex = 0;
             labelTime.Text = "(?)";
             // 
@@ -164,7 +164,7 @@
             label1.ForeColor = SystemColors.ButtonHighlight;
             label1.Location = new Point(71, 108);
             label1.Name = "label1";
-            label1.Size = new Size(149, 28);
+            label1.Size = new Size(120, 23);
             label1.TabIndex = 0;
             label1.Text = "Attendance";
             // 
@@ -412,7 +412,7 @@
             label3.ForeColor = Color.White;
             label3.Location = new Point(490, 18);
             label3.Name = "label3";
-            label3.Size = new Size(37, 23);
+            label3.Size = new Size(30, 19);
             label3.TabIndex = 2;
             label3.Text = "(?)";
             // 
@@ -424,7 +424,7 @@
             Course.ForeColor = Color.White;
             Course.Location = new Point(389, 18);
             Course.Name = "Course";
-            Course.Size = new Size(85, 23);
+            Course.Size = new Size(66, 19);
             Course.TabIndex = 1;
             Course.Text = "Course:";
             // 
@@ -436,7 +436,7 @@
             labelRole.ForeColor = Color.White;
             labelRole.Location = new Point(175, 57);
             labelRole.Name = "labelRole";
-            labelRole.Size = new Size(37, 23);
+            labelRole.Size = new Size(30, 19);
             labelRole.TabIndex = 0;
             labelRole.Text = "(?)";
             // 
@@ -448,7 +448,7 @@
             label6.ForeColor = Color.White;
             label6.Location = new Point(55, 57);
             label6.Name = "label6";
-            label6.Size = new Size(59, 23);
+            label6.Size = new Size(46, 19);
             label6.TabIndex = 0;
             label6.Text = "Role:";
             // 
@@ -460,7 +460,7 @@
             labelUsername.ForeColor = Color.White;
             labelUsername.Location = new Point(175, 18);
             labelUsername.Name = "labelUsername";
-            labelUsername.Size = new Size(37, 23);
+            labelUsername.Size = new Size(30, 19);
             labelUsername.TabIndex = 0;
             labelUsername.Text = "(?)";
             // 
@@ -472,7 +472,7 @@
             label4.ForeColor = Color.White;
             label4.Location = new Point(55, 18);
             label4.Name = "label4";
-            label4.Size = new Size(110, 23);
+            label4.Size = new Size(87, 19);
             label4.TabIndex = 0;
             label4.Text = "Welcome:";
             // 
@@ -493,7 +493,7 @@
             // 
             // TeacherDashborad
             // 
-            AutoScaleDimensions = new SizeF(12F, 23F);
+            AutoScaleDimensions = new SizeF(9F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1200, 720);

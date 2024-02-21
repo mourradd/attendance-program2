@@ -89,7 +89,7 @@ namespace AttendanceManagement.Attendance.TeacherDashborad
 
 
 
-        
+
 
         private void buttonAttendance_Click(object sender, EventArgs e)
         {
@@ -100,8 +100,6 @@ namespace AttendanceManagement.Attendance.TeacherDashborad
         {
             MoveSidePanel(buttonReport);
         }
-
-        
 
         
     }

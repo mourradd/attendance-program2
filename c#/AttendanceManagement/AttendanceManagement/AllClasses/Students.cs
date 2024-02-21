@@ -9,6 +9,7 @@ namespace AttendanceManagement.AllClasses
     public class Student : User
     {
        
+       
         public string ClassID { get; set; }
 
         public override string ToString()

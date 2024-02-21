@@ -235,7 +235,7 @@
             panelSide.Name = "panelSide";
             panelSide.Size = new Size(8, 47);
             panelSide.TabIndex = 1;
-            panelSide.Paint += panelSide_Paint;
+            // panelSide.Paint += panelSide_Paint;
             // 
             // panel2
             // 
