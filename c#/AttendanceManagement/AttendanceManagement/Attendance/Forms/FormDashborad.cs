@@ -63,6 +63,7 @@ namespace AttendanceManagement.Attendance.Forms
         {
             MoveSidePanel(Dashborad);
             userControlAdmin1.Visible = true;
+            userControlAddStudent1.Visible = false;
             userControlAdmin1.Count();
         }
 
@@ -70,12 +71,15 @@ namespace AttendanceManagement.Attendance.Forms
         {
             MoveSidePanel(buttonAttendance);
             userControlAdmin1.Visible = false;
+            userControlAddStudent1.Visible = false;
+
         }
 
         private void buttonAddStudent_Click(object sender, EventArgs e)
         {
             MoveSidePanel(buttonAddStudent);
             userControlAdmin1.Visible = false;
+            userControlAddStudent1.Visible=true;
 
         }
 
@@ -83,6 +87,7 @@ namespace AttendanceManagement.Attendance.Forms
         {
             MoveSidePanel(buttonAddTeacher);
             userControlAdmin1.Visible = false;
+            userControlAddStudent1.Visible = false;
 
 
         }
@@ -91,6 +96,8 @@ namespace AttendanceManagement.Attendance.Forms
         {
             MoveSidePanel(buttonAddCourse);
             userControlAdmin1.Visible = false;
+            userControlAddStudent1.Visible = false;
+
 
 
         }
@@ -99,6 +106,7 @@ namespace AttendanceManagement.Attendance.Forms
         {
             MoveSidePanel(buttonReport);
             userControlAdmin1.Visible = false;
+            userControlAddStudent1.Visible = false;
 
 
         }
@@ -107,6 +115,8 @@ namespace AttendanceManagement.Attendance.Forms
         {
             MoveSidePanel(buttonSetting);
             userControlAdmin1.Visible = false;
+            userControlAddStudent1.Visible = false;
+
 
 
         }

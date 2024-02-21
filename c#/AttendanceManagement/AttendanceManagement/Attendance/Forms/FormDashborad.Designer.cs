@@ -58,6 +58,7 @@
             label4 = new Label();
             timerDateAndTime = new System.Windows.Forms.Timer(components);
             userControlAdmin1 = new AdminDashborad.UserControlAdmin();
+            userControlAddStudent1 = new AdminDashborad.UserControlAddStudent();
             panel1.SuspendLayout();
             panel4.SuspendLayout();
             panel2.SuspendLayout();
@@ -493,12 +494,25 @@
             userControlAdmin1.TabIndex = 0;
             userControlAdmin1.Load += userControlAdmin1_Load;
             // 
+            // userControlAddStudent1
+            // 
+            userControlAddStudent1.BackColor = Color.White;
+            userControlAddStudent1.Dock = DockStyle.Fill;
+            userControlAddStudent1.Font = new Font("Century Gothic", 15F, FontStyle.Bold);
+            userControlAddStudent1.Location = new Point(303, 211);
+            userControlAddStudent1.Margin = new Padding(4);
+            userControlAddStudent1.Name = "userControlAddStudent1";
+            userControlAddStudent1.Size = new Size(1097, 634);
+            userControlAddStudent1.TabIndex = 0;
+            userControlAddStudent1.Visible = false;
+            // 
             // FormDashborad
             // 
             AutoScaleDimensions = new SizeF(14F, 27F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1400, 845);
+            Controls.Add(userControlAddStudent1);
             Controls.Add(userControlAdmin1);
             Controls.Add(panelBack);
             Controls.Add(panel1);
@@ -556,5 +570,6 @@
         private Button buttonSetting;
         private System.Windows.Forms.Timer timerDateAndTime;
         private AdminDashborad.UserControlAdmin userControlAdmin1;
+        private AdminDashborad.UserControlAddStudent userControlAddStudent1;
     }
 }
