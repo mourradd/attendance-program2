@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\attendnce project\\attendance-program\\attendance-program2\\c#\\AttendanceManagement\\AttendanceManagement\\AttendanceManagement.csproj": {}
+    "D:\\PD(ITI Mansoura)\\C#\\project-attendance Management\\sprint2\\attendance-program2\\c#\\AttendanceManagement\\AttendanceManagement\\AttendanceManagement.csproj": {}
   },
   "projects": {
-    "D:\\attendnce project\\attendance-program\\attendance-program2\\c#\\AttendanceManagement\\AttendanceManagement\\AttendanceManagement.csproj": {
+    "D:\\PD(ITI Mansoura)\\C#\\project-attendance Management\\sprint2\\attendance-program2\\c#\\AttendanceManagement\\AttendanceManagement\\AttendanceManagement.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\attendnce project\\attendance-program\\attendance-program2\\c#\\AttendanceManagement\\AttendanceManagement\\AttendanceManagement.csproj",
+        "projectUniqueName": "D:\\PD(ITI Mansoura)\\C#\\project-attendance Management\\sprint2\\attendance-program2\\c#\\AttendanceManagement\\AttendanceManagement\\AttendanceManagement.csproj",
         "projectName": "AttendanceManagement",
-        "projectPath": "D:\\attendnce project\\attendance-program\\attendance-program2\\c#\\AttendanceManagement\\AttendanceManagement\\AttendanceManagement.csproj",
-        "packagesPath": "C:\\Users\\moust\\.nuget\\packages\\",
-        "outputPath": "D:\\attendnce project\\attendance-program\\attendance-program2\\c#\\AttendanceManagement\\AttendanceManagement\\obj\\",
+        "projectPath": "D:\\PD(ITI Mansoura)\\C#\\project-attendance Management\\sprint2\\attendance-program2\\c#\\AttendanceManagement\\AttendanceManagement\\AttendanceManagement.csproj",
+        "packagesPath": "C:\\Users\\Elhamd Computer\\.nuget\\packages\\",
+        "outputPath": "D:\\PD(ITI Mansoura)\\C#\\project-attendance Management\\sprint2\\attendance-program2\\c#\\AttendanceManagement\\AttendanceManagement\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\moust\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Elhamd Computer\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

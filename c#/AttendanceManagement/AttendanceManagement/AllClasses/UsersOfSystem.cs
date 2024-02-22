@@ -13,7 +13,7 @@ namespace AttendanceManagement.Resources
     {
         // public static List<Student> Students;
         public static List<Student> students;
-        public static readonly string filePath = "D:\\attendnce project\\attendance-program\\attendance-program2\\c#\\AttendanceManagement\\AttendanceManagement\\xml\\SystemData.xml";
+        public static readonly string filePath = "D:\\PD(ITI Mansoura)\\C#\\project-attendance Management\\sprint2\\attendance-program2\\xml\\SystemData.xml";
         static UsersOfSystem()
         {
             students = LoadStudentsFromXml(filePath);

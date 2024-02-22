@@ -36,3 +36,22 @@ D:\attendnce project\attendance-program\attendance-program2\c#\AttendanceManagem
 D:\attendnce project\attendance-program\attendance-program2\c#\AttendanceManagement\AttendanceManagement\obj\Debug\net8.0-windows\AttendanceManagement.pdb
 D:\attendnce project\attendance-program\attendance-program2\c#\AttendanceManagement\AttendanceManagement\obj\Debug\net8.0-windows\AttendanceManagement.genruntimeconfig.cache
 D:\attendnce project\attendance-program\attendance-program2\c#\AttendanceManagement\AttendanceManagement\obj\Debug\net8.0-windows\ref\AttendanceManagement.dll
+D:\PD(ITI Mansoura)\C#\project-attendance Management\sprint2\attendance-program2\c#\AttendanceManagement\AttendanceManagement\bin\Debug\net8.0-windows\AttendanceManagement.exe
+D:\PD(ITI Mansoura)\C#\project-attendance Management\sprint2\attendance-program2\c#\AttendanceManagement\AttendanceManagement\bin\Debug\net8.0-windows\AttendanceManagement.deps.json
+D:\PD(ITI Mansoura)\C#\project-attendance Management\sprint2\attendance-program2\c#\AttendanceManagement\AttendanceManagement\bin\Debug\net8.0-windows\AttendanceManagement.runtimeconfig.json
+D:\PD(ITI Mansoura)\C#\project-attendance Management\sprint2\attendance-program2\c#\AttendanceManagement\AttendanceManagement\bin\Debug\net8.0-windows\AttendanceManagement.dll
+D:\PD(ITI Mansoura)\C#\project-attendance Management\sprint2\attendance-program2\c#\AttendanceManagement\AttendanceManagement\bin\Debug\net8.0-windows\AttendanceManagement.pdb
+D:\PD(ITI Mansoura)\C#\project-attendance Management\sprint2\attendance-program2\c#\AttendanceManagement\AttendanceManagement\obj\Debug\net8.0-windows\AttendanceManagement.Attendance.Forms.FormDashborad.resources
+D:\PD(ITI Mansoura)\C#\project-attendance Management\sprint2\attendance-program2\c#\AttendanceManagement\AttendanceManagement\obj\Debug\net8.0-windows\AttendanceManagement.Attendance.Forms.FormLogin.resources
+D:\PD(ITI Mansoura)\C#\project-attendance Management\sprint2\attendance-program2\c#\AttendanceManagement\AttendanceManagement\obj\Debug\net8.0-windows\AttendanceManagement.Properties.Resources.resources
+D:\PD(ITI Mansoura)\C#\project-attendance Management\sprint2\attendance-program2\c#\AttendanceManagement\AttendanceManagement\obj\Debug\net8.0-windows\AttendanceManagement.csproj.GenerateResource.cache
+D:\PD(ITI Mansoura)\C#\project-attendance Management\sprint2\attendance-program2\c#\AttendanceManagement\AttendanceManagement\obj\Debug\net8.0-windows\AttendanceManagement.GeneratedMSBuildEditorConfig.editorconfig
+D:\PD(ITI Mansoura)\C#\project-attendance Management\sprint2\attendance-program2\c#\AttendanceManagement\AttendanceManagement\obj\Debug\net8.0-windows\AttendanceManagement.AssemblyInfoInputs.cache
+D:\PD(ITI Mansoura)\C#\project-attendance Management\sprint2\attendance-program2\c#\AttendanceManagement\AttendanceManagement\obj\Debug\net8.0-windows\AttendanceManagement.AssemblyInfo.cs
+D:\PD(ITI Mansoura)\C#\project-attendance Management\sprint2\attendance-program2\c#\AttendanceManagement\AttendanceManagement\obj\Debug\net8.0-windows\AttendanceManagement.csproj.CoreCompileInputs.cache
+D:\PD(ITI Mansoura)\C#\project-attendance Management\sprint2\attendance-program2\c#\AttendanceManagement\AttendanceManagement\obj\Debug\net8.0-windows\AttendanceManagement.sourcelink.json
+D:\PD(ITI Mansoura)\C#\project-attendance Management\sprint2\attendance-program2\c#\AttendanceManagement\AttendanceManagement\obj\Debug\net8.0-windows\AttendanceManagement.dll
+D:\PD(ITI Mansoura)\C#\project-attendance Management\sprint2\attendance-program2\c#\AttendanceManagement\AttendanceManagement\obj\Debug\net8.0-windows\refint\AttendanceManagement.dll
+D:\PD(ITI Mansoura)\C#\project-attendance Management\sprint2\attendance-program2\c#\AttendanceManagement\AttendanceManagement\obj\Debug\net8.0-windows\AttendanceManagement.pdb
+D:\PD(ITI Mansoura)\C#\project-attendance Management\sprint2\attendance-program2\c#\AttendanceManagement\AttendanceManagement\obj\Debug\net8.0-windows\AttendanceManagement.genruntimeconfig.cache
+D:\PD(ITI Mansoura)\C#\project-attendance Management\sprint2\attendance-program2\c#\AttendanceManagement\AttendanceManagement\obj\Debug\net8.0-windows\ref\AttendanceManagement.dll

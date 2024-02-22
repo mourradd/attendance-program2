@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<attendance_system>
-	<users>
+<attendance_system xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="D:\PD(ITI Mansoura)\C#\project-attendance Management\sprint2\attendance-program2\xml\Schema.xsd">
+
+<users>
 		<!-- Admin Users -->
 		<admin>
 			<id>1</id>
@@ -77,7 +78,9 @@
 			</student>
 		</students>
 	</users>
-	<courses>
+
+	
+		<courses>
 		<course>
 			<id>1</id>
 			<name>C#</name>
@@ -89,27 +92,9 @@
 			<details>this course will help you to be good at JavaScript programming language</details>
 		</course>
 	</courses>
-	<teachers_Courses>
-		<teacherCourses>
-			<teacher_id>101</teacher_id>
-			<courses>
-				<course_id>1</course_id>
-				<course_id>2</course_id>
-			</courses>
-		</teacherCourses>
-		<teacherCourses>
-			<teacher_id>102</teacher_id>
-			<courses>
-				<course_id>1</course_id>
-			</courses>
-		</teacherCourses>
-		<teacherCourses>
-			<teacher_id>103</teacher_id>
-			<courses>
-				<course_id>2</course_id>
-			</courses>
-		</teacherCourses>
-	</teachers_Courses>
+	
+	
+	
 	<Classes>
 		<Class>
 			<id>1000</id>
@@ -124,6 +109,9 @@
 			<name>AI</name>
 		</Class>
 	</Classes>
+	
+	
+	
 	<ClassesCourses>
 		<ClassCourses>
 			<Class_id>1000</Class_id>
@@ -153,66 +141,43 @@
 	</ClassesCourses>
 	
 	
-	<students_Attendance>
 	
-		<attendace>
-			<date>2024-1-8</date>
-			<Courses_attendance>
-				<Course_attendance>
-					<course>1</course>
-					<students>
-						<student_id>201</student_id>
-						<student_id>1000</student_id>
-					</students>
-				</Course_attendance>
-				
-					<Course_attendance>
-					<course>2</course>
-					<students>
-						<student_id>202</student_id>
-					</students>
-				</Course_attendance>
-			</Courses_attendance>
-		</attendace>
-		
-		<attendace>
-			<date>2024-1-9</date>
-			<Courses_attendance>
-			
-				<Course_attendance>
-					<course>1</course>
-					<students>
-						<student_id>201</student_id>
-						<student_id>1000</student_id>
-					</students>
-				</Course_attendance>
-				
-					<Course_attendance>
-					<course>2</course>
-					<students>
-						<student_id>202</student_id>
-					</students>
-				</Course_attendance>
-				
-			</Courses_attendance>
-		</attendace>
-		
-		<attendace>
-			<date>2024-1-11</date>
-			<Courses_attendance>
-			
-				<Course_attendance>
-					<course>1</course>
-					<students>
-						<student_id>201</student_id>
-					</students>
-				</Course_attendance>
-				
-			</Courses_attendance>
-		</attendace>
-		
-		
-	</students_Attendance>
 	
+	<teachers_Courses>
+	
+		<teacherCourses>
+		
+			<teacher_id>101</teacher_id>
+			<teacher_courses>
+				<teacher_course_id>1</teacher_course_id>
+				<teacher_course_id>2</teacher_course_id>
+			</teacher_courses>
+			
+		</teacherCourses>
+		
+		
+		
+		<teacherCourses>
+		
+			<teacher_id>102</teacher_id>
+			<teacher_courses>
+				<teacher_course_id>1</teacher_course_id>
+			</teacher_courses>
+			
+		</teacherCourses>
+		
+		
+		<teacherCourses>
+			<teacher_id>103</teacher_id>
+			<teacher_courses>
+				<teacher_course_id>2</teacher_course_id>
+			</teacher_courses>
+		</teacherCourses>
+		
+		
+	</teachers_Courses>
+	
+	
+
 	
 </attendance_system>
