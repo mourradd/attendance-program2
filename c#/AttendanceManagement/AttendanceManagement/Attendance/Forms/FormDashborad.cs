@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using AttendanceManagement.Attendance.Forms.AdminDashborad;
 
 namespace AttendanceManagement.Attendance.Forms
 {
@@ -29,14 +21,6 @@ namespace AttendanceManagement.Attendance.Forms
             panelExpand.Hide();
             labelUsername.Text = Username;
             labelRole.Text = Role;
-
-            if(Role == "Teacher")
-            {
-                Dashborad.Hide();
-                buttonSetting.Hide();
-                buttonAddTeacher.Hide();
-                buttonAddCourse.Hide();
-            }
 
 
         }
@@ -62,6 +46,7 @@ namespace AttendanceManagement.Attendance.Forms
             WindowState = FormWindowState.Minimized;
         }
 
+
         private void timerDateAndTime_Tick(object sender, EventArgs e)
         {
             DateTime now = DateTime.Now;
@@ -70,54 +55,90 @@ namespace AttendanceManagement.Attendance.Forms
 
         private void MoveSidePanel(Control button)
         {
-            panelSide.Location = new Point(button.Location.X - button.Location.X, button.Location.Y - 180);
+            panelSide.Location = new Point(button.Location.X - button.Location.X, button.Location.Y - 208);
         }
+
 
         private void Dashborad_Click(object sender, EventArgs e)
         {
             MoveSidePanel(Dashborad);
+            userControlAdmin1.Visible = true;
+            userControlAddStudent1.Visible = false;
+            userControlAdmin1.Count();
         }
 
         private void buttonAttendance_Click(object sender, EventArgs e)
         {
             MoveSidePanel(buttonAttendance);
+            userControlAdmin1.Visible = false;
+            userControlAddStudent1.Visible = false;
+
         }
 
         private void buttonAddStudent_Click(object sender, EventArgs e)
         {
             MoveSidePanel(buttonAddStudent);
+            userControlAdmin1.Visible = false;
+            userControlAddStudent1.Visible=true;
+
         }
 
         private void buttonAddTeacher_Click(object sender, EventArgs e)
         {
             MoveSidePanel(buttonAddTeacher);
+            userControlAdmin1.Visible = false;
+            userControlAddStudent1.Visible = false;
+
 
         }
 
         private void buttonAddCourse_Click(object sender, EventArgs e)
         {
             MoveSidePanel(buttonAddCourse);
+            userControlAdmin1.Visible = false;
+            userControlAddStudent1.Visible = false;
+
+
 
         }
 
         private void buttonReport_Click(object sender, EventArgs e)
         {
             MoveSidePanel(buttonReport);
+            userControlAdmin1.Visible = false;
+            userControlAddStudent1.Visible = false;
+
 
         }
 
         private void buttonSetting_Click(object sender, EventArgs e)
         {
             MoveSidePanel(buttonSetting);
+            userControlAdmin1.Visible = false;
+            userControlAddStudent1.Visible = false;
+
+
 
         }
 
         private void pictureBoxExpand_Click(object sender, EventArgs e)
         {
-            if (panelExpand.Visible) {
-            panelExpand.Visible = false;
-            }else
+            if (panelExpand.Visible)
+            {
+                panelExpand.Visible = false;
+            }
+            else
                 panelExpand.Visible = true;
+        }
+
+        private void panelSide_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void userControlAdmin1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

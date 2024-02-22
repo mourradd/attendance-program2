@@ -8,8 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using AttendanceManagement.AllClasses;
-using static AttendanceManagement.Resources.UsersOfSystem;
-
+using AttendanceManagement.Attendance.Teacher;
+//using static AttendanceManagement.Resources.UsersOfSystem;
+using static AttendanceManagement.AllClasses.LoadUserFromXML;
 namespace AttendanceManagement.Attendance.Forms
 {
     public partial class FormLogin : Form
@@ -88,49 +89,69 @@ namespace AttendanceManagement.Attendance.Forms
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-            if (textBoxName.Text.Trim() != string.Empty && textBoxPassword.Text.Trim() != string.Empty)
+            string filepath = "C:\\Users\\lap0\\OneDrive\\Desktop\\Main\\attendance-program2\\c#\\AttendanceManagement\\AttendanceManagement\\xml\\SystemData.xml";
+
+            List<User> allUsers = LoadUsersFromXml(filepath);
+
+            string email = textBoxName.Text.Trim();
+            string password = textBoxPassword.Text.Trim();
+
+            if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password))
             {
-                foreach (var item in students)
+                MessageBox.Show("Please Enter email and password");
+                return;
+            }
+
+            foreach (var user in allUsers)
+            {
+                if (user.Email == email && user.Password == password)
                 {
-                    if (textBoxName.Text.Trim() == item.Email && textBoxPassword.Text.Trim() == item.PassWord)
+                    if (user.UserType == "admin")
                     {
-                        FormDashborad FD = new FormDashborad();
-                        FD.ShowDialog();
-
-
+                        OpenDashboardForm(user.Name, user.UserType);
+                    }
+                    else if (user.UserType == "teacher")
+                    {
+                        OpenTeacherDashboardForm(user.Name, user.UserType);
                     }
 
+                    ClearInputFields();
+                    return;
                 }
-                //if (textBoxName.Text.Trim() == "mohamed" && textBoxPassword.Text.Trim() == "123" || textBoxName.Text.Trim() == "ali" && textBoxPassword.Text.Trim() == "123")
-                //{
-
-                //    FormDashborad FD = new FormDashborad();
-
-
-                //    if (textBoxName.Text.Trim() == "mohamed")
-                //    {
-                //        FD.Role = "Admin";
-                //    }
-                //    else
-                //    {
-                //        FD.Role = "Teacher";
-                //    }
-                //    FD.Username = textBoxName.Text;
-                //    textBoxName.Clear();
-                //    textBoxPassword.Clear();
-                //    pictureBoxHide_Click(sender, e);
-                //    textBoxName.Focus();
-                //    pictureBoxError.Hide();
-                //    labelError.Hide();
-                //    FD.ShowDialog();
-
-                //}
-                //else
-                //{
-                //    pictureBoxError.Show();
-                //    labelError.Show();
-                //}
             }
+
+            ShowError();
         }
+
+        private void OpenDashboardForm(string username, string role)
+        {
+            FormDashborad dashboard = new FormDashborad();
+            dashboard.Username = username;
+            dashboard.Role = role;
+            dashboard.ShowDialog();
+        }
+
+        private void OpenTeacherDashboardForm(string username, string role)
+        {
+            TeacherDashborad teacherDashboard = new TeacherDashborad();
+            teacherDashboard.Username = username;
+            teacherDashboard.Role = role;
+            teacherDashboard.ShowDialog();
+        }
+
+        private void ClearInputFields()
+        {
+            textBoxName.Clear();
+            textBoxPassword.Clear();
+            textBoxPassword.UseSystemPasswordChar = true;
+            textBoxName.Focus();
+        }
+
+        private void ShowError()
+        {
+            pictureBoxError.Show();
+            labelError.Show();
+        }
+
     }
 }
