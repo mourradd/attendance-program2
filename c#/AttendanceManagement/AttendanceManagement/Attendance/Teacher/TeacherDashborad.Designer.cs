@@ -406,17 +406,17 @@
             // 
             // CourseName
             // 
-<<<<<<< HEAD:c#/AttendanceManagement/AttendanceManagement/Attendance/TeacherDashborad/TeacherDashborad.Designer.cs
-            label3.AutoSize = true;
-            label3.BackColor = Color.FromArgb(51, 154, 240);
-            label3.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
-            label3.ForeColor = Color.White;
-            label3.Location = new Point(490, 18);
-            label3.Name = "label3";
-            label3.Size = new Size(30, 19);
-            label3.TabIndex = 2;
-            label3.Text = "(?)";
-=======
+
+            //label3.AutoSize = true;
+            //label3.BackColor = Color.FromArgb(51, 154, 240);
+            //label3.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
+            //label3.ForeColor = Color.White;
+            //label3.Location = new Point(490, 18);
+            //label3.Name = "label3";
+            //label3.Size = new Size(30, 19);
+            //label3.TabIndex = 2;
+            //label3.Text = "(?)";
+
             CourseName.AutoSize = true;
             CourseName.BackColor = Color.FromArgb(51, 154, 240);
             CourseName.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
@@ -426,7 +426,6 @@
             CourseName.Size = new Size(37, 23);
             CourseName.TabIndex = 2;
             CourseName.Text = "(?)";
->>>>>>> dc5a80cc4b06398c3643758135c2acdee03b7283:c#/AttendanceManagement/AttendanceManagement/Attendance/Teacher/TeacherDashborad.Designer.cs
             // 
             // Course
             // 

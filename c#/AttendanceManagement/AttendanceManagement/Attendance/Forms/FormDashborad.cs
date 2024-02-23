@@ -79,7 +79,7 @@ namespace AttendanceManagement.Attendance.Forms
         {
             MoveSidePanel(buttonAddStudent);
             userControlAdmin1.Visible = false;
-            userControlAddStudent1.Visible=true;
+            userControlAddStudent1.Visible = true;
 
         }
 
@@ -137,6 +137,11 @@ namespace AttendanceManagement.Attendance.Forms
         }
 
         private void userControlAdmin1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void userControlAddStudent1_Load(object sender, EventArgs e)
         {
 
         }

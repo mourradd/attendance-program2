@@ -13,6 +13,9 @@
     <Compile Update="Attendance\Forms\FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Attendance\Student\StudentDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Attendance\Teacher\TeacherDashborad.cs">
       <SubType>Form</SubType>
     </Compile>
