@@ -60,6 +60,7 @@
             label4 = new Label();
             panel1 = new Panel();
             timerDateAndTime = new System.Windows.Forms.Timer(components);
+            panelTeacherPar = new Panel();
             ((System.ComponentModel.ISupportInitialize)pictureBoxExpand).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panelExpand.SuspendLayout();
@@ -406,27 +407,15 @@
             // 
             // CourseName
             // 
-<<<<<<< HEAD:c#/AttendanceManagement/AttendanceManagement/Attendance/TeacherDashborad/TeacherDashborad.Designer.cs
-            label3.AutoSize = true;
-            label3.BackColor = Color.FromArgb(51, 154, 240);
-            label3.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
-            label3.ForeColor = Color.White;
-            label3.Location = new Point(490, 18);
-            label3.Name = "label3";
-            label3.Size = new Size(30, 19);
-            label3.TabIndex = 2;
-            label3.Text = "(?)";
-=======
             CourseName.AutoSize = true;
             CourseName.BackColor = Color.FromArgb(51, 154, 240);
             CourseName.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
             CourseName.ForeColor = Color.White;
             CourseName.Location = new Point(490, 18);
             CourseName.Name = "CourseName";
-            CourseName.Size = new Size(37, 23);
+            CourseName.Size = new Size(30, 19);
             CourseName.TabIndex = 2;
             CourseName.Text = "(?)";
->>>>>>> dc5a80cc4b06398c3643758135c2acdee03b7283:c#/AttendanceManagement/AttendanceManagement/Attendance/Teacher/TeacherDashborad.Designer.cs
             // 
             // Course
             // 
@@ -507,12 +496,21 @@
             // 
             timerDateAndTime.Tick += timerDateAndTime_Tick_1;
             // 
+            // panelTeacherPar
+            // 
+            panelTeacherPar.Dock = DockStyle.Fill;
+            panelTeacherPar.Location = new Point(284, 175);
+            panelTeacherPar.Name = "panelTeacherPar";
+            panelTeacherPar.Size = new Size(916, 545);
+            panelTeacherPar.TabIndex = 3;
+            // 
             // TeacherDashborad
             // 
             AutoScaleDimensions = new SizeF(9F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1200, 720);
+            Controls.Add(panelTeacherPar);
             Controls.Add(panelBack);
             Controls.Add(panel1);
             Font = new Font("Century Gothic", 12F, FontStyle.Bold);
@@ -573,5 +571,7 @@
         private Label CourseName;
         private Label Course;
         private System.Windows.Forms.Timer timerDateAndTime;
+        private UserControlTeacherDashboard teacherDashboard1;
+        private Panel panelTeacherPar;
     }
 }

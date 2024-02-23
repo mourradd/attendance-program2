@@ -31,5 +31,10 @@ namespace AttendanceManagement.Attendance.Forms.AdminDashborad
         {
 
         }
+
+        private void tabPageAddStudent_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

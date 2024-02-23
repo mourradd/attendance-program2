@@ -128,10 +128,11 @@
             tabPageAddStudent.Location = new Point(4, 4);
             tabPageAddStudent.Name = "tabPageAddStudent";
             tabPageAddStudent.Padding = new Padding(3);
-            tabPageAddStudent.Size = new Size(934, 660);
+            tabPageAddStudent.Size = new Size(934, 664);
             tabPageAddStudent.TabIndex = 0;
             tabPageAddStudent.Text = "Add Student";
             tabPageAddStudent.UseVisualStyleBackColor = true;
+            tabPageAddStudent.Click += tabPageAddStudent_Click;
             // 
             // button1
             // 
@@ -161,7 +162,7 @@
             textBoxClass.BorderStyle = BorderStyle.None;
             textBoxClass.Location = new Point(112, 418);
             textBoxClass.Name = "textBoxClass";
-            textBoxClass.Size = new Size(270, 29);
+            textBoxClass.Size = new Size(270, 23);
             textBoxClass.TabIndex = 0;
             // 
             // label5
@@ -170,7 +171,7 @@
             label5.AutoSize = true;
             label5.Location = new Point(112, 387);
             label5.Name = "label5";
-            label5.Size = new Size(82, 28);
+            label5.Size = new Size(64, 23);
             label5.TabIndex = 0;
             label5.Text = "Class:";
             // 
@@ -189,7 +190,7 @@
             textBoxPassword.BorderStyle = BorderStyle.None;
             textBoxPassword.Location = new Point(562, 332);
             textBoxPassword.Name = "textBoxPassword";
-            textBoxPassword.Size = new Size(270, 29);
+            textBoxPassword.Size = new Size(270, 23);
             textBoxPassword.TabIndex = 0;
             // 
             // label4
@@ -198,7 +199,7 @@
             label4.AutoSize = true;
             label4.Location = new Point(562, 300);
             label4.Name = "label4";
-            label4.Size = new Size(128, 28);
+            label4.Size = new Size(101, 23);
             label4.TabIndex = 0;
             label4.Text = "Password:";
             // 
@@ -217,7 +218,7 @@
             textBoxEmail.BorderStyle = BorderStyle.None;
             textBoxEmail.Location = new Point(115, 331);
             textBoxEmail.Name = "textBoxEmail";
-            textBoxEmail.Size = new Size(270, 29);
+            textBoxEmail.Size = new Size(270, 23);
             textBoxEmail.TabIndex = 0;
             // 
             // label3
@@ -226,7 +227,7 @@
             label3.AutoSize = true;
             label3.Location = new Point(112, 300);
             label3.Name = "label3";
-            label3.Size = new Size(82, 28);
+            label3.Size = new Size(66, 23);
             label3.TabIndex = 0;
             label3.Text = "Email:";
             // 
@@ -245,7 +246,7 @@
             textBoxAge.BorderStyle = BorderStyle.None;
             textBoxAge.Location = new Point(562, 245);
             textBoxAge.Name = "textBoxAge";
-            textBoxAge.Size = new Size(270, 29);
+            textBoxAge.Size = new Size(270, 23);
             textBoxAge.TabIndex = 0;
             // 
             // label2
@@ -254,7 +255,7 @@
             label2.AutoSize = true;
             label2.Location = new Point(562, 214);
             label2.Name = "label2";
-            label2.Size = new Size(68, 28);
+            label2.Size = new Size(54, 23);
             label2.TabIndex = 0;
             label2.Text = "Age:";
             label2.Click += label2_Click;
@@ -274,7 +275,7 @@
             textBoxName.BorderStyle = BorderStyle.None;
             textBoxName.Location = new Point(115, 247);
             textBoxName.Name = "textBoxName";
-            textBoxName.Size = new Size(270, 29);
+            textBoxName.Size = new Size(270, 23);
             textBoxName.TabIndex = 0;
             textBoxName.TextChanged += textBoxName_TextChanged;
             // 
@@ -284,7 +285,7 @@
             label1.AutoSize = true;
             label1.Location = new Point(112, 216);
             label1.Name = "label1";
-            label1.Size = new Size(91, 28);
+            label1.Size = new Size(72, 23);
             label1.TabIndex = 0;
             label1.Text = "Name:";
             // 
@@ -294,7 +295,7 @@
             labelAddStudent.BackColor = Color.LightSkyBlue;
             labelAddStudent.Location = new Point(6, 5);
             labelAddStudent.Name = "labelAddStudent";
-            labelAddStudent.Size = new Size(154, 28);
+            labelAddStudent.Size = new Size(124, 23);
             labelAddStudent.TabIndex = 0;
             labelAddStudent.Text = "Add Student";
             // 
@@ -311,7 +312,7 @@
             tabPageSearchStudent.Location = new Point(4, 4);
             tabPageSearchStudent.Name = "tabPageSearchStudent";
             tabPageSearchStudent.Padding = new Padding(3);
-            tabPageSearchStudent.Size = new Size(934, 660);
+            tabPageSearchStudent.Size = new Size(934, 664);
             tabPageSearchStudent.TabIndex = 1;
             tabPageSearchStudent.Text = "Search Student";
             tabPageSearchStudent.UseVisualStyleBackColor = true;
@@ -322,7 +323,7 @@
             label9.Font = new Font("Century Gothic", 12F);
             label9.Location = new Point(884, 632);
             label9.Name = "label9";
-            label9.Size = new Size(35, 23);
+            label9.Size = new Size(31, 21);
             label9.TabIndex = 0;
             label9.Text = "(0)";
             // 
@@ -331,7 +332,7 @@
             label8.AutoSize = true;
             label8.Location = new Point(702, 629);
             label8.Name = "label8";
-            label8.Size = new Size(176, 28);
+            label8.Size = new Size(141, 23);
             label8.TabIndex = 0;
             label8.Text = "Total Students:";
             // 
@@ -403,7 +404,7 @@
             textBoxSearch.BorderStyle = BorderStyle.None;
             textBoxSearch.Location = new Point(151, 83);
             textBoxSearch.Name = "textBoxSearch";
-            textBoxSearch.Size = new Size(252, 29);
+            textBoxSearch.Size = new Size(252, 23);
             textBoxSearch.TabIndex = 0;
             // 
             // pictureBoxSearch
@@ -430,7 +431,7 @@
             label6.AutoSize = true;
             label6.Location = new Point(151, 50);
             label6.Name = "label6";
-            label6.Size = new Size(84, 28);
+            label6.Size = new Size(67, 23);
             label6.TabIndex = 0;
             label6.Text = "Name";
             // 
@@ -440,7 +441,7 @@
             label7.BackColor = Color.LightGreen;
             label7.Location = new Point(6, 5);
             label7.Name = "label7";
-            label7.Size = new Size(184, 28);
+            label7.Size = new Size(148, 23);
             label7.TabIndex = 0;
             label7.Text = "Search Student";
             // 
@@ -468,7 +469,7 @@
             tabPageUDStudent.Location = new Point(4, 4);
             tabPageUDStudent.Name = "tabPageUDStudent";
             tabPageUDStudent.Padding = new Padding(3);
-            tabPageUDStudent.Size = new Size(934, 660);
+            tabPageUDStudent.Size = new Size(934, 664);
             tabPageUDStudent.TabIndex = 2;
             tabPageUDStudent.Text = "Update and Delete";
             tabPageUDStudent.UseVisualStyleBackColor = true;
@@ -514,7 +515,7 @@
             textBoxClass1.BorderStyle = BorderStyle.None;
             textBoxClass1.Location = new Point(112, 422);
             textBoxClass1.Name = "textBoxClass1";
-            textBoxClass1.Size = new Size(270, 31);
+            textBoxClass1.Size = new Size(270, 25);
             textBoxClass1.TabIndex = 0;
             // 
             // label10
@@ -523,7 +524,7 @@
             label10.AutoSize = true;
             label10.Location = new Point(112, 391);
             label10.Name = "label10";
-            label10.Size = new Size(84, 29);
+            label10.Size = new Size(68, 23);
             label10.TabIndex = 0;
             label10.Text = "Class:";
             // 
@@ -542,7 +543,7 @@
             textBoxPassword1.BorderStyle = BorderStyle.None;
             textBoxPassword1.Location = new Point(562, 336);
             textBoxPassword1.Name = "textBoxPassword1";
-            textBoxPassword1.Size = new Size(270, 31);
+            textBoxPassword1.Size = new Size(270, 25);
             textBoxPassword1.TabIndex = 0;
             // 
             // label11
@@ -551,7 +552,7 @@
             label11.AutoSize = true;
             label11.Location = new Point(562, 304);
             label11.Name = "label11";
-            label11.Size = new Size(134, 29);
+            label11.Size = new Size(106, 23);
             label11.TabIndex = 0;
             label11.Text = "Password:";
             // 
@@ -570,7 +571,7 @@
             textBoxEmail1.BorderStyle = BorderStyle.None;
             textBoxEmail1.Location = new Point(115, 335);
             textBoxEmail1.Name = "textBoxEmail1";
-            textBoxEmail1.Size = new Size(270, 31);
+            textBoxEmail1.Size = new Size(270, 25);
             textBoxEmail1.TabIndex = 0;
             // 
             // label12
@@ -579,7 +580,7 @@
             label12.AutoSize = true;
             label12.Location = new Point(112, 304);
             label12.Name = "label12";
-            label12.Size = new Size(85, 29);
+            label12.Size = new Size(68, 23);
             label12.TabIndex = 0;
             label12.Text = "Email:";
             // 
@@ -598,7 +599,7 @@
             textBoxAge1.BorderStyle = BorderStyle.None;
             textBoxAge1.Location = new Point(562, 249);
             textBoxAge1.Name = "textBoxAge1";
-            textBoxAge1.Size = new Size(270, 31);
+            textBoxAge1.Size = new Size(270, 25);
             textBoxAge1.TabIndex = 0;
             // 
             // label13
@@ -607,7 +608,7 @@
             label13.AutoSize = true;
             label13.Location = new Point(562, 218);
             label13.Name = "label13";
-            label13.Size = new Size(71, 29);
+            label13.Size = new Size(57, 23);
             label13.TabIndex = 0;
             label13.Text = "Age:";
             // 
@@ -626,7 +627,7 @@
             textBoxName1.BorderStyle = BorderStyle.None;
             textBoxName1.Location = new Point(115, 251);
             textBoxName1.Name = "textBoxName1";
-            textBoxName1.Size = new Size(270, 31);
+            textBoxName1.Size = new Size(270, 25);
             textBoxName1.TabIndex = 0;
             // 
             // label14
@@ -635,7 +636,7 @@
             label14.AutoSize = true;
             label14.Location = new Point(112, 220);
             label14.Name = "label14";
-            label14.Size = new Size(94, 29);
+            label14.Size = new Size(76, 23);
             label14.TabIndex = 0;
             label14.Text = "Name:";
             // 
@@ -645,13 +646,13 @@
             label15.BackColor = Color.Bisque;
             label15.Location = new Point(6, 5);
             label15.Name = "label15";
-            label15.Size = new Size(201, 29);
+            label15.Size = new Size(159, 23);
             label15.TabIndex = 0;
             label15.Text = "Update Student";
             // 
             // UserControlAddStudent
             // 
-            AutoScaleDimensions = new SizeF(12F, 23F);
+            AutoScaleDimensions = new SizeF(9F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             Controls.Add(tabControlAddStudent);

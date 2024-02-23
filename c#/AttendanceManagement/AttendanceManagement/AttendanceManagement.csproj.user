@@ -13,8 +13,14 @@
     <Compile Update="Attendance\Forms\FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Attendance\Teacher\UserControlTeacherDashboard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="Attendance\Teacher\TeacherDashborad.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Attendance\Teacher\UserControlAttendance.cs">
+      <SubType>UserControl</SubType>
     </Compile>
   </ItemGroup>
 </Project>
