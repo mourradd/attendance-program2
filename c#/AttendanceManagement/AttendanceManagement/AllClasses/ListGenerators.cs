@@ -10,18 +10,25 @@ namespace AttendanceManagement.AllClasses
 {
     public static class StudentsListGenerators
     {
-        
         public static List<Student> students;
+        public static List<Class> AllClasses;
+        public static List<Attandance> Attandances;
 
-      //  public static readonly string filePath = "D:\\attendnce project\\attendance-program\\attendance-program2\\xml\\SystemData.xml";
+
+        //  public static readonly string filePath = "D:\\attendnce project\\attendance-program\\attendance-program2\\xml\\SystemData.xml";
         public static readonly string filePath = "D:\\PD(ITI Mansoura)\\C#\\project-attendance Management\\sprint2\\attendance-program2\\xml\\SystemData.xml";
+        public static readonly string AttandanceDataFileBath = "D:\\PD(ITI Mansoura)\\C#\\project-attendance Management\\sprint2\\attendance-program2\\xml\\AttendanceData.xml";
 
-    static StudentsListGenerators()
+        static StudentsListGenerators()
     {
         students = LoadStudentsFromXml(filePath);
+          //  AllClasses=new List<Class>();
+          Attandances= LoadStudentsAttendace(AttandanceDataFileBath);
+          
+
     }
 
-    private static List<Student> LoadStudentsFromXml(string filePath)
+    public static List<Student> LoadStudentsFromXml(string filePath)
     {
         List<Student> loadedStudents = new List<Student>();
 
@@ -56,7 +63,48 @@ namespace AttendanceManagement.AllClasses
     }
 
 
-    public static void AddNewStudent(Student newStudent)
+
+
+
+        public static List<Attandance> LoadStudentsAttendace(string filePath)
+        {
+            List<Attandance> StudentsAttendance = new List<Attandance>();
+
+            try
+            {
+                XDocument doc = XDocument.Load(filePath);
+
+                 StudentsAttendance = (
+                    from attendace in doc.Root.Elements("attendace")
+                    select new Attandance
+                    {
+                        DateOfDay = (string)attendace.Element("date"),
+                        CoursesAttendance = (
+                            from courseAttendance in attendace.Elements("Courses_attendance").Elements("Course_attendance")
+                            select new CourseAttendance
+                            {
+                                Class_id = (int)courseAttendance.Element("Class_id"),
+                                Course_id = (int)courseAttendance.Element("Course_id"),
+                                Students = (
+                                    from student in courseAttendance.Element("students").Elements("student_id")
+                                    select (int)student
+                                ).ToList()
+                            }
+                        ).ToList()
+                    }
+                ).ToList();
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error loading students from XML: " + ex.Message);
+            }
+
+            return StudentsAttendance;
+        }
+
+
+        public static void AddNewStudent(Student newStudent)
        {
         string xmlFilePath = filePath;
 

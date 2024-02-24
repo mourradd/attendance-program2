@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace AttendanceManagement.AllClasses
 {
-    public class Class :ParentOfClassesAndCourses
+    internal class StudentAttendance
     {
-        
     }
 }

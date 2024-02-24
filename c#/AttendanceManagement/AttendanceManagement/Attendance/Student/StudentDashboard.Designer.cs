@@ -1,5 +1,5 @@
-﻿using AttendanceManagement.Attendance.Forms.AdminDashborad;
-
+﻿using AttendanceManagement.AllClasses;
+using AttendanceManagement.Attendance.Forms.AdminDashborad;
 namespace AttendanceManagement.Attendance.Student
 {
     partial class StudentDashboard
@@ -32,6 +32,8 @@ namespace AttendanceManagement.Attendance.Student
         {
             components = new System.ComponentModel.Container();
             panel1 = new Panel();
+            panelSide1 = new Panel();
+            panelSide2 = new Panel();
             buttonReport = new Button();
             buttonAttendance = new Button();
             panel4 = new Panel();
@@ -40,7 +42,6 @@ namespace AttendanceManagement.Attendance.Student
             label2 = new Label();
             label1 = new Label();
             pictureBox1 = new PictureBox();
-            buttonSetting = new Button();
             panelBack = new Panel();
             panelExpand = new Panel();
             buttonLogOut = new Button();
@@ -55,6 +56,9 @@ namespace AttendanceManagement.Attendance.Student
             labelUsername = new Label();
             label4 = new Label();
             timerDateAndTime = new System.Windows.Forms.Timer(components);
+            dataGridView1 = new DataGridView();
+            attandanceBindingSource = new BindingSource(components);
+            dateOfDayDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             panel1.SuspendLayout();
             panel4.SuspendLayout();
             panel2.SuspendLayout();
@@ -64,11 +68,15 @@ namespace AttendanceManagement.Attendance.Student
             ((System.ComponentModel.ISupportInitialize)pictureBoxExpand).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panelTop.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)attandanceBindingSource).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(51, 154, 240);
+            panel1.Controls.Add(panelSide1);
+            panel1.Controls.Add(panelSide2);
             panel1.Controls.Add(buttonReport);
             panel1.Controls.Add(buttonAttendance);
             panel1.Controls.Add(panel4);
@@ -79,6 +87,24 @@ namespace AttendanceManagement.Attendance.Student
             panel1.Name = "panel1";
             panel1.Size = new Size(303, 645);
             panel1.TabIndex = 0;
+            // 
+            // panelSide1
+            // 
+            panelSide1.BackColor = Color.White;
+            panelSide1.Location = new Point(9, 211);
+            panelSide1.Margin = new Padding(4);
+            panelSide1.Name = "panelSide1";
+            panelSide1.Size = new Size(295, 10);
+            panelSide1.TabIndex = 3;
+            // 
+            // panelSide2
+            // 
+            panelSide2.BackColor = Color.White;
+            panelSide2.Location = new Point(9, 256);
+            panelSide2.Margin = new Padding(4);
+            panelSide2.Name = "panelSide2";
+            panelSide2.Size = new Size(295, 10);
+            panelSide2.TabIndex = 2;
             // 
             // buttonReport
             // 
@@ -151,13 +177,14 @@ namespace AttendanceManagement.Attendance.Student
             panel2.Name = "panel2";
             panel2.Size = new Size(303, 211);
             panel2.TabIndex = 0;
+            panel2.Paint += panel2_Paint;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Century Gothic", 11F, FontStyle.Bold);
             label2.ForeColor = SystemColors.ButtonHighlight;
-            label2.Location = new Point(113, 164);
+            label2.Location = new Point(118, 152);
             label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
             label2.Size = new Size(59, 18);
@@ -169,7 +196,7 @@ namespace AttendanceManagement.Attendance.Student
             label1.AutoSize = true;
             label1.Font = new Font("Century Gothic", 11F, FontStyle.Bold);
             label1.ForeColor = SystemColors.ButtonHighlight;
-            label1.Location = new Point(27, 135);
+            label1.Location = new Point(51, 120);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
             label1.Size = new Size(199, 18);
@@ -179,33 +206,13 @@ namespace AttendanceManagement.Attendance.Student
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.user;
-            pictureBox1.Location = new Point(94, 7);
+            pictureBox1.Location = new Point(38, 27);
             pictureBox1.Margin = new Padding(4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(108, 102);
+            pictureBox1.Size = new Size(225, 105);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
-            // 
-            // buttonSetting
-            // 
-            buttonSetting.Cursor = Cursors.Hand;
-            buttonSetting.Dock = DockStyle.Top;
-            buttonSetting.FlatAppearance.BorderSize = 0;
-            buttonSetting.FlatStyle = FlatStyle.Flat;
-            buttonSetting.ForeColor = Color.White;
-            buttonSetting.Image = Properties.Resources.browser_settings1;
-            buttonSetting.ImageAlign = ContentAlignment.MiddleLeft;
-            buttonSetting.Location = new Point(9, 266);
-            buttonSetting.Margin = new Padding(4);
-            buttonSetting.Name = "buttonSetting";
-            buttonSetting.Size = new Size(294, 55);
-            buttonSetting.TabIndex = 0;
-            buttonSetting.Text = "     Setting";
-            buttonSetting.TextAlign = ContentAlignment.MiddleLeft;
-            buttonSetting.TextImageRelation = TextImageRelation.ImageBeforeText;
-            buttonSetting.UseVisualStyleBackColor = true;
-            buttonSetting.Click += buttonSetting_Click;
             // 
             // panelBack
             // 
@@ -393,12 +400,36 @@ namespace AttendanceManagement.Attendance.Student
             // 
             timerDateAndTime.Tick += timerDateAndTime_Tick;
             // 
+            // dataGridView1
+            // 
+            dataGridView1.AutoGenerateColumns = false;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { dateOfDayDataGridViewTextBoxColumn });
+            dataGridView1.DataSource = StudentsListGenerators.Attandances;
+            dataGridView1.Dock = DockStyle.Fill;
+            dataGridView1.Location = new Point(303, 211);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new Size(697, 434);
+            dataGridView1.TabIndex = 1;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            // 
+            // attandanceBindingSource
+            // 
+            attandanceBindingSource.DataSource = typeof(AllClasses.Attandance);
+            // 
+            // dateOfDayDataGridViewTextBoxColumn
+            // 
+            dateOfDayDataGridViewTextBoxColumn.DataPropertyName = "DateOfDay";
+            dateOfDayDataGridViewTextBoxColumn.HeaderText = "DateOfDay";
+            dateOfDayDataGridViewTextBoxColumn.Name = "dateOfDayDataGridViewTextBoxColumn";
+            // 
             // StudentDashboard
             // 
             AutoScaleDimensions = new SizeF(11F, 23F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1000, 645);
+            Controls.Add(dataGridView1);
             Controls.Add(panelBack);
             Controls.Add(panel1);
             Font = new Font("Century Gothic", 14F, FontStyle.Bold);
@@ -407,6 +438,7 @@ namespace AttendanceManagement.Attendance.Student
             Name = "StudentDashboard";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Dashborad";
+            WindowState = FormWindowState.Maximized;
             Load += FormDashborad_Load;
             panel1.ResumeLayout(false);
             panel4.ResumeLayout(false);
@@ -420,6 +452,8 @@ namespace AttendanceManagement.Attendance.Student
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             panelTop.ResumeLayout(false);
             panelTop.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)attandanceBindingSource).EndInit();
             ResumeLayout(false);
         }
 
@@ -447,12 +481,16 @@ namespace AttendanceManagement.Attendance.Student
         private Button buttonAttendance;
         private Button buttonReport;
 
-        private Button buttonSetting;
 
 
         private System.Windows.Forms.Timer timerDateAndTime;
 
         #endregion
 
+        private Panel panelSide2;
+        private Panel panelSide1;
+        private DataGridView dataGridView1;
+        private DataGridViewTextBoxColumn dateOfDayDataGridViewTextBoxColumn;
+        private BindingSource attandanceBindingSource;
     }
 }

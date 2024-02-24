@@ -8,6 +8,6 @@ namespace AttendanceManagement.AllClasses
 {
     public class Courses :ParentOfClassesAndCourses
     {
-       
+        public string Details { get; set; }
     }
 }

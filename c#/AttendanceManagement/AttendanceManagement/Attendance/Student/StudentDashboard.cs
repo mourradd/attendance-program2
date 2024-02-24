@@ -1,4 +1,6 @@
 ﻿using AttendanceManagement.Attendance.Forms.AdminDashborad;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,32 +24,22 @@ namespace AttendanceManagement.Attendance.Student
             timerDateAndTime.Start();
 
         }
-
-        private void buttonSetting_Click(object sender, EventArgs e)
+        private void MoveSidePanel(Control button)
         {
-            //MoveSidePanel(buttonSetting);
-            //userControlAdmin1.Visible = false;
-            //userControlAddStudent1.Visible = false;
-
-
-
+            panelSide.Location = new Point(button.Location.X - button.Location.X, button.Location.Y - 211);
+            panelSide1.Location = new Point(button.Location.X, button.Location.Y);
+            panelSide2.Location = new Point(button.Location.X, button.Location.Y + 45);
         }
+
+
 
         private void buttonAttendance_Click(object sender, EventArgs e)
         {
-            //////MoveSidePanel(buttonAttendance);
-            //////userControlAdmin1.Visible = false;
-            //////userControlAddStudent1.Visible = false;
+            MoveSidePanel(buttonAttendance);
 
         }
 
-        private void Dashborad_Click(object sender, EventArgs e)
-        {
-            //MoveSidePanel(Dashborad);
-            //userControlAdmin1.Visible = true;
-            //userControlAddStudent1.Visible = false;
-            //userControlAdmin1.Count();
-        }
+
 
 
         private void panel3_Paint(object sender, PaintEventArgs e)
@@ -107,9 +99,82 @@ namespace AttendanceManagement.Attendance.Student
         }
         private void buttonReport_Click(object sender, EventArgs e)
         {
-            //MoveSidePanel(buttonReport);
-            //userControlAdmin1.Visible = false;
-            //userControlAddStudent1.Visible = false;
+            MoveSidePanel(buttonReport);
+            if(dataGridView1.Rows.Count > 1)
+            {
+                SaveFileDialog saveFileDialog = new SaveFileDialog() ;
+                saveFileDialog.Filter = "PDF (*.pdf)|*.pdf";
+                saveFileDialog.FileName = "Result.pdf";
+                bool ErrorMassage= false;
+                if (saveFileDialog.ShowDialog()==DialogResult.OK)
+                {
+                    if (File.Exists(saveFileDialog.FileName))
+                    {
+                        try
+                        {
+                            File.Delete(saveFileDialog.FileName);
+
+                        }
+                        catch (Exception ex)
+                        {
+                            ErrorMassage = true;
+                            MessageBox.Show("Unable to write data in the disk" + ex.Message);
+
+                        }
+                    }
+                    if (!ErrorMassage)
+                    {
+
+                        try
+                        {
+                            PdfPTable PTable = new PdfPTable(dataGridView1.Columns.Count);
+                            PTable.DefaultCell.Padding = 2;
+                            PTable.WidthPercentage = 100;
+                            PTable.HorizontalAlignment = Element.ALIGN_LEFT;
+                        
+                        foreach (DataGridViewColumn  column in dataGridView1.Columns) 
+                            {
+                                PdfPCell pCell= new PdfPCell(new Phrase(column.HeaderText));
+                                PTable.AddCell(pCell);
+                            
+                            }
+                        foreach (DataGridViewRow viewRow in dataGridView1.Rows)
+                            {
+                                foreach (DataGridViewCell dCell in viewRow.Cells)
+                                {
+                                    PTable.AddCell(dCell.Value.ToString());
+                                }
+                            }
+
+
+                        using(FileStream fileStream=new FileStream(saveFileDialog.FileName, FileMode.Create)) 
+                            {
+                            Document document = new Document(PageSize.A4,8f,16f,16f,8f);
+                                PdfWriter.GetInstance(document, fileStream);
+
+                                document.Open();
+                                document.Add(PTable);
+                                document.Close();   
+                                fileStream.Close(); 
+
+                            }
+                            MessageBox.Show("Data saved successfully","info");
+                        }
+                        catch (Exception ex) 
+                        {
+
+                            MessageBox.Show("An error happend while saving the data" + ex.Message);
+                        }
+                    }
+                }
+
+
+
+            }
+            else
+            {
+                MessageBox.Show("No data is here to save ", "Info");
+            }
 
 
         }
@@ -119,6 +184,20 @@ namespace AttendanceManagement.Attendance.Student
 
         }
 
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 
 

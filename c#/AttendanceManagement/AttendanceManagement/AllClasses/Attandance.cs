@@ -6,8 +6,15 @@ using System.Threading.Tasks;
 
 namespace AttendanceManagement.AllClasses
 {
-    public class Class :ParentOfClassesAndCourses
+    public  class Attandance
     {
-        
+
+        public string DateOfDay { get; set; }
+        public List<CourseAttendance> CoursesAttendance { get; set; }
+
+
+
     }
+
+    
 }
