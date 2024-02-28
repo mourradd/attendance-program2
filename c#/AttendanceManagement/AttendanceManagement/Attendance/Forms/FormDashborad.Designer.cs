@@ -57,9 +57,13 @@
             labelUsername = new Label();
             label4 = new Label();
             timerDateAndTime = new System.Windows.Forms.Timer(components);
+<<<<<<< HEAD
             userControlAdmin1 = new AdminDashborad.UserControlAdmin();
             userControlAddStudent1 = new AdminDashborad.UserControlAddStudent();
             userControlAddTeacher1 = new AdminDashborad.UserControlAddTeacher();
+=======
+            userControlAdmin2 = new AdminDashborad.UserControlAdmin();
+>>>>>>> 429a97916d41c14a77dc8343b24b21d18bb48d54
             panel1.SuspendLayout();
             panel4.SuspendLayout();
             panel2.SuspendLayout();
@@ -269,7 +273,7 @@
             label2.Location = new Point(113, 164);
             label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(75, 23);
+            label2.Size = new Size(59, 18);
             label2.TabIndex = 0;
             label2.Text = "System";
             // 
@@ -281,7 +285,7 @@
             label1.Location = new Point(27, 135);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(251, 23);
+            label1.Size = new Size(199, 18);
             label1.TabIndex = 0;
             label1.Text = "Attendance Management";
             // 
@@ -309,6 +313,7 @@
             panelBack.Name = "panelBack";
             panelBack.Size = new Size(1097, 211);
             panelBack.TabIndex = 0;
+            panelBack.Paint += panelBack_Paint;
             // 
             // panelExpand
             // 
@@ -408,7 +413,7 @@
             labelTime.Location = new Point(28, 27);
             labelTime.Margin = new Padding(4, 0, 4, 0);
             labelTime.Name = "labelTime";
-            labelTime.Size = new Size(35, 23);
+            labelTime.Size = new Size(28, 18);
             labelTime.TabIndex = 0;
             labelTime.Text = "(?)";
             // 
@@ -435,7 +440,7 @@
             labelRole.Location = new Point(187, 66);
             labelRole.Margin = new Padding(4, 0, 4, 0);
             labelRole.Name = "labelRole";
-            labelRole.Size = new Size(37, 23);
+            labelRole.Size = new Size(30, 19);
             labelRole.TabIndex = 0;
             labelRole.Text = "(?)";
             // 
@@ -448,7 +453,7 @@
             label6.Location = new Point(58, 67);
             label6.Margin = new Padding(4, 0, 4, 0);
             label6.Name = "label6";
-            label6.Size = new Size(59, 23);
+            label6.Size = new Size(46, 19);
             label6.TabIndex = 0;
             label6.Text = "Role:";
             // 
@@ -461,7 +466,7 @@
             labelUsername.Location = new Point(187, 26);
             labelUsername.Margin = new Padding(4, 0, 4, 0);
             labelUsername.Name = "labelUsername";
-            labelUsername.Size = new Size(37, 23);
+            labelUsername.Size = new Size(30, 19);
             labelUsername.TabIndex = 0;
             labelUsername.Text = "(?)";
             // 
@@ -474,7 +479,7 @@
             label4.Location = new Point(58, 26);
             label4.Margin = new Padding(4, 0, 4, 0);
             label4.Name = "label4";
-            label4.Size = new Size(110, 23);
+            label4.Size = new Size(87, 19);
             label4.TabIndex = 0;
             label4.Text = "Welcome:";
             // 
@@ -482,6 +487,7 @@
             // 
             timerDateAndTime.Tick += timerDateAndTime_Tick;
             // 
+<<<<<<< HEAD
             // userControlAdmin1
             // 
             userControlAdmin1.BackColor = Color.White;
@@ -503,6 +509,17 @@
             userControlAddStudent1.Size = new Size(1097, 634);
             userControlAddStudent1.TabIndex = 0;
             userControlAddStudent1.Visible = false;
+=======
+            // userControlAdmin2
+            // 
+            userControlAdmin2.BackColor = Color.White;
+            userControlAdmin2.Dock = DockStyle.Fill;
+            userControlAdmin2.Font = new Font("Century Gothic", 15F);
+            userControlAdmin2.Location = new Point(303, 211);
+            userControlAdmin2.Name = "userControlAdmin2";
+            userControlAdmin2.Size = new Size(1097, 634);
+            userControlAdmin2.TabIndex = 1;
+>>>>>>> 429a97916d41c14a77dc8343b24b21d18bb48d54
             // 
             // userControlAddTeacher1
             // 
@@ -517,13 +534,17 @@
             // 
             // FormDashborad
             // 
-            AutoScaleDimensions = new SizeF(14F, 27F);
+            AutoScaleDimensions = new SizeF(11F, 23F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1400, 845);
+<<<<<<< HEAD
             Controls.Add(userControlAddTeacher1);
             Controls.Add(userControlAddStudent1);
             Controls.Add(userControlAdmin1);
+=======
+            Controls.Add(userControlAdmin2);
+>>>>>>> 429a97916d41c14a77dc8343b24b21d18bb48d54
             Controls.Add(panelBack);
             Controls.Add(panel1);
             Font = new Font("Century Gothic", 14F, FontStyle.Bold);
@@ -581,6 +602,10 @@
         private System.Windows.Forms.Timer timerDateAndTime;
         private AdminDashborad.UserControlAdmin userControlAdmin1;
         private AdminDashborad.UserControlAddStudent userControlAddStudent1;
+<<<<<<< HEAD
         private AdminDashborad.UserControlAddTeacher userControlAddTeacher1;
+=======
+        private AdminDashborad.UserControlAdmin userControlAdmin2;
+>>>>>>> 429a97916d41c14a77dc8343b24b21d18bb48d54
     }
 }

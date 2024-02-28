@@ -33,12 +33,16 @@ namespace AttendanceManagement.Attendance.Teacher
             panelSide.Location = new Point(button.Location.X - button.Location.X, button.Location.Y - 180);
         }
 
-       
+
 
 
         private void Dashborad_Click(object sender, EventArgs e)
         {
             MoveSidePanel(Dashborad);
+            panelTeacherPar.Controls.Clear();
+            UserControlTeacherDashboard TeacherDashboard = new UserControlTeacherDashboard();
+            panelTeacherPar.Controls.Add(TeacherDashboard);
+
         }
 
         private void panel7_Paint(object sender, PaintEventArgs e)
@@ -91,11 +95,16 @@ namespace AttendanceManagement.Attendance.Teacher
         private void buttonAttendance_Click(object sender, EventArgs e)
         {
             MoveSidePanel(buttonAttendance);
+            panelTeacherPar.Controls.Clear();
+            UserControlAttendance USattendance = new UserControlAttendance();
+            panelTeacherPar.Controls.Add(USattendance);
+
         }
 
         private void buttonReport_Click(object sender, EventArgs e)
         {
             MoveSidePanel(buttonReport);
+            
         }
 
 
@@ -105,5 +114,10 @@ namespace AttendanceManagement.Attendance.Teacher
             labelTime.Text = now.ToString();
 
         }
+<<<<<<< HEAD
+=======
+
+       
+>>>>>>> 429a97916d41c14a77dc8343b24b21d18bb48d54
     }
 }
