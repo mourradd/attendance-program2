@@ -6,11 +6,13 @@ using System.Threading.Tasks;
 
 namespace AttendanceManagement.AllClasses
 {
-    internal class Teacher : User
+    public class Teacher : User
     {
         public override string ToString()
         {
             return $"{Id}:{Name}:{Age}:{DateOfJoining}:{Email}:{Password}";
         }
+
+
     }
 }

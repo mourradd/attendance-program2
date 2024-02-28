@@ -4,6 +4,9 @@
     <Compile Update="Attendance\Forms\AdminDashborad\UserControlAddStudent.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="Attendance\Forms\AdminDashborad\UserControlAddTeacher.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="Attendance\Forms\AdminDashborad\UserControlAdmin.cs">
       <SubType>UserControl</SubType>
     </Compile>

@@ -98,15 +98,12 @@ namespace AttendanceManagement.Attendance.Teacher
             MoveSidePanel(buttonReport);
         }
 
-<<<<<<< HEAD:c#/AttendanceManagement/AttendanceManagement/Attendance/TeacherDashborad/TeacherDashborad.cs
-        
-=======
+
         private void timerDateAndTime_Tick_1(object sender, EventArgs e)
         {
             DateTime now = DateTime.Now;
             labelTime.Text = now.ToString();
 
         }
->>>>>>> dc5a80cc4b06398c3643758135c2acdee03b7283:c#/AttendanceManagement/AttendanceManagement/Attendance/Teacher/TeacherDashborad.cs
     }
 }

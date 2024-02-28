@@ -17,11 +17,13 @@ namespace AttendanceManagement.AllClasses
         public string Email { get; set; }
         public string Password { get; set; }
         public string UserType { get; set; } // type of user
+
+        public string ClassID { get; set; }
     }
 
     public class Students : User
     {
-        public string ClassID { get; set; }
+        //public string ClassID { get; set; }
     }
 
     public class Teachers : User

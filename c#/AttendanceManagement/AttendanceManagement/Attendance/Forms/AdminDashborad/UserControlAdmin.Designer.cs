@@ -56,7 +56,7 @@
             panelTotalTeachers.Controls.Add(label1);
             panelTotalTeachers.Controls.Add(pictureBox1);
             panelTotalTeachers.Location = new Point(172, 124);
-            panelTotalTeachers.Margin = new Padding(4, 4, 4, 4);
+            panelTotalTeachers.Margin = new Padding(4);
             panelTotalTeachers.Name = "panelTotalTeachers";
             panelTotalTeachers.Size = new Size(389, 189);
             panelTotalTeachers.TabIndex = 0;
@@ -89,7 +89,7 @@
             pictureBox1.Anchor = AnchorStyles.None;
             pictureBox1.Image = Properties.Resources.teacher5;
             pictureBox1.Location = new Point(22, 24);
-            pictureBox1.Margin = new Padding(4, 4, 4, 4);
+            pictureBox1.Margin = new Padding(4);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(90, 89);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
@@ -104,7 +104,7 @@
             panel1.Controls.Add(label3);
             panel1.Controls.Add(pictureBox2);
             panel1.Location = new Point(856, 124);
-            panel1.Margin = new Padding(4, 4, 4, 4);
+            panel1.Margin = new Padding(4);
             panel1.Name = "panel1";
             panel1.Size = new Size(389, 189);
             panel1.TabIndex = 0;
@@ -137,7 +137,7 @@
             pictureBox2.Anchor = AnchorStyles.None;
             pictureBox2.Image = Properties.Resources.reading2;
             pictureBox2.Location = new Point(22, 24);
-            pictureBox2.Margin = new Padding(4, 4, 4, 4);
+            pictureBox2.Margin = new Padding(4);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(90, 89);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
@@ -152,7 +152,7 @@
             panel2.Controls.Add(label5);
             panel2.Controls.Add(pictureBox3);
             panel2.Location = new Point(513, 434);
-            panel2.Margin = new Padding(4, 4, 4, 4);
+            panel2.Margin = new Padding(4);
             panel2.Name = "panel2";
             panel2.Size = new Size(389, 189);
             panel2.TabIndex = 0;
@@ -185,7 +185,7 @@
             pictureBox3.Anchor = AnchorStyles.None;
             pictureBox3.Image = Properties.Resources.homework1;
             pictureBox3.Location = new Point(22, 24);
-            pictureBox3.Margin = new Padding(4, 4, 4, 4);
+            pictureBox3.Margin = new Padding(4);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(90, 89);
             pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
@@ -201,7 +201,7 @@
             Controls.Add(panel1);
             Controls.Add(panelTotalTeachers);
             Font = new Font("Century Gothic", 15F);
-            Margin = new Padding(4, 4, 4, 4);
+            Margin = new Padding(4);
             Name = "UserControlAdmin";
             Size = new Size(1413, 740);
             Load += UserControlAdmin_Load;

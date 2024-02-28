@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AttendanceManagement.AllClasses;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,19 +13,26 @@ namespace AttendanceManagement.Attendance.Forms.AdminDashborad
 {
     public partial class UserControlAdmin : UserControl
     {
+
         public UserControlAdmin()
         {
             InitializeComponent();
         }
 
-        public void Count()
-        {
-
-        }
+        //public void Count()
+        //{
+        //    labelTotalStudents.Text
+        //}
 
         private void UserControlAdmin_Load(object sender, EventArgs e)
         {
-            Count();
+            // استدعاء الدالة لحساب عدد الطلاب
+            int numberOfStudents = StudentsListGenerators.CountStudents();
+            int numberOfTeachers=TeacherListGenerators.CountTeachers();
+           labelTotalStudents.Text = numberOfStudents.ToString();
+            labelTotalTeachers.Text = numberOfTeachers.ToString();
         }
+
+
     }
 }

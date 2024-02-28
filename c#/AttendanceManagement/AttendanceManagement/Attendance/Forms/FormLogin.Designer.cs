@@ -32,7 +32,6 @@
             pictureBoxClose = new PictureBox();
             pictureBoxMinimize = new PictureBox();
             groupBox1 = new GroupBox();
-            labelFP = new Label();
             labelError = new Label();
             pictureBoxError = new PictureBox();
             textBoxPassword = new TextBox();
@@ -88,7 +87,6 @@
             // groupBox1
             // 
             groupBox1.Anchor = AnchorStyles.None;
-            groupBox1.Controls.Add(labelFP);
             groupBox1.Controls.Add(labelError);
             groupBox1.Controls.Add(pictureBoxError);
             groupBox1.Controls.Add(textBoxPassword);
@@ -106,24 +104,12 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Please Login First";
             // 
-            // labelFP
-            // 
-            labelFP.AutoSize = true;
-            labelFP.Cursor = Cursors.Hand;
-            labelFP.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold);
-            labelFP.ForeColor = Color.FromArgb(51, 154, 240);
-            labelFP.Location = new Point(159, 257);
-            labelFP.Name = "labelFP";
-            labelFP.Size = new Size(152, 19);
-            labelFP.TabIndex = 8;
-            labelFP.Text = "Forgot Password?";
-            // 
             // labelError
             // 
             labelError.AutoSize = true;
             labelError.Font = new Font("Century Gothic", 9F);
             labelError.ForeColor = Color.FromArgb(234, 73, 73);
-            labelError.Location = new Point(126, 222);
+            labelError.Location = new Point(123, 240);
             labelError.Name = "labelError";
             labelError.Size = new Size(230, 20);
             labelError.TabIndex = 7;
@@ -133,7 +119,7 @@
             // 
             pictureBoxError.Cursor = Cursors.Hand;
             pictureBoxError.Image = Properties.Resources.icons8_important_32;
-            pictureBoxError.Location = new Point(92, 221);
+            pictureBoxError.Location = new Point(92, 235);
             pictureBoxError.Name = "pictureBoxError";
             pictureBoxError.Size = new Size(25, 25);
             pictureBoxError.SizeMode = PictureBoxSizeMode.Zoom;
@@ -166,7 +152,7 @@
             buttonLogin.FlatAppearance.BorderSize = 0;
             buttonLogin.FlatStyle = FlatStyle.Flat;
             buttonLogin.ForeColor = Color.White;
-            buttonLogin.Location = new Point(159, 294);
+            buttonLogin.Location = new Point(151, 292);
             buttonLogin.Name = "buttonLogin";
             buttonLogin.Size = new Size(150, 38);
             buttonLogin.TabIndex = 2;
@@ -324,7 +310,6 @@
         private Label label2;
         private Label labelError;
         private PictureBox pictureBoxError;
-        private Label labelFP;
         private Panel panel1;
         private PictureBox pictureBoxPicture;
         private Label label3;
