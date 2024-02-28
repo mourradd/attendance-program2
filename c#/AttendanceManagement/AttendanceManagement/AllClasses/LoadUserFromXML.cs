@@ -24,7 +24,7 @@ namespace AttendanceManagement.AllClasses
                 var students = (
                     from usersElement in doc.Root.Elements("users")
                     from student in usersElement.Elements("students").Elements("student")
-                    select new Students
+                    select new Student
                     {
                         Id = (int)student.Element("id"),
                         Name = (string)student.Element("name"),
@@ -32,7 +32,7 @@ namespace AttendanceManagement.AllClasses
                         DateOfJoining = (string)student.Element("date_of_joining"),
                         Email = (string)student.Element("email"),
                         Password = (string)student.Element("password"),
-                        ClassID = (string)student.Element("class_id"),
+                        ClassID = (int)student.Element("class_id"),
                         UserType="student"
                     }
                 ).ToList();

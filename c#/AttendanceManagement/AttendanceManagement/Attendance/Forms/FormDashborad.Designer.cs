@@ -59,6 +59,8 @@
             timerDateAndTime = new System.Windows.Forms.Timer(components);
             userControlAdmin1 = new AdminDashborad.UserControlAdmin();
             userControlAddStudent1 = new AdminDashborad.UserControlAddStudent();
+            userControlAddTeacher1 = new AdminDashborad.UserControlAddTeacher();
+
             panel1.SuspendLayout();
             panel4.SuspendLayout();
             panel2.SuspendLayout();
@@ -486,21 +488,19 @@
             // 
             userControlAdmin1.BackColor = Color.White;
             userControlAdmin1.Dock = DockStyle.Fill;
-            userControlAdmin1.Font = new Font("Century Gothic", 10F);
+            userControlAdmin1.Font = new Font("Century Gothic", 15F);
             userControlAdmin1.Location = new Point(303, 211);
             userControlAdmin1.Margin = new Padding(4);
             userControlAdmin1.Name = "userControlAdmin1";
             userControlAdmin1.Size = new Size(1097, 634);
             userControlAdmin1.TabIndex = 0;
-            userControlAdmin1.Load += userControlAdmin1_Load;
             // 
             // userControlAddStudent1
             // 
             userControlAddStudent1.BackColor = Color.White;
             userControlAddStudent1.Dock = DockStyle.Fill;
-            userControlAddStudent1.Font = new Font("Century Gothic", 15F, FontStyle.Bold);
+            userControlAddStudent1.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
             userControlAddStudent1.Location = new Point(303, 211);
-            userControlAddStudent1.Margin = new Padding(4);
             userControlAddStudent1.Name = "userControlAddStudent1";
             userControlAddStudent1.Size = new Size(1097, 634);
             userControlAddStudent1.TabIndex = 0;
@@ -513,8 +513,11 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1400, 845);
+            Controls.Add(userControlAddTeacher1);
             Controls.Add(userControlAddStudent1);
             Controls.Add(userControlAdmin1);
+
+            Controls.Add(userControlAdmin2);
             Controls.Add(panelBack);
             Controls.Add(panel1);
             Font = new Font("Century Gothic", 14F, FontStyle.Bold);
@@ -571,5 +574,8 @@
         private System.Windows.Forms.Timer timerDateAndTime;
         private AdminDashborad.UserControlAdmin userControlAdmin1;
         private AdminDashborad.UserControlAddStudent userControlAddStudent1;
+        private AdminDashborad.UserControlAddTeacher userControlAddTeacher1;
+
+        private AdminDashborad.UserControlAdmin userControlAdmin2;
     }
 }

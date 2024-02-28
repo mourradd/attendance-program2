@@ -63,3 +63,6 @@ D:\PD(ITI Mansoura)\C#\project-attendance Management\sprint2\attendance-program2
 D:\PD(ITI Mansoura)\C#\project-attendance Management\sprint2\attendance-program2\c#\AttendanceManagement\AttendanceManagement\obj\Debug\net8.0-windows\AttendanceManagement.genruntimeconfig.cache
 D:\PD(ITI Mansoura)\C#\project-attendance Management\sprint2\attendance-program2\c#\AttendanceManagement\AttendanceManagement\bin\Debug\net8.0-windows\AttendanceManagement.pdb
 D:\PD(ITI Mansoura)\C#\project-attendance Management\sprint2\attendance-program2\c#\AttendanceManagement\AttendanceManagement\obj\Debug\net8.0-windows\ref\AttendanceManagement.dll
+D:\PD(ITI Mansoura)\C#\project-attendance Management\sprint2\attendance-program2\c#\AttendanceManagement\AttendanceManagement\obj\Debug\net8.0-windows\AttendanceManagement.Attendance.Forms.AdminDashborad.UserControlAddTeacher.resources
+D:\PD(ITI Mansoura)\C#\project-attendance Management\sprint2\attendance-program2\c#\AttendanceManagement\AttendanceManagement\obj\Debug\net8.0-windows\AttendanceManagement.Attendance.Teacher.UserControlAttendance.resources
+D:\PD(ITI Mansoura)\C#\project-attendance Management\sprint2\attendance-program2\c#\AttendanceManagement\AttendanceManagement\obj\Debug\net8.0-windows\AttendanceManagement.Attendance.Teacher.UserControlTeacherDashboard.resources
