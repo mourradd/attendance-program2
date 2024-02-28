@@ -31,6 +31,8 @@ namespace AttendanceManagement.Attendance.Student
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             panel1 = new Panel();
             panelSide1 = new Panel();
             panelSide2 = new Panel();
@@ -51,14 +53,27 @@ namespace AttendanceManagement.Attendance.Student
             pictureBox2 = new PictureBox();
             labelTime = new Label();
             panelTop = new Panel();
+            JoiningDateValue = new Label();
+            JoiningDate = new Label();
+            ClassValue = new Label();
+            label8 = new Label();
             labelRole = new Label();
             label6 = new Label();
             labelUsername = new Label();
             label4 = new Label();
             timerDateAndTime = new System.Windows.Forms.Timer(components);
             dataGridView1 = new DataGridView();
+            courseNameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            numberOfLectureDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            numberOfAttendendLecDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            numberOfAbsentedLecDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            studentCourseAttandanceBindingSource = new BindingSource(components);
             attandanceBindingSource = new BindingSource(components);
-            dateOfDayDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            textBox1 = new TextBox();
+            comboBox2 = new ComboBox();
+            label5 = new Label();
+            courseAttendanceBindingSource = new BindingSource(components);
+            label3 = new Label();
             panel1.SuspendLayout();
             panel4.SuspendLayout();
             panel2.SuspendLayout();
@@ -69,7 +84,9 @@ namespace AttendanceManagement.Attendance.Student
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)studentCourseAttandanceBindingSource).BeginInit();
             ((System.ComponentModel.ISupportInitialize)attandanceBindingSource).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)courseAttendanceBindingSource).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -85,7 +102,7 @@ namespace AttendanceManagement.Attendance.Student
             panel1.Location = new Point(0, 0);
             panel1.Margin = new Padding(4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(303, 645);
+            panel1.Size = new Size(295, 708);
             panel1.TabIndex = 0;
             // 
             // panelSide1
@@ -118,7 +135,7 @@ namespace AttendanceManagement.Attendance.Student
             buttonReport.Location = new Point(9, 266);
             buttonReport.Margin = new Padding(4);
             buttonReport.Name = "buttonReport";
-            buttonReport.Size = new Size(294, 55);
+            buttonReport.Size = new Size(286, 55);
             buttonReport.TabIndex = 0;
             buttonReport.Text = "     Reports";
             buttonReport.TextAlign = ContentAlignment.MiddleLeft;
@@ -138,7 +155,7 @@ namespace AttendanceManagement.Attendance.Student
             buttonAttendance.Location = new Point(9, 211);
             buttonAttendance.Margin = new Padding(4);
             buttonAttendance.Name = "buttonAttendance";
-            buttonAttendance.Size = new Size(294, 55);
+            buttonAttendance.Size = new Size(286, 55);
             buttonAttendance.TabIndex = 0;
             buttonAttendance.Text = "     Attendance";
             buttonAttendance.TextAlign = ContentAlignment.MiddleLeft;
@@ -153,7 +170,7 @@ namespace AttendanceManagement.Attendance.Student
             panel4.Location = new Point(0, 211);
             panel4.Margin = new Padding(4);
             panel4.Name = "panel4";
-            panel4.Size = new Size(9, 434);
+            panel4.Size = new Size(9, 497);
             panel4.TabIndex = 0;
             // 
             // panelSide
@@ -164,7 +181,6 @@ namespace AttendanceManagement.Attendance.Student
             panelSide.Name = "panelSide";
             panelSide.Size = new Size(9, 55);
             panelSide.TabIndex = 1;
-            panelSide.Paint += panelSide_Paint;
             // 
             // panel2
             // 
@@ -175,9 +191,8 @@ namespace AttendanceManagement.Attendance.Student
             panel2.Location = new Point(0, 0);
             panel2.Margin = new Padding(4);
             panel2.Name = "panel2";
-            panel2.Size = new Size(303, 211);
+            panel2.Size = new Size(295, 211);
             panel2.TabIndex = 0;
-            panel2.Paint += panel2_Paint;
             // 
             // label2
             // 
@@ -222,10 +237,11 @@ namespace AttendanceManagement.Attendance.Student
             panelBack.Controls.Add(labelTime);
             panelBack.Controls.Add(panelTop);
             panelBack.Dock = DockStyle.Top;
-            panelBack.Location = new Point(303, 0);
+            panelBack.ForeColor = SystemColors.ActiveCaptionText;
+            panelBack.Location = new Point(295, 0);
             panelBack.Margin = new Padding(4);
             panelBack.Name = "panelBack";
-            panelBack.Size = new Size(697, 211);
+            panelBack.Size = new Size(932, 211);
             panelBack.TabIndex = 0;
             // 
             // panelExpand
@@ -236,7 +252,7 @@ namespace AttendanceManagement.Attendance.Student
             panelExpand.Controls.Add(buttonLogOut);
             panelExpand.Controls.Add(buttonMinimize);
             panelExpand.Controls.Add(panel3);
-            panelExpand.Location = new Point(527, 85);
+            panelExpand.Location = new Point(791, 85);
             panelExpand.Margin = new Padding(4);
             panelExpand.Name = "panelExpand";
             panelExpand.Size = new Size(124, 112);
@@ -297,7 +313,7 @@ namespace AttendanceManagement.Attendance.Student
             pictureBoxExpand.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             pictureBoxExpand.Cursor = Cursors.Hand;
             pictureBoxExpand.Image = Properties.Resources.down_arrow;
-            pictureBoxExpand.Location = new Point(527, 59);
+            pictureBoxExpand.Location = new Point(791, 59);
             pictureBoxExpand.Margin = new Padding(4);
             pictureBoxExpand.Name = "pictureBoxExpand";
             pictureBoxExpand.Size = new Size(31, 28);
@@ -310,7 +326,7 @@ namespace AttendanceManagement.Attendance.Student
             // 
             pictureBox2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             pictureBox2.Image = Properties.Resources.icons8_account_1001;
-            pictureBox2.Location = new Point(450, 19);
+            pictureBox2.Location = new Point(714, 19);
             pictureBox2.Margin = new Padding(4);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(70, 68);
@@ -333,6 +349,10 @@ namespace AttendanceManagement.Attendance.Student
             // panelTop
             // 
             panelTop.BackColor = Color.FromArgb(51, 154, 240);
+            panelTop.Controls.Add(JoiningDateValue);
+            panelTop.Controls.Add(JoiningDate);
+            panelTop.Controls.Add(ClassValue);
+            panelTop.Controls.Add(label8);
             panelTop.Controls.Add(labelRole);
             panelTop.Controls.Add(label6);
             panelTop.Controls.Add(labelUsername);
@@ -341,16 +361,68 @@ namespace AttendanceManagement.Attendance.Student
             panelTop.Location = new Point(0, 94);
             panelTop.Margin = new Padding(4);
             panelTop.Name = "panelTop";
-            panelTop.Size = new Size(697, 117);
+            panelTop.Size = new Size(932, 117);
             panelTop.TabIndex = 0;
+            // 
+            // JoiningDateValue
+            // 
+            JoiningDateValue.AutoSize = true;
+            JoiningDateValue.BackColor = Color.FromArgb(51, 154, 240);
+            JoiningDateValue.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
+            JoiningDateValue.ForeColor = SystemColors.ActiveCaptionText;
+            JoiningDateValue.Location = new Point(665, 70);
+            JoiningDateValue.Margin = new Padding(4, 0, 4, 0);
+            JoiningDateValue.Name = "JoiningDateValue";
+            JoiningDateValue.Size = new Size(30, 19);
+            JoiningDateValue.TabIndex = 3;
+            JoiningDateValue.Text = "(?)";
+            // 
+            // JoiningDate
+            // 
+            JoiningDate.AutoSize = true;
+            JoiningDate.BackColor = Color.FromArgb(51, 154, 240);
+            JoiningDate.Font = new Font("Century Gothic", 18F, FontStyle.Bold);
+            JoiningDate.ForeColor = Color.White;
+            JoiningDate.Location = new Point(510, 63);
+            JoiningDate.Margin = new Padding(4, 0, 4, 0);
+            JoiningDate.Name = "JoiningDate";
+            JoiningDate.Size = new Size(128, 28);
+            JoiningDate.TabIndex = 4;
+            JoiningDate.Text = "Join Date:";
+            // 
+            // ClassValue
+            // 
+            ClassValue.AutoSize = true;
+            ClassValue.BackColor = Color.FromArgb(51, 154, 240);
+            ClassValue.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
+            ClassValue.ForeColor = SystemColors.ActiveCaptionText;
+            ClassValue.Location = new Point(665, 33);
+            ClassValue.Margin = new Padding(4, 0, 4, 0);
+            ClassValue.Name = "ClassValue";
+            ClassValue.Size = new Size(30, 19);
+            ClassValue.TabIndex = 1;
+            ClassValue.Text = "(?)";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.BackColor = Color.FromArgb(51, 154, 240);
+            label8.Font = new Font("Century Gothic", 18F, FontStyle.Bold);
+            label8.ForeColor = Color.White;
+            label8.Location = new Point(507, 26);
+            label8.Margin = new Padding(4, 0, 4, 0);
+            label8.Name = "label8";
+            label8.Size = new Size(131, 28);
+            label8.TabIndex = 2;
+            label8.Text = "Class       :";
             // 
             // labelRole
             // 
             labelRole.AutoSize = true;
             labelRole.BackColor = Color.FromArgb(51, 154, 240);
             labelRole.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
-            labelRole.ForeColor = Color.White;
-            labelRole.Location = new Point(187, 66);
+            labelRole.ForeColor = SystemColors.ActiveCaptionText;
+            labelRole.Location = new Point(219, 65);
             labelRole.Margin = new Padding(4, 0, 4, 0);
             labelRole.Name = "labelRole";
             labelRole.Size = new Size(30, 19);
@@ -361,22 +433,22 @@ namespace AttendanceManagement.Attendance.Student
             // 
             label6.AutoSize = true;
             label6.BackColor = Color.FromArgb(51, 154, 240);
-            label6.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
+            label6.Font = new Font("Century Gothic", 18F, FontStyle.Bold);
             label6.ForeColor = Color.White;
-            label6.Location = new Point(58, 67);
+            label6.Location = new Point(58, 63);
             label6.Margin = new Padding(4, 0, 4, 0);
             label6.Name = "label6";
-            label6.Size = new Size(46, 19);
+            label6.Size = new Size(132, 28);
             label6.TabIndex = 0;
-            label6.Text = "Role:";
+            label6.Text = "Role         :";
             // 
             // labelUsername
             // 
             labelUsername.AutoSize = true;
             labelUsername.BackColor = Color.FromArgb(51, 154, 240);
             labelUsername.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
-            labelUsername.ForeColor = Color.White;
-            labelUsername.Location = new Point(187, 26);
+            labelUsername.ForeColor = SystemColors.ActiveCaptionText;
+            labelUsername.Location = new Point(219, 26);
             labelUsername.Margin = new Padding(4, 0, 4, 0);
             labelUsername.Name = "labelUsername";
             labelUsername.Size = new Size(30, 19);
@@ -387,12 +459,12 @@ namespace AttendanceManagement.Attendance.Student
             // 
             label4.AutoSize = true;
             label4.BackColor = Color.FromArgb(51, 154, 240);
-            label4.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
+            label4.Font = new Font("Century Gothic", 18F, FontStyle.Bold);
             label4.ForeColor = Color.White;
             label4.Location = new Point(58, 26);
             label4.Margin = new Padding(4, 0, 4, 0);
             label4.Name = "label4";
-            label4.Size = new Size(87, 19);
+            label4.Size = new Size(130, 28);
             label4.TabIndex = 0;
             label4.Text = "Welcome:";
             // 
@@ -402,33 +474,123 @@ namespace AttendanceManagement.Attendance.Student
             // 
             // dataGridView1
             // 
+            dataGridView1.AllowUserToOrderColumns = true;
             dataGridView1.AutoGenerateColumns = false;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.BackgroundColor = SystemColors.Window;
+            dataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { dateOfDayDataGridViewTextBoxColumn });
-            dataGridView1.DataSource = StudentsListGenerators.Attandances;
-            dataGridView1.Dock = DockStyle.Fill;
-            dataGridView1.Location = new Point(303, 211);
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { courseNameDataGridViewTextBoxColumn, numberOfLectureDataGridViewTextBoxColumn, numberOfAttendendLecDataGridViewTextBoxColumn, numberOfAbsentedLecDataGridViewTextBoxColumn });
+            dataGridView1.DataSource = studentCourseAttandanceBindingSource;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Window;
+            dataGridViewCellStyle1.Font = new Font("Century Gothic", 14F, FontStyle.Bold);
+            dataGridViewCellStyle1.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridView1.Dock = DockStyle.Bottom;
+            dataGridView1.Location = new Point(295, 273);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(697, 434);
+            dataGridView1.ReadOnly = true;
+            dataGridView1.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = SystemColors.Control;
+            dataGridViewCellStyle2.Font = new Font("Century Gothic", 14F, FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridView1.RowHeadersWidth = 4;
+            dataGridView1.Size = new Size(932, 435);
             dataGridView1.TabIndex = 1;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            // 
+            // courseNameDataGridViewTextBoxColumn
+            // 
+            courseNameDataGridViewTextBoxColumn.DataPropertyName = "CourseName";
+            courseNameDataGridViewTextBoxColumn.HeaderText = "CourseName";
+            courseNameDataGridViewTextBoxColumn.Name = "courseNameDataGridViewTextBoxColumn";
+            courseNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // numberOfLectureDataGridViewTextBoxColumn
+            // 
+            numberOfLectureDataGridViewTextBoxColumn.DataPropertyName = "NumberOfLecture";
+            numberOfLectureDataGridViewTextBoxColumn.HeaderText = "Lecture Count";
+            numberOfLectureDataGridViewTextBoxColumn.Name = "numberOfLectureDataGridViewTextBoxColumn";
+            numberOfLectureDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // numberOfAttendendLecDataGridViewTextBoxColumn
+            // 
+            numberOfAttendendLecDataGridViewTextBoxColumn.DataPropertyName = "NumberOfAttendendLec";
+            numberOfAttendendLecDataGridViewTextBoxColumn.HeaderText = "Attendend Count";
+            numberOfAttendendLecDataGridViewTextBoxColumn.Name = "numberOfAttendendLecDataGridViewTextBoxColumn";
+            numberOfAttendendLecDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // numberOfAbsentedLecDataGridViewTextBoxColumn
+            // 
+            numberOfAbsentedLecDataGridViewTextBoxColumn.DataPropertyName = "NumberOfAbsentedLec";
+            numberOfAbsentedLecDataGridViewTextBoxColumn.HeaderText = "Absented Count";
+            numberOfAbsentedLecDataGridViewTextBoxColumn.Name = "numberOfAbsentedLecDataGridViewTextBoxColumn";
+            numberOfAbsentedLecDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // studentCourseAttandanceBindingSource
+            // 
+            studentCourseAttandanceBindingSource.DataSource = typeof(StudentCourseAttandance);
             // 
             // attandanceBindingSource
             // 
-            attandanceBindingSource.DataSource = typeof(AllClasses.Attandance);
+            attandanceBindingSource.DataSource = typeof(Attandance);
             // 
-            // dateOfDayDataGridViewTextBoxColumn
+            // textBox1
             // 
-            dateOfDayDataGridViewTextBoxColumn.DataPropertyName = "DateOfDay";
-            dateOfDayDataGridViewTextBoxColumn.HeaderText = "DateOfDay";
-            dateOfDayDataGridViewTextBoxColumn.Name = "dateOfDayDataGridViewTextBoxColumn";
+            textBox1.Location = new Point(885, 228);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(303, 30);
+            textBox1.TabIndex = 2;
+            // 
+            // comboBox2
+            // 
+            comboBox2.FormattingEnabled = true;
+            comboBox2.Location = new Point(411, 228);
+            comboBox2.Name = "comboBox2";
+            comboBox2.Size = new Size(213, 31);
+            comboBox2.TabIndex = 4;
+            comboBox2.SelectedIndexChanged += comboBox2_SelectedIndexChanged_1;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(323, 227);
+            label5.Name = "label5";
+            label5.Size = new Size(82, 23);
+            label5.TabIndex = 6;
+            label5.Text = "Courses";
+            // 
+            // courseAttendanceBindingSource
+            // 
+            courseAttendanceBindingSource.DataSource = typeof(CourseAttendance);
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(805, 231);
+            label3.Name = "label3";
+            label3.Size = new Size(74, 23);
+            label3.TabIndex = 7;
+            label3.Text = "Search";
             // 
             // StudentDashboard
             // 
             AutoScaleDimensions = new SizeF(11F, 23F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1000, 645);
+            ClientSize = new Size(1227, 708);
+            Controls.Add(label3);
+            Controls.Add(label5);
+            Controls.Add(comboBox2);
+            Controls.Add(textBox1);
             Controls.Add(dataGridView1);
             Controls.Add(panelBack);
             Controls.Add(panel1);
@@ -453,8 +615,11 @@ namespace AttendanceManagement.Attendance.Student
             panelTop.ResumeLayout(false);
             panelTop.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)studentCourseAttandanceBindingSource).EndInit();
             ((System.ComponentModel.ISupportInitialize)attandanceBindingSource).EndInit();
+            ((System.ComponentModel.ISupportInitialize)courseAttendanceBindingSource).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         private Panel panel1;
@@ -492,5 +657,19 @@ namespace AttendanceManagement.Attendance.Student
         private DataGridView dataGridView1;
         private DataGridViewTextBoxColumn dateOfDayDataGridViewTextBoxColumn;
         private BindingSource attandanceBindingSource;
+        private TextBox textBox1;
+        private ComboBox comboBox2;
+        private Label label5;
+        private BindingSource studentCourseAttandanceBindingSource;
+        private BindingSource courseAttendanceBindingSource;
+        private DataGridViewTextBoxColumn courseNameDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn numberOfLectureDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn numberOfAttendendLecDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn numberOfAbsentedLecDataGridViewTextBoxColumn;
+        private Label ClassValue;
+        private Label label8;
+        private Label JoiningDateValue;
+        private Label JoiningDate;
+        private Label label3;
     }
 }

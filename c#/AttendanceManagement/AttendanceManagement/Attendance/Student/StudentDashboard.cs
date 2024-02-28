@@ -1,4 +1,5 @@
-﻿using AttendanceManagement.Attendance.Forms.AdminDashborad;
+﻿using AttendanceManagement.AllClasses;
+using AttendanceManagement.Attendance.Forms.AdminDashborad;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
 using System;
@@ -11,17 +12,96 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using static AttendanceManagement.AllClasses.StudentsListGenerators;
 
 namespace AttendanceManagement.Attendance.Student
 {
     public partial class StudentDashboard : Form
     {
-        public string Username, Role;
+        public string Username, Role, ClassName, JoinDate;
+        public static AttendanceManagement.AllClasses.Student Student = StudentsListGenerators.students.FirstOrDefault((x) => x.Email == "ali@gmail.com" && x.Password == "AliEmad123#");
 
         public StudentDashboard()
         {
             InitializeComponent();
             timerDateAndTime.Start();
+
+
+
+            var Student = StudentsListGenerators.students.FirstOrDefault((x) => x.Email == "ali@gmail.com" && x.Password == "AliEmad123#");
+            Username = Student.Name;
+            Role = "Student";
+            ClassName = StudentsListGenerators.AllClasses.FirstOrDefault(x => x.ID == Student.ClassID).Name;
+            JoinDate = Student.DateOfJoining;
+            List<Courses> comboBoxValues = new List<Courses>();
+            comboBoxValues.Add(new Courses { ID = 0, Name = "All Courses", });
+            foreach (var item in LoadClassCourses(Student.ClassID, StudentsListGenerators.Courses))
+            {
+                comboBoxValues.Add(item);
+
+            }
+            comboBox2.DataSource = comboBoxValues;
+
+
+
+
+
+
+            #region Student Attendance Data
+
+            //var StudentClassAttendancesRawData=StudentsListGenerators.Attandances.Where(attend=> attend.CoursesAttendance.Any(y=>y.Class_id==Student.ClassID)).ToList();
+            //List<StudentCourseAttandance> studentAttendances= new List<StudentCourseAttandance>();
+            // foreach (var DayAttendace in StudentClassAttendancesRawData)
+            // {
+            //     bool findFlag = false;
+
+            //     foreach (var courseAttendance in DayAttendace.CoursesAttendance)
+            //     {
+
+            //         if(courseAttendance.Class_id==Student.ClassID)
+            //         {
+            //             var courseName= StudentsListGenerators.Courses.FirstOrDefault(x => x.ID == courseAttendance.Course_id).Name;
+            //             if (studentAttendances.Count > 0)
+            //             {
+            //                 foreach (var studentAttend in studentAttendances)
+            //                 {
+            //                     if (studentAttend.CourseName == courseName)
+            //                     {
+            //                         if (courseAttendance.Students.Any(studentID => studentID == Student.Id)) studentAttend.NumberOfAttendendLec++;
+            //                         else studentAttend.NumberOfAbsentedLec++;
+            //                         findFlag = true;
+            //                         break;
+            //                     }
+
+
+            //                 }
+            //                 if (findFlag) { continue; }
+            //             }
+
+
+
+
+            //             StudentCourseAttandance studentCourseAtt=new StudentCourseAttandance();
+            //             studentCourseAtt.CourseName = courseName;
+            //             studentCourseAtt.NumberOfLecture = Classes_Courses.FirstOrDefault(x => x.ClassId == Student.ClassID).Courses.FirstOrDefault(course => course.CourseId == courseAttendance.Course_id).LectureNumber;
+            //             if (courseAttendance.Students.Any(studentID => studentID == Student.Id)) studentCourseAtt.NumberOfAttendendLec++; 
+            //             else studentCourseAtt.NumberOfAbsentedLec++;
+
+            //             studentAttendances.Add(studentCourseAtt);
+            //             break;
+
+            //         }
+
+            //     }
+
+
+            // }
+            #endregion
+
+
+            dataGridView1.DataSource = LoadAllStudentCoursesAttendance(Student);
+
+
 
         }
         private void MoveSidePanel(Control button)
@@ -94,19 +174,21 @@ namespace AttendanceManagement.Attendance.Student
             panelExpand.Hide();
             labelUsername.Text = Username;
             labelRole.Text = Role;
+            ClassValue.Text = ClassName;
+            JoiningDateValue.Text = JoinDate;
 
 
         }
         private void buttonReport_Click(object sender, EventArgs e)
         {
             MoveSidePanel(buttonReport);
-            if(dataGridView1.Rows.Count > 1)
+            if (dataGridView1.Rows.Count > 0)
             {
-                SaveFileDialog saveFileDialog = new SaveFileDialog() ;
+                SaveFileDialog saveFileDialog = new SaveFileDialog();
                 saveFileDialog.Filter = "PDF (*.pdf)|*.pdf";
                 saveFileDialog.FileName = "Result.pdf";
-                bool ErrorMassage= false;
-                if (saveFileDialog.ShowDialog()==DialogResult.OK)
+                bool ErrorMassage = false;
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
                 {
                     if (File.Exists(saveFileDialog.FileName))
                     {
@@ -131,14 +213,14 @@ namespace AttendanceManagement.Attendance.Student
                             PTable.DefaultCell.Padding = 2;
                             PTable.WidthPercentage = 100;
                             PTable.HorizontalAlignment = Element.ALIGN_LEFT;
-                        
-                        foreach (DataGridViewColumn  column in dataGridView1.Columns) 
+
+                            foreach (DataGridViewColumn column in dataGridView1.Columns)
                             {
-                                PdfPCell pCell= new PdfPCell(new Phrase(column.HeaderText));
+                                PdfPCell pCell = new PdfPCell(new Phrase(column.HeaderText));
                                 PTable.AddCell(pCell);
-                            
+
                             }
-                        foreach (DataGridViewRow viewRow in dataGridView1.Rows)
+                            foreach (DataGridViewRow viewRow in dataGridView1.Rows)
                             {
                                 foreach (DataGridViewCell dCell in viewRow.Cells)
                                 {
@@ -147,20 +229,20 @@ namespace AttendanceManagement.Attendance.Student
                             }
 
 
-                        using(FileStream fileStream=new FileStream(saveFileDialog.FileName, FileMode.Create)) 
+                            using (FileStream fileStream = new FileStream(saveFileDialog.FileName, FileMode.Create))
                             {
-                            Document document = new Document(PageSize.A4,8f,16f,16f,8f);
+                                Document document = new Document(PageSize.A4, 8f, 16f, 16f, 8f);
                                 PdfWriter.GetInstance(document, fileStream);
 
                                 document.Open();
                                 document.Add(PTable);
-                                document.Close();   
-                                fileStream.Close(); 
+                                document.Close();
+                                fileStream.Close();
 
                             }
-                            MessageBox.Show("Data saved successfully","info");
+                            MessageBox.Show("Data saved successfully", "info");
                         }
-                        catch (Exception ex) 
+                        catch (Exception ex)
                         {
 
                             MessageBox.Show("An error happend while saving the data" + ex.Message);
@@ -179,23 +261,65 @@ namespace AttendanceManagement.Attendance.Student
 
         }
 
-        private void panelSide_Paint(object sender, PaintEventArgs e)
+
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
+            //ParentOfClassesAndCourses p = comboBox1.SelectedItem as ParentOfClassesAndCourses;
+            ////textBox1.Text = p.ID.ToString();
+            //var classCourse = Classes_Courses.FirstOrDefault(x => x.ClassId == p.ID);
+
+
+            //#region generate the dropdownList valuse for each different Class
+
+            //var ComboBox2Values = new List<Courses>();
+            //if (classCourse != null)
+            //{
+            //    foreach (var coursID in classCourse.Courses)
+            //    {
+            //        foreach (var Course in StudentsListGenerators.Courses)
+            //        {
+            //            if (coursID.CourseId == Course.ID)
+            //            {
+            //                ComboBox2Values.Add(Course);
+            //                break;
+
+            //            }
+            //        }
+
+
+
+            //    }
+            //    textBox1.Text = Classes_Courses.FirstOrDefault(x => x.ClassId == p.ID).ToString();
+
+            //}
+            //else
+            //{
+            //    ComboBox2Values = [];
+            //    comboBox2.Text = "";
+
+            //}
+
+            //comboBox2.DataSource = ComboBox2Values;
+            //#endregion
+
 
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
+        private void comboBox2_SelectedIndexChanged_1(object sender, EventArgs e)
         {
 
-        }
+            ParentOfClassesAndCourses selectedValue = comboBox2.SelectedItem as ParentOfClassesAndCourses;
 
-        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
 
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
+            if (selectedValue.ID > 0)
+            {
+                dataGridView1.DataSource = LoadAllStudentCoursesAttendance(Student).Where(attend => attend.CourseName == selectedValue.Name).ToList();
+            }
+            else
+            {
+                dataGridView1.DataSource = LoadAllStudentCoursesAttendance(Student);
+            }
 
         }
     }

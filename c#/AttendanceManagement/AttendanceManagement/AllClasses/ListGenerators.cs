@@ -13,7 +13,8 @@ namespace AttendanceManagement.AllClasses
         public static List<Student> students;
         public static List<Class> AllClasses;
         public static List<Attandance> Attandances;
-
+        public static List<Courses> Courses;
+        public static List<Class_Courses> Classes_Courses;
 
         //  public static readonly string filePath = "D:\\attendnce project\\attendance-program\\attendance-program2\\xml\\SystemData.xml";
         public static readonly string filePath = "D:\\PD(ITI Mansoura)\\C#\\project-attendance Management\\sprint2\\attendance-program2\\xml\\SystemData.xml";
@@ -22,9 +23,10 @@ namespace AttendanceManagement.AllClasses
         static StudentsListGenerators()
     {
         students = LoadStudentsFromXml(filePath);
-          //  AllClasses=new List<Class>();
+            AllClasses=LoadClasses(filePath);
           Attandances= LoadStudentsAttendace(AttandanceDataFileBath);
-          
+          Courses=LoadCourses(filePath);
+            Classes_Courses=LoadClassesCourses(filePath);
 
     }
 
@@ -49,7 +51,8 @@ namespace AttendanceManagement.AllClasses
                     //DateOfJoining = (DateTime)student.Element("date_of_joining"),
                     Email = (string)student.Element("email"),
                     Password = (string)student.Element("password"),
-                    ClassID = (string)student.Element("class_id")
+                    ClassID = (int)student.Element("class_id"),
+                    DateOfJoining=(string)student.Element("date_of_joining")
                 }
             ).ToList();
 
@@ -104,6 +107,199 @@ namespace AttendanceManagement.AllClasses
         }
 
 
+
+        public static List<Class> LoadClasses(string filePath) {
+        List<Class> classes = new List<Class>();
+
+
+            try
+            {
+                XDocument doc = XDocument.Load(filePath);
+
+
+                classes = (
+                    from El in doc.Root.Elements("Classes").Elements("Class")
+
+                    select new Class
+                    {
+                        ID = (int)El.Element("id"),
+                        Name = (string)El.Element("name")
+                        
+                    }
+                ).ToList();
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error loading students from XML: " + ex.Message);
+            }
+
+
+            return classes;
+        
+        }
+
+
+        public static List<Courses> LoadCourses(string filePath)
+        {
+            List<Courses> courses = new List<Courses>();
+
+
+            try
+            {
+                XDocument doc = XDocument.Load(filePath);
+
+
+                courses = (
+                    from El in doc.Root.Elements("courses").Elements("course")
+
+                    select new Courses
+                    {
+                        ID = (int)El.Element("id"),
+                        Name = (string)El.Element("name"),
+                        Details=(string)El.Element("details")
+
+                    }
+                ).ToList();
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error loading students from XML: " + ex.Message);
+            }
+
+
+            return courses;
+
+        }
+
+        public static List<Class_Courses> LoadClassesCourses(string filePath)
+        {
+            List<Class_Courses> classes_Courses = new List<Class_Courses>();
+
+
+            try
+            {
+                XDocument doc = XDocument.Load(filePath);
+
+                classes_Courses = (
+                   from ClassesCourses in doc.Root.Elements("ClassesCourses").Elements("ClassCourses")
+                   select new Class_Courses
+                   {
+                       ClassId = (int)ClassesCourses.Element("Class_id"),
+                       Courses = (
+                           from course in ClassesCourses.Elements("courses").Elements("course")
+                           select new Class_Course
+                           {
+                               CourseId = (int)course.Element("id"),
+                               TeacherId = (int)course.Element("teacher_id"),
+                               LectureNumber=(int)course.Element("Lecture_number")
+                           }
+                       ).ToList()
+                   }
+               ).ToList();
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error loading students from XML: " + ex.Message);
+            }
+
+
+            return classes_Courses;
+
+
+        }
+
+        public static List<Courses>LoadClassCourses(int ClassId,List<Courses> AllCourse)
+        {
+
+            var classCourses = Classes_Courses.FirstOrDefault(x => x.ClassId == ClassId);
+
+            var coursesList = new List<Courses>();
+            if (classCourses != null)
+            {
+                foreach (var coursID in classCourses.Courses)
+                {
+                    foreach (var Course in StudentsListGenerators.Courses)
+                    {
+                        if (coursID.CourseId == Course.ID)
+                        {
+                            coursesList.Add(Course);
+                            break;
+
+                        }
+                    }
+
+
+
+                }
+
+            }
+            else
+            {
+                coursesList = [];
+
+            }
+            return coursesList;
+
+
+        }
+
+        public static List<StudentCourseAttandance> LoadAllStudentCoursesAttendance(Student std)
+        {
+            var StudentClassAttendancesRawData = StudentsListGenerators.Attandances.Where(attend => attend.CoursesAttendance.Any(y => y.Class_id == std.ClassID)).ToList();
+            List<StudentCourseAttandance> studentAttendances = new List<StudentCourseAttandance>();
+            foreach (var DayAttendace in StudentClassAttendancesRawData)
+            {
+                bool findFlag = false;
+
+                foreach (var courseAttendance in DayAttendace.CoursesAttendance)
+                {
+
+                    if (courseAttendance.Class_id == std.ClassID)
+                    {
+                        var courseName = StudentsListGenerators.Courses.FirstOrDefault(x => x.ID == courseAttendance.Course_id).Name;
+                        if (studentAttendances.Count > 0)
+                        {
+                            foreach (var studentAttend in studentAttendances)
+                            {
+                                if (studentAttend.CourseName == courseName)
+                                {
+                                    if (courseAttendance.Students.Any(studentID => studentID == std.Id)) studentAttend.NumberOfAttendendLec++;
+                                    else studentAttend.NumberOfAbsentedLec++;
+                                    findFlag = true;
+                                    break;
+                                }
+
+
+                            }
+                            if (findFlag) { continue; }
+                        }
+
+
+
+
+                        StudentCourseAttandance studentCourseAtt = new StudentCourseAttandance();
+                        studentCourseAtt.CourseName = courseName;
+                        studentCourseAtt.NumberOfLecture = Classes_Courses.FirstOrDefault(x => x.ClassId == std.ClassID).Courses.FirstOrDefault(course => course.CourseId == courseAttendance.Course_id).LectureNumber;
+                        if (courseAttendance.Students.Any(studentID => studentID == std.Id)) studentCourseAtt.NumberOfAttendendLec++;
+                        else studentCourseAtt.NumberOfAbsentedLec++;
+
+                        studentAttendances.Add(studentCourseAtt);
+                        break;
+
+                    }
+
+                }
+
+
+            }
+        return studentAttendances;
+        }
+        
+        
+        
         public static void AddNewStudent(Student newStudent)
        {
         string xmlFilePath = filePath;

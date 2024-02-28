@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<attendance_system xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="D:\PD(ITI Mansoura)\C#\project-attendance Management\sprint2\attendance-program2\xml\Schema.xsd">
-
-<users>
+<attendance_system xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="D:\PD(ITI Mansoura)\C#\project-attendance Management\sprint2\attendance-program2\xml\SystemData_Schema.xsd">
+	<users>
 		<!-- Admin Users -->
 		<admin>
 			<id>1</id>
@@ -72,15 +71,14 @@
 				<name>Ali emad aboshosha</name>
 				<age>25</age>
 				<date_of_joining>2024-02-16</date_of_joining>
-				<email>ali@gmail.com.com</email>
+				<email>ali@gmail.com</email>
 				<password>AliEmad123#</password>
 				<class_id>1000</class_id>
 			</student>
 		</students>
 	</users>
-
 	
-		<courses>
+	<courses>
 		<course>
 			<id>1</id>
 			<name>C#</name>
@@ -91,8 +89,14 @@
 			<name>JavaScript</name>
 			<details>this course will help you to be good at JavaScript programming language</details>
 		</course>
+		
+		
+		<course>
+			<id>3</id>
+			<name>XML</name>
+			<details>this course will help you to be good at XML Data representation</details>
+		</course>
 	</courses>
-	
 	
 	
 	<Classes>
@@ -110,9 +114,8 @@
 		</Class>
 	</Classes>
 	
-	
-	
 	<ClassesCourses>
+	
 		<ClassCourses>
 			<Class_id>1000</Class_id>
 			<courses>
@@ -121,12 +124,23 @@
 					<teacher_id>103</teacher_id>
 					<Lecture_number>12</Lecture_number>
 				</course>
+				
 				<course>
 					<id>2</id>
 					<teacher_id>101</teacher_id>
 					<Lecture_number>10</Lecture_number>
 				</course>
+				
+				<course>
+					<id>3</id>
+					<teacher_id>101</teacher_id>
+					<Lecture_number>5</Lecture_number>
+				</course>
+				
+				
 			</courses>
+			
+			
 		</ClassCourses>
 		<ClassCourses>
 			<Class_id>1001</Class_id>
@@ -141,43 +155,26 @@
 	</ClassesCourses>
 	
 	
-	
-	
 	<teachers_Courses>
-	
 		<teacherCourses>
-		
 			<teacher_id>101</teacher_id>
 			<teacher_courses>
 				<teacher_course_id>1</teacher_course_id>
 				<teacher_course_id>2</teacher_course_id>
+				<teacher_course_id>3</teacher_course_id>
 			</teacher_courses>
-			
 		</teacherCourses>
-		
-		
-		
 		<teacherCourses>
-		
 			<teacher_id>102</teacher_id>
 			<teacher_courses>
 				<teacher_course_id>1</teacher_course_id>
 			</teacher_courses>
-			
 		</teacherCourses>
-		
-		
 		<teacherCourses>
 			<teacher_id>103</teacher_id>
 			<teacher_courses>
 				<teacher_course_id>2</teacher_course_id>
 			</teacher_courses>
 		</teacherCourses>
-		
-		
 	</teachers_Courses>
-	
-	
-
-	
 </attendance_system>

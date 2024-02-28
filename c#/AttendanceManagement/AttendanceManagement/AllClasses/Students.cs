@@ -10,7 +10,7 @@ namespace AttendanceManagement.AllClasses
     {
        
        
-        public string ClassID { get; set; }
+        public int ClassID { get; set; }
 
         public override string ToString()
         {

@@ -8,7 +8,12 @@ namespace AttendanceManagement.AllClasses
 {
     public class ParentOfClassesAndCourses
     {
-        public int ID { get; private set; }
-        public string Name { get; private set; }
+        public int ID { get;  set; }
+        public string Name { get;  set; }
+
+        public override string ToString()
+        {
+            return $"{Name}";
+        }
     }
 }

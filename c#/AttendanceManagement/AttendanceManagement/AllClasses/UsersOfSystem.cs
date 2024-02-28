@@ -42,7 +42,7 @@ namespace AttendanceManagement.Resources
                         //DateOfJoining = (DateTime)student.Element("date_of_joining"),
                         Email = (string)student.Element("email"),
                         Password = (string)student.Element("password"),
-                        ClassID = (string)student.Element("class_id")
+                        ClassID = (int)student.Element("class_id")
                     }
                 ).ToList();
 
