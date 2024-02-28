@@ -19,14 +19,18 @@ namespace AttendanceManagement.Attendance.Forms.AdminDashborad
             InitializeComponent();
         }
 
-        //public void Count()
-        //{
-        //    labelTotalStudents.Text
-        //}
+        public void Count()
+        {
+
+            int numberOfStudents = StudentsListGenerators.CountStudents();
+            int numberOfTeachers = TeacherListGenerators.CountTeachers();
+            labelTotalStudents.Text = numberOfStudents.ToString();
+            labelTotalTeachers.Text = numberOfTeachers.ToString();
+        }
 
         private void UserControlAdmin_Load(object sender, EventArgs e)
         {
-            // استدعاء الدالة لحساب عدد الطلاب
+            
             int numberOfStudents = StudentsListGenerators.CountStudents();
             int numberOfTeachers=TeacherListGenerators.CountTeachers();
            labelTotalStudents.Text = numberOfStudents.ToString();

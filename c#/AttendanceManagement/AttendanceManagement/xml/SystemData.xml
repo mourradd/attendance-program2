@@ -28,6 +28,30 @@
         <email>moha@gmail.com</email>
         <password>123456</password>
       </teacher>
+      <teacher>
+        <id>448</id>
+        <name>mohamed</name>
+        <age>20</age>
+        <date_of_joining>2024-02-28</date_of_joining>
+        <email>moh@gmail.com</email>
+        <password>123456</password>
+      </teacher>
+      <teacher>
+        <id>394</id>
+        <name>nasr123</name>
+        <age>20</age>
+        <date_of_joining>2024-02-28</date_of_joining>
+        <email>nasr@gmail.com</email>
+        <password>123456</password>
+      </teacher>
+      <teacher>
+        <id>202</id>
+        <name>ali</name>
+        <age>50</age>
+        <date_of_joining>2024-02-28</date_of_joining>
+        <email>alo@gmail.com</email>
+        <password>123456</password>
+      </teacher>
     </teachers>
     <!-- Students -->
     <students>
@@ -50,15 +74,6 @@
         <class_id>1001</class_id>
       </student>
       <student>
-        <id>2</id>
-        <name>ali</name>
-        <age>20</age>
-        <date_of_joining>2024-02-28</date_of_joining>
-        <email>ali@gmail.com</email>
-        <password>123456</password>
-        <class_id>1000</class_id>
-      </student>
-      <student>
         <id>1</id>
         <name>mohamedYouse</name>
         <age>20</age>
@@ -73,6 +88,15 @@
         <age>22</age>
         <date_of_joining>2024-02-28</date_of_joining>
         <email>yousef@gmail.com</email>
+        <password>123456</password>
+        <class_id>1000</class_id>
+      </student>
+      <student>
+        <id>386</id>
+        <name>aliEmad</name>
+        <age>20</age>
+        <date_of_joining>2024-02-28</date_of_joining>
+        <email>ali@gmail.com</email>
         <password>123456</password>
         <class_id>1000</class_id>
       </student>

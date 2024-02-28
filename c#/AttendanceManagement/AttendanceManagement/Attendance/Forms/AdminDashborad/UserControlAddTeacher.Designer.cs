@@ -353,7 +353,7 @@
             // 
             labelTotalTeachers.AutoSize = true;
             labelTotalTeachers.Font = new Font("Century Gothic", 12F);
-            labelTotalTeachers.Location = new Point(1162, 799);
+            labelTotalTeachers.Location = new Point(1181, 754);
             labelTotalTeachers.Name = "labelTotalTeachers";
             labelTotalTeachers.Size = new Size(35, 23);
             labelTotalTeachers.TabIndex = 0;
@@ -362,7 +362,7 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(980, 799);
+            label8.Location = new Point(991, 754);
             label8.Name = "label8";
             label8.Size = new Size(184, 28);
             label8.TabIndex = 0;
@@ -385,7 +385,7 @@
             dataGridViewTeachers.ShowCellErrors = false;
             dataGridViewTeachers.ShowEditingIcon = false;
             dataGridViewTeachers.ShowRowErrors = false;
-            dataGridViewTeachers.Size = new Size(1178, 665);
+            dataGridViewTeachers.Size = new Size(1178, 620);
             dataGridViewTeachers.TabIndex = 0;
             dataGridViewTeachers.CellDoubleClick += dataGridViewTeachers_CellDoubleClick;
             // 

@@ -114,10 +114,6 @@ namespace AttendanceManagement.Attendance.Teacher
             labelTime.Text = now.ToString();
 
         }
-<<<<<<< HEAD
-=======
 
-       
->>>>>>> 429a97916d41c14a77dc8343b24b21d18bb48d54
     }
 }

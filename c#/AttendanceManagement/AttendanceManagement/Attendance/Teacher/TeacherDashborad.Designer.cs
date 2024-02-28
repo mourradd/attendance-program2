@@ -407,7 +407,6 @@
             // 
             // CourseName
             // 
-<<<<<<< HEAD
             //label3.AutoSize = true;
             //label3.BackColor = Color.FromArgb(51, 154, 240);
             //label3.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
@@ -418,8 +417,6 @@
             //label3.TabIndex = 2;
             //label3.Text = "(?)";
 
-=======
->>>>>>> 429a97916d41c14a77dc8343b24b21d18bb48d54
             CourseName.AutoSize = true;
             CourseName.BackColor = Color.FromArgb(51, 154, 240);
             CourseName.Font = new Font("Century Gothic", 12F, FontStyle.Bold);

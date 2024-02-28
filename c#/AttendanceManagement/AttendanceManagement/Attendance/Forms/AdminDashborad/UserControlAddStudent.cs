@@ -295,7 +295,7 @@ namespace AttendanceManagement.Attendance.Forms.AdminDashborad
             }
         }
 
-<<<<<<< HEAD
+
 
         private void comboBoxSearch_SelectedValueChanged(object sender, EventArgs e)
         {
@@ -414,12 +414,12 @@ namespace AttendanceManagement.Attendance.Forms.AdminDashborad
         }
 
 
-=======
+
         private void tabPageAddStudent_Click(object sender, EventArgs e)
         {
 
         }
->>>>>>> 429a97916d41c14a77dc8343b24b21d18bb48d54
+
     }
 }
 
