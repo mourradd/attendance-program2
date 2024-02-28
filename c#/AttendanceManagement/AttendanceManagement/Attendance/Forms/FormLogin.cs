@@ -18,6 +18,19 @@ namespace AttendanceManagement.Attendance.Forms
         public FormLogin()
         {
             InitializeComponent();
+             timerDateAndTime.Start();
+            
+             Text = "Attendance Backup";
+            
+             string[] sourceFilePaths = new string[]
+             {
+             "..\\..\\..\\xml\\SystemData.xml",
+             "..\\..\\..\\xml\\AttendanceData.xml"
+             };
+            
+             string backupDirPath = "..\\..\\..\\xml\\Backup";
+            
+             AttendanceBackupService backupService = new AttendanceBackupService(sourceFilePaths, backupDirPath);
         }
 
         private void FormLogin_Load(object sender, EventArgs e)
