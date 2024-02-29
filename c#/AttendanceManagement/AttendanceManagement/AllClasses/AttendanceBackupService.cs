@@ -41,26 +41,26 @@ public class AttendanceBackupService
 
     private void BackupAttendanceData()
     {
-        try
-        {
-            Console.WriteLine("Starting attendance data backup...");
-            foreach (string sourceFilePath in sourceFilePaths)
-            {
-                // Generate a backup file name with a timestamp
-                string backupFileName = $"Backup_{Path.GetFileNameWithoutExtension(sourceFilePath)}_{DateTime.Now:yyyyMMddHHmmss}.xml";
-                string backupFilePath = Path.Combine(backupDirPath, backupFileName);
+        //try
+        //{
+        //    Console.WriteLine("Starting attendance data backup...");
+        //    foreach (string sourceFilePath in sourceFilePaths)
+        //    {
+        //        // Generate a backup file name with a timestamp
+        //        string backupFileName = $"Backup_{Path.GetFileNameWithoutExtension(sourceFilePath)}_{DateTime.Now:yyyyMMddHHmmss}.xml";
+        //        string backupFilePath = Path.Combine(backupDirPath, backupFileName);
 
-                // Load the XML file
-                XDocument doc = XDocument.Load(sourceFilePath);
+        //        // Load the XML file
+        //        XDocument doc = XDocument.Load(sourceFilePath);
 
-                // Save a copy of the XML file to the backup location
-                doc.Save(backupFilePath);
-            }
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine($"Error occurred during backup: {ex.Message}");
-            MessageBox.Show($"Error occurred during backup: {ex.Message}", "Backup Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        }
+        //        // Save a copy of the XML file to the backup location
+        //        doc.Save(backupFilePath);
+        //    }
+        //}
+        //catch (Exception ex)
+        //{
+        //    Console.WriteLine($"Error occurred during backup: {ex.Message}");
+        //    MessageBox.Show($"Error occurred during backup: {ex.Message}", "Backup Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //}
     }
 }

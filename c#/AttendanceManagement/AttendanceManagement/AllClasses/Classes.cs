@@ -112,23 +112,17 @@ namespace AttendanceManagement.AllClasses
 
         public static string GetClassIdByName(string className)
         {
-            // تحميل ملف XML الذي يحتوي على بيانات الفئات
-            XDocument doc = XDocument.Load("C:\\Users\\lap0\\OneDrive\\Desktop\\MainFinal\\attendance-program2\\c#\\AttendanceManagement\\AttendanceManagement\\xml\\SystemData.xml");
+            XDocument doc = XDocument.Load("..\\..\\..\\xml\\SystemData.xml");
 
-            // البحث عن العنصر الذي يحتوي على الاسم المحدد
             XElement classElement = doc.Descendants("Class")
                                        .FirstOrDefault(e => e.Element("name").Value == className);
 
-            // التحقق مما إذا كان العنصر موجودًا
             if (classElement != null)
             {
-                // إذا كان العنصر موجودًا، استرجاع معرف الفئة
                 return classElement.Element("id").Value;
             }
             else
             {
-                // إذا لم يتم العثور على العنصر، يمكنك إطلاق استثناء أو إرجاع قيمة افتراضية
-                // هنا، سنقوم بإرجاع قيمة فارغة
                 return string.Empty;
             }
         }

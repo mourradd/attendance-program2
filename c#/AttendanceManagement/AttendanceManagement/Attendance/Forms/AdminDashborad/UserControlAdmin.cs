@@ -24,13 +24,16 @@ namespace AttendanceManagement.Attendance.Forms.AdminDashborad
 
             int numberOfStudents = StudentsListGenerators.CountStudents();
             int numberOfTeachers = TeacherListGenerators.CountTeachers();
+            int numberOfCourses = CourseOperations.CountCourses();
+            labelTotalCoures.Text =numberOfCourses.ToString();
             labelTotalStudents.Text = numberOfStudents.ToString();
             labelTotalTeachers.Text = numberOfTeachers.ToString();
         }
 
         private void UserControlAdmin_Load(object sender, EventArgs e)
         {
-            
+            int numberOfCourses = CourseOperations.CountCourses();
+            labelTotalCoures.Text = numberOfCourses.ToString();
             int numberOfStudents = StudentsListGenerators.CountStudents();
             int numberOfTeachers=TeacherListGenerators.CountTeachers();
            labelTotalStudents.Text = numberOfStudents.ToString();
