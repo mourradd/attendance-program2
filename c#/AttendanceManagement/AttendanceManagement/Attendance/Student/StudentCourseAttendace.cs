@@ -84,7 +84,6 @@ namespace AttendanceManagement.Attendance.Student
             var comboBoxValues = new List<string>();
             comboBoxValues.Add("PDF");
             comboBoxValues.Add("Excel");
-            comboBoxValues.Add("Web Page");
             comboBox1.DataSource = comboBoxValues;
             CoursNaneValue.Text = CourseName;
 
