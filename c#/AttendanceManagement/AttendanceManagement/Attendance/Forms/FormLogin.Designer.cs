@@ -1,4 +1,4 @@
-﻿namespace AttendanceManagement.Attendance.Forms
+namespace AttendanceManagement.Attendance.Forms
 {
     partial class FormLogin
     {
@@ -111,7 +111,7 @@
             labelError.ForeColor = Color.FromArgb(234, 73, 73);
             labelError.Location = new Point(123, 240);
             labelError.Name = "labelError";
-            labelError.Size = new Size(230, 20);
+            labelError.Size = new Size(183, 17);
             labelError.TabIndex = 7;
             labelError.Text = "Invalid Username or Password";
             // 
@@ -131,7 +131,7 @@
             // 
             textBoxPassword.Location = new Point(95, 170);
             textBoxPassword.Name = "textBoxPassword";
-            textBoxPassword.Size = new Size(241, 32);
+            textBoxPassword.Size = new Size(241, 27);
             textBoxPassword.TabIndex = 2;
             textBoxPassword.UseSystemPasswordChar = true;
             // 
@@ -141,7 +141,7 @@
             label2.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold);
             label2.Location = new Point(92, 136);
             label2.Name = "label2";
-            label2.Size = new Size(92, 19);
+            label2.Size = new Size(71, 16);
             label2.TabIndex = 5;
             label2.Text = "Password:";
             // 
@@ -164,7 +164,7 @@
             // 
             textBoxName.Location = new Point(95, 92);
             textBoxName.Name = "textBoxName";
-            textBoxName.Size = new Size(265, 32);
+            textBoxName.Size = new Size(265, 27);
             textBoxName.TabIndex = 1;
             // 
             // label1
@@ -173,7 +173,7 @@
             label1.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold);
             label1.Location = new Point(92, 59);
             label1.Name = "label1";
-            label1.Size = new Size(96, 19);
+            label1.Size = new Size(75, 16);
             label1.TabIndex = 0;
             label1.Text = "Username:";
             // 
@@ -234,7 +234,7 @@
             label3.ForeColor = Color.FromArgb(51, 154, 240);
             label3.Location = new Point(781, 412);
             label3.Name = "label3";
-            label3.Size = new Size(354, 32);
+            label3.Size = new Size(293, 26);
             label3.TabIndex = 9;
             label3.Text = "Attendance Management";
             // 
@@ -246,7 +246,7 @@
             label4.ForeColor = Color.FromArgb(51, 154, 240);
             label4.Location = new Point(906, 460);
             label4.Name = "label4";
-            label4.Size = new Size(106, 32);
+            label4.Size = new Size(88, 26);
             label4.TabIndex = 10;
             label4.Text = "System";
             // 
@@ -258,13 +258,13 @@
             label5.ForeColor = Color.Black;
             label5.Location = new Point(12, 634);
             label5.Name = "label5";
-            label5.Size = new Size(305, 21);
+            label5.Size = new Size(258, 19);
             label5.TabIndex = 11;
             label5.Text = "Copyright @ 2024 ,mohamed yousef";
             // 
             // FormLogin
             // 
-            AutoScaleDimensions = new SizeF(12F, 23F);
+            AutoScaleDimensions = new SizeF(10F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1200, 662);
@@ -283,6 +283,7 @@
             StartPosition = FormStartPosition.CenterParent;
             Text = "Login";
             WindowState = FormWindowState.Maximized;
+            FormClosed += FormLogin_FormClosed;
             Load += FormLogin_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBoxClose).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxMinimize).EndInit();
