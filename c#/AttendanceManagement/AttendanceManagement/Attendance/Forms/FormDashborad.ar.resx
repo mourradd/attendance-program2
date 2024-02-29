@@ -117,167 +117,77 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="buttonMinimiz.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Century Gothic, 20pt</value>
+  <data name="buttonSetting.Text" xml:space="preserve">
+    <value>الاعدادات</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="buttonMinimiz.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="buttonReport.Text" xml:space="preserve">
+    <value>تقارير</value>
   </data>
-  <data name="buttonMinimiz.Text" xml:space="preserve">
-    <value>اخفاء</value>
+  <data name="buttonAddCourse.Text" xml:space="preserve">
+    <value>اضافة مادة جديدة</value>
   </data>
-  <data name="buttonLogout2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Century Gothic, 20pt, style=Bold</value>
+  <data name="buttonAddTeacher.Text" xml:space="preserve">
+    <value>اضافة معلم جديد</value>
   </data>
-  <data name="buttonLogout2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="buttonAddStudent.Text" xml:space="preserve">
+    <value>اضافة طالب جديد</value>
   </data>
-  <data name="buttonLogout2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>-34, 49</value>
+  <data name="buttonAttendance.Text" xml:space="preserve">
+    <value>تقرير الحضور</value>
   </data>
-  <data name="buttonLogout2.Text" xml:space="preserve">
+  <data name="Dashborad.Text" xml:space="preserve">
+    <value>لوحة التحكم</value>
+  </data>
+  <data name="buttonLogOut.Text" xml:space="preserve">
     <value>خروج</value>
   </data>
+  <data name="buttonMinimize.Text" xml:space="preserve">
+    <value>إخفاء</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="panelExpand.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 85</value>
   </data>
-  <data name="label7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>833, 16</value>
-  </data>
-  <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="label7.Text" xml:space="preserve">
-    <value>اختر اللغة</value>
-  </data>
-  <data name="pictureBoxExpand.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="pictureBoxExpand.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 58</value>
-  </data>
-  <data name="comboBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>929, 9</value>
-  </data>
-  <data name="labelTime.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="labelTime.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1478, 9</value>
-  </data>
-  <data name="JoiningDateValue.Location" type="System.Drawing.Point, System.Drawing">
-    <value>62, 66</value>
-  </data>
-  <data name="JoiningDate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>191, 64</value>
-  </data>
-  <data name="JoiningDate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 28</value>
-  </data>
-  <data name="JoiningDate.Text" xml:space="preserve">
-    <value>تاريخ الانضمام  :</value>
-  </data>
-  <data name="ClassValue.Location" type="System.Drawing.Point, System.Drawing">
-    <value>62, 19</value>
-  </data>
-  <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>188, 17</value>
-  </data>
-  <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>155, 28</value>
-  </data>
-  <data name="label8.Text" xml:space="preserve">
-    <value>اسم الفصل       :</value>
-  </data>
-  <data name="labelRole.Location" type="System.Drawing.Point, System.Drawing">
-    <value>626, 66</value>
-  </data>
-  <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>795, 58</value>
-  </data>
-  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>140, 28</value>
-  </data>
-  <data name="label6.Text" xml:space="preserve">
-    <value> نوع المستخدم :</value>
-  </data>
-  <data name="labelUsername.Location" type="System.Drawing.Point, System.Drawing">
-    <value>626, 17</value>
-  </data>
-  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>831, 10</value>
-  </data>
-  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 28</value>
-  </data>
-  <data name="label4.Text" xml:space="preserve">
-    <value>مرحبا بك :</value>
-  </data>
-  <data name="panelTop.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1584, 117</value>
-  </data>
-  <data name="pictureBox2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left</value>
-  </data>
-  <data name="pictureBox2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+    <value>13, 58</value>
   </data>
   <data name="pictureBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>76, 1</value>
+    <value>39, 20</value>
   </data>
-  <data name="pictureBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>70, 94</value>
+  <data name="labelTime.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1334, 58</value>
+  </data>
+  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>95, 19</value>
+  </data>
+  <data name="label6.Text" xml:space="preserve">
+    <value>: نوع المستخدم</value>
+  </data>
+  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 19</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>: مرحبا بك</value>
+  </data>
+  <data name="panelTop.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1382, 117</value>
   </data>
   <data name="panelBack.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1584, 211</value>
+    <value>1382, 211</value>
   </data>
-  <data name="courseNameDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>اسم المادة</value>
+  <data name="userControlAdmin1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1382, 509</value>
   </data>
-  <data name="numberOfLectureDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>عدد المحاضرات</value>
+  <data name="userControlAddStudent1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1382, 509</value>
   </data>
-  <data name="numberOfAttendendLecDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>عدد ايام الحضور</value>
-  </data>
-  <data name="numberOfAbsentedLecDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>عدد ايام الغياب</value>
-  </data>
-  <data name="dataGridView1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>288, 356</value>
-  </data>
-  <data name="dataGridView1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1584, 352</value>
-  </data>
-  <data name="comboBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>410, 228</value>
-  </data>
-  <data name="label5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>74, 23</value>
-  </data>
-  <data name="label5.Text" xml:space="preserve">
-    <value>اسم المادة</value>
-  </data>
-  <data name="label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="pictureBox1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="userControlAddTeacher1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1382, 509</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1872, 708</value>
+    <value>1685, 720</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="$this.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
     <value>Yes</value>
   </data>
@@ -285,19 +195,10 @@
   <data name="$this.RightToLeftLayout" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="comboBox1.Items1" xml:space="preserve">
-    <value>عربى</value>
-  </data>
-  <data name="comboBox1.Items" xml:space="preserve">
-    <value>انجليزى</value>
-  </data>
   <data name="label2.Text" xml:space="preserve">
-    <value>نظام</value>
+    <value>النظام</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
-    <value>الحضور و المتابعة</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>لوحة تحكم</value>
+    <value>نظام الحضور و المتابعة</value>
   </data>
 </root>

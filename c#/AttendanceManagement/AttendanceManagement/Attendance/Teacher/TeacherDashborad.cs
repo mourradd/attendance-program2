@@ -23,17 +23,17 @@ namespace AttendanceManagement.Attendance.Teacher
             InitializeComponent();
             timerDateAndTime.Start();
             Username = name;
-           // Text = "Attendance Backup";
+            // Text = "Attendance Backup";
 
-          //  string[] sourceFilePaths = new string[]
-          //  {
-          //  "..\\..\\..\\xml\\SystemData.xml",
-          //  "..\\..\\..\\xml\\AttendanceData.xml"
-         //   };
+            //  string[] sourceFilePaths = new string[]
+            //  {
+            //  "..\\..\\..\\xml\\SystemData.xml",
+            //  "..\\..\\..\\xml\\AttendanceData.xml"
+            //   };
 
-          //  string backupDirPath = "..\\..\\..\\xml\\Backup";
+            //  string backupDirPath = "..\\..\\..\\xml\\Backup";
 
-         //   AttendanceBackupService backupService = new AttendanceBackupService(sourceFilePaths, backupDirPath);
+            //   AttendanceBackupService backupService = new AttendanceBackupService(sourceFilePaths, backupDirPath);
 
 
 
@@ -157,7 +157,7 @@ namespace AttendanceManagement.Attendance.Teacher
         }
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBox1.SelectedIndex == 0)
+            if (comboBox2.SelectedIndex == 0)
             {
                 //change Language to English
                 Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("en");
@@ -165,34 +165,37 @@ namespace AttendanceManagement.Attendance.Teacher
                 InitializeComponent();
                 RightToLeft = RightToLeft.No;
                 RightToLeftLayout = false;
-                
-               
 
-                panelExpand.Hide();
+
+
+                panelExp.Hide();
                 labelUsername.Text = Username;
                 labelRole.Text = Role;
-               
+
                 WindowState = FormWindowState.Maximized;
 
             }
-            else if (comboBox1.SelectedIndex == 1)
+            else if (comboBox2.SelectedIndex == 1)
             {
-                WindowState = FormWindowState.Maximized;
 
                 //change Language to Arabic
 
                 Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("ar");
                 Controls.Clear();
                 InitializeComponent();
-                panelExpand.Hide();
+                panelExp.Hide();
                 labelUsername.Text = Username;
                 labelRole.Text = Role;
-               
+                
+                WindowState = FormWindowState.Maximized;
+
+
 
 
             }
 
         }
 
+       
     }
 }

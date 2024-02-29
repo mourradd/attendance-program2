@@ -117,4 +117,319 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="&gt;&gt;textBox1.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="buttonSave.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;btnPDF.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="dateTimePicker1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>580, 35</value>
+  </data>
+  <data name="buttonSave.Size" type="System.Drawing.Size, System.Drawing">
+    <value>141, 33</value>
+  </data>
+  <data name="&gt;&gt;status_written.Name" xml:space="preserve">
+    <value>status_written</value>
+  </data>
+  <data name="&gt;&gt;btnEXCELL.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;buttonSave.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;buttonSave.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnPDF.Name" xml:space="preserve">
+    <value>btnPDF</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;buttonSave.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="status.MinimumWidth" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Filter</value>
+  </data>
+  <data name="textBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 23</value>
+  </data>
+  <data name="TAttendanceGridView1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 125</value>
+  </data>
+  <data name="TAttendanceGridView1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;dateTimePicker1.Name" xml:space="preserve">
+    <value>dateTimePicker1</value>
+  </data>
+  <data name="CompoCourse.Location" type="System.Drawing.Point, System.Drawing">
+    <value>239, 35</value>
+  </data>
+  <data name="textBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;status.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewCheckBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="CompoClass.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="btnPDF.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;textBox2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="CompoClass.IntegralHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;btnPDF.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="CompoCourse.ItemHeight" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;status.Name" xml:space="preserve">
+    <value>status</value>
+  </data>
+  <data name="TAttendanceGridView1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1014, 248</value>
+  </data>
+  <data name="&gt;&gt;CompoCourse.Name" xml:space="preserve">
+    <value>CompoCourse</value>
+  </data>
+  <data name="status.HeaderText" xml:space="preserve">
+    <value>status</value>
+  </data>
+  <data name="&gt;&gt;CompoCourse.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 15</value>
+  </data>
+  <data name="TAttendanceGridView1.RowHeadersWidth" type="System.Int32, mscorlib">
+    <value>51</value>
+  </data>
+  <data name="status_written.MinimumWidth" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="dateTimePicker1.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;CompoClass.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btnPDF.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 31</value>
+  </data>
+  <data name="&gt;&gt;CompoClass.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="textBox2.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="textBox1.Text" xml:space="preserve">
+    <value>courses</value>
+  </data>
+  <data name="&gt;&gt;CompoClass.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="CompoCourse.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 23</value>
+  </data>
+  <data name="&gt;&gt;dateTimePicker1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="CompoCourse.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;CompoCourse.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBox2.Name" xml:space="preserve">
+    <value>textBox2</value>
+  </data>
+  <data name="CompoClass.Location" type="System.Drawing.Point, System.Drawing">
+    <value>390, 35</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="Student_name.HeaderText" xml:space="preserve">
+    <value>Student_name</value>
+  </data>
+  <data name="&gt;&gt;textBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9pt, style=Bold</value>
+  </data>
+  <data name="&gt;&gt;TAttendanceGridView1.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;Student_name.Name" xml:space="preserve">
+    <value>Student_name</value>
+  </data>
+  <data name="btnPDF.Location" type="System.Drawing.Point, System.Drawing">
+    <value>601, 453</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="buttonSave.Location" type="System.Drawing.Point, System.Drawing">
+    <value>375, 401</value>
+  </data>
+  <data name="status_written.HeaderText" xml:space="preserve">
+    <value>status_written</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>7, 15</value>
+  </data>
+  <data name="CompoClass.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 23</value>
+  </data>
+  <data name="btnEXCELL.Text" xml:space="preserve">
+    <value>export EXCELL</value>
+  </data>
+  <data name="&gt;&gt;btnEXCELL.Name" xml:space="preserve">
+    <value>btnEXCELL</value>
+  </data>
+  <data name="buttonSave.Text" xml:space="preserve">
+    <value>save</value>
+  </data>
+  <data name="Student_name.MinimumWidth" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="btnEXCELL.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="CompoClass.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;dateTimePicker1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;textBox1.Name" xml:space="preserve">
+    <value>textBox1</value>
+  </data>
+  <data name="&gt;&gt;TAttendanceGridView1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1014, 622</value>
+  </data>
+  <data name="&gt;&gt;TAttendanceGridView1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnEXCELL.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="CompoCourse.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="CompoCourse.IntegralHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;textBox2.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;textBox2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;TAttendanceGridView1.Name" xml:space="preserve">
+    <value>TAttendanceGridView1</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>UserControlAttendance</value>
+  </data>
+  <data name="&gt;&gt;buttonSave.Name" xml:space="preserve">
+    <value>buttonSave</value>
+  </data>
+  <data name="&gt;&gt;dateTimePicker1.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="btnPDF.Text" xml:space="preserve">
+    <value>export PDF</value>
+  </data>
+  <data name="&gt;&gt;status_written.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btnEXCELL.Location" type="System.Drawing.Point, System.Drawing">
+    <value>62, 453</value>
+  </data>
+  <data name="textBox2.Text" xml:space="preserve">
+    <value>classes</value>
+  </data>
+  <data name="&gt;&gt;CompoCourse.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;textBox1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="dateTimePicker1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 23</value>
+  </data>
+  <data name="&gt;&gt;CompoClass.Name" xml:space="preserve">
+    <value>CompoClass</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.UserControl, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="textBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 23</value>
+  </data>
+  <data name="textBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>259, 7</value>
+  </data>
+  <data name="&gt;&gt;btnPDF.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Student_name.Width" type="System.Int32, mscorlib">
+    <value>214</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="textBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>417, 7</value>
+  </data>
+  <data name="btnEXCELL.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 31</value>
+  </data>
+  <data name="&gt;&gt;btnEXCELL.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="CompoClass.ItemHeight" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;Student_name.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>167, 38</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, System.Private.CoreLib, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+    <value>ar</value>
+  </metadata>
 </root>

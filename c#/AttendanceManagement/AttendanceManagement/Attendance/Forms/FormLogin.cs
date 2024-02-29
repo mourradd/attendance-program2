@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using AttendanceManagement.AllClasses;
+using AttendanceManagement.Attendance.Student;
 using AttendanceManagement.Attendance.Teacher;
 //using static AttendanceManagement.Resources.UsersOfSystem;
 using static AttendanceManagement.AllClasses.LoadUserFromXML;
@@ -127,6 +128,11 @@ namespace AttendanceManagement.Attendance.Forms
                     {
                         OpenTeacherDashboardForm(user.Name, user.UserType);
                     }
+                    else if(user.UserType=="student")
+                    {
+                        OpenStudentDashboardForm(user as AllClasses.Student);
+
+                    }
 
                     ClearInputFields();
                     return;
@@ -150,6 +156,15 @@ namespace AttendanceManagement.Attendance.Forms
             //teacherDashboard.Username = username;
             teacherDashboard.Role = role;
             teacherDashboard.ShowDialog();
+            this.Close();
+        }
+
+
+        private void OpenStudentDashboardForm(AllClasses.Student user)
+        {
+            StudentDashboard studentDashboard = new StudentDashboard(user);
+            studentDashboard.ShowDialog();
+            this.Close();
         }
 
         private void ClearInputFields()

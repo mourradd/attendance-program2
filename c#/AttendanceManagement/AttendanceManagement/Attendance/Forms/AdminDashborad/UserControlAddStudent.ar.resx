@@ -117,79 +117,161 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="label1.Text" xml:space="preserve">
-    <value>لوحة تحكم المعلم</value>
+  <data name="comboBoxClass.ToolTip" xml:space="preserve">
+    <value />
   </data>
-  <data name="buttonReport.Text" xml:space="preserve">
-    <value>تقرير</value>
+  <data name="buttonAddStudent.ToolTip" xml:space="preserve">
+    <value />
   </data>
-  <data name="buttonAttendance.Text" xml:space="preserve">
-    <value>الحضور</value>
+  <data name="panel5.ToolTip" xml:space="preserve">
+    <value />
   </data>
-  <data name="Dashborad.Text" xml:space="preserve">
-    <value>لوحة التحكم </value>
+  <data name="label5.ToolTip" xml:space="preserve">
+    <value />
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="panel4.ToolTip" xml:space="preserve">
+    <value />
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>68, 19</value>
+  <data name="textBoxPassword.ToolTip" xml:space="preserve">
+    <value />
   </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>إختر اللغة</value>
+  <data name="label4.ToolTip" xml:space="preserve">
+    <value />
   </data>
-  <data name="buttonMinimiz.Text" xml:space="preserve">
-    <value>إخفاء</value>
+  <data name="panel3.ToolTip" xml:space="preserve">
+    <value />
   </data>
-  <data name="buttonLogout2.Text" xml:space="preserve">
-    <value>خروج</value>
+  <data name="textBoxEmail.ToolTip" xml:space="preserve">
+    <value />
   </data>
-  <data name="Course.Size" type="System.Drawing.Size, System.Drawing">
-    <value>68, 19</value>
+  <data name="label3.ToolTip" xml:space="preserve">
+    <value />
   </data>
-  <data name="Course.Text" xml:space="preserve">
-    <value>اسم المادة</value>
+  <data name="panel2.ToolTip" xml:space="preserve">
+    <value />
   </data>
-  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>95, 19</value>
+  <data name="textBoxAge.ToolTip" xml:space="preserve">
+    <value />
   </data>
-  <data name="label6.Text" xml:space="preserve">
-    <value>: نوع المستخدم</value>
+  <data name="label2.ToolTip" xml:space="preserve">
+    <value />
   </data>
-  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>87, 18</value>
+  <data name="panel1.ToolTip" xml:space="preserve">
+    <value />
   </data>
-  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>63, 19</value>
+  <data name="textBoxName.ToolTip" xml:space="preserve">
+    <value />
   </data>
-  <data name="label4.Text" xml:space="preserve">
-    <value>مرحبا بك</value>
+  <data name="label1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="labelAddStudent.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPageAddStudent.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="comboBoxSearch.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panel12.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label16.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="labelCountStudents.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label8.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dataGridViewStudents.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="textBoxSearch.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBoxSearch.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panel6.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label6.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label7.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPageSearchStudent.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="comboBoxClassUD.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="buttonDelete.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panel7.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label10.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="buttonUpdate.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panel8.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="textBoxPassword1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label11.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panel9.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="textBoxEmail1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label12.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panel10.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="textBoxAge1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label13.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panel11.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="textBoxName1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label14.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label15.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPageUDStudent.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabControlAddStudent.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="$this.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
     <value>Yes</value>
   </data>
-  <data name="$this.RightToLeftLayout" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="comboBox2.Items1" xml:space="preserve">
-    <value>عربى</value>
-  </data>
-  <data name="btnSwitchLanguage.Text" xml:space="preserve">
-    <value>تغير اللغة</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>لوحة تحكم المعلم</value>
-  </data>
-  <data name="buttonLogOut.Text" xml:space="preserve">
-    <value>خروج</value>
-  </data>
-  <data name="buttonMinimize.Text" xml:space="preserve">
-    <value>إخفاء</value>
-  </data>
-  <data name="comboBox2.Items" xml:space="preserve">
-    <value>انجليزى</value>
+  <data name="$this.ToolTip" xml:space="preserve">
+    <value />
   </data>
 </root>

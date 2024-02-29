@@ -19,17 +19,15 @@ namespace AttendanceManagement.Attendance.Student
     public partial class StudentDashboard : Form
     {
         public string Username, Role, ClassName, JoinDate;
-        public static AttendanceManagement.AllClasses.Student Student = StudentsListGenerators.students.FirstOrDefault((x) => x.Email == "ali@gmail.com" && x.Password == "AliEmad123#");
-
-        public StudentDashboard()
+        public static AttendanceManagement.AllClasses.Student Student;
+        public StudentDashboard(AllClasses.Student student )
         {
             InitializeComponent();
             timerDateAndTime.Start();
 
+            Student= student;
 
-
-            var Student = StudentsListGenerators.students.FirstOrDefault((x) => x.Email == "ali@gmail.com" && x.Password == "AliEmad123#");
-            Username = Student.Name;
+            Username = student.Name;
             Role = "Student";
             ClassName = StudentsListGenerators.AllClasses.FirstOrDefault(x => x.ID == Student.ClassID).Name;
             JoinDate = Student.DateOfJoining;
@@ -50,7 +48,7 @@ namespace AttendanceManagement.Attendance.Student
 
 
 
-            dataGridView1.DataSource = LoadAllStudentCoursesAttendance(Student);
+            dataGridView1.DataSource = LoadAllStudentCoursesAttendance(student);
 
 
 
@@ -213,43 +211,7 @@ namespace AttendanceManagement.Attendance.Student
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //ParentOfClassesAndCourses p = comboBox1.SelectedItem as ParentOfClassesAndCourses;
-            ////textBox1.Text = p.ID.ToString();
-            //var classCourse = Classes_Courses.FirstOrDefault(x => x.ClassId == p.ID);
-
-
-            //#region generate the dropdownList valuse for each different Class
-
-            //var ComboBox2Values = new List<Courses>();
-            //if (classCourse != null)
-            //{
-            //    foreach (var coursID in classCourse.Courses)
-            //    {
-            //        foreach (var Course in StudentsListGenerators.Courses)
-            //        {
-            //            if (coursID.CourseId == Course.ID)
-            //            {
-            //                ComboBox2Values.Add(Course);
-            //                break;
-
-            //            }
-            //        }
-
-
-
-            //    }
-            //    textBox1.Text = Classes_Courses.FirstOrDefault(x => x.ClassId == p.ID).ToString();
-
-            //}
-            //else
-            //{
-            //    ComboBox2Values = [];
-            //    comboBox2.Text = "";
-
-            //}
-
-            //comboBox2.DataSource = ComboBox2Values;
-            //#endregion
+         
 
 
         }

@@ -162,13 +162,23 @@ namespace AttendanceManagement.Attendance.Forms
         {
 
         }
+
+        private void userControlAddTeacher1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
     }
-       
 
-        
 
-        
 
-        
-    }
+
+
+
+
+}
 

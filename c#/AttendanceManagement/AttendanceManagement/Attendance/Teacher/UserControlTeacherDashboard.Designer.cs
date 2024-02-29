@@ -29,6 +29,7 @@ namespace AttendanceManagement.Attendance.Teacher
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControlTeacherDashboard));
             TDashboardGridView = new DataGridView();
             Column1 = new DataGridViewTextBoxColumn();
             Column2 = new DataGridViewTextBoxColumn();
@@ -40,38 +41,32 @@ namespace AttendanceManagement.Attendance.Teacher
             // 
             // TDashboardGridView
             // 
+            resources.ApplyResources(TDashboardGridView, "TDashboardGridView");
             TDashboardGridView.AllowUserToDeleteRows = false;
             TDashboardGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             TDashboardGridView.BackgroundColor = SystemColors.GradientActiveCaption;
             TDashboardGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             TDashboardGridView.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3 });
-            TDashboardGridView.Dock = DockStyle.Fill;
-            TDashboardGridView.Location = new Point(0, 0);
             TDashboardGridView.Name = "TDashboardGridView";
             TDashboardGridView.ReadOnly = true;
-            TDashboardGridView.RowHeadersWidth = 51;
-            TDashboardGridView.Size = new Size(1163, 628);
-            TDashboardGridView.TabIndex = 0;
+            TDashboardGridView.UseWaitCursor = true;
             TDashboardGridView.CellContentClick += TDashboardGridView_CellContentClick;
             // 
             // Column1
             // 
-            Column1.HeaderText = "course";
-            Column1.MinimumWidth = 6;
+            resources.ApplyResources(Column1, "Column1");
             Column1.Name = "Column1";
             Column1.ReadOnly = true;
             // 
             // Column2
             // 
-            Column2.HeaderText = "class";
-            Column2.MinimumWidth = 6;
+            resources.ApplyResources(Column2, "Column2");
             Column2.Name = "Column2";
             Column2.ReadOnly = true;
             // 
             // Column3
             // 
-            Column3.HeaderText = "number_of_students";
-            Column3.MinimumWidth = 6;
+            resources.ApplyResources(Column3, "Column3");
             Column3.Name = "Column3";
             Column3.ReadOnly = true;
             // 
@@ -81,11 +76,11 @@ namespace AttendanceManagement.Attendance.Teacher
             // 
             // UserControlTeacherDashboard
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(TDashboardGridView);
             Name = "UserControlTeacherDashboard";
-            Size = new Size(1163, 628);
+            UseWaitCursor = true;
             Load += UserControlTeacherDashboard_Load;
             ((System.ComponentModel.ISupportInitialize)TDashboardGridView).EndInit();
             ((System.ComponentModel.ISupportInitialize)loadUserFromXMLBindingSource).EndInit();

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControlAddStudent));
             toolTip = new ToolTip(components);
             tabControlAddStudent = new TabControl();
             tabPageAddStudent = new TabPage();
@@ -90,21 +91,19 @@
             // 
             // tabControlAddStudent
             // 
-            tabControlAddStudent.Alignment = TabAlignment.Bottom;
+            resources.ApplyResources(tabControlAddStudent, "tabControlAddStudent");
             tabControlAddStudent.Controls.Add(tabPageAddStudent);
             tabControlAddStudent.Controls.Add(tabPageSearchStudent);
             tabControlAddStudent.Controls.Add(tabPageUDStudent);
-            tabControlAddStudent.Dock = DockStyle.Fill;
-            tabControlAddStudent.Font = new Font("Century Gothic", 14F, FontStyle.Bold);
-            tabControlAddStudent.Location = new Point(0, 0);
             tabControlAddStudent.Name = "tabControlAddStudent";
             tabControlAddStudent.SelectedIndex = 0;
-            tabControlAddStudent.Size = new Size(1230, 867);
-            tabControlAddStudent.TabIndex = 0;
+            toolTip.SetToolTip(tabControlAddStudent, resources.GetString("tabControlAddStudent.ToolTip"));
+            tabControlAddStudent.UseWaitCursor = true;
             tabControlAddStudent.Leave += tabControlAddStudent_Leave;
             // 
             // tabPageAddStudent
             // 
+            resources.ApplyResources(tabPageAddStudent, "tabPageAddStudent");
             tabPageAddStudent.Controls.Add(comboBoxClass);
             tabPageAddStudent.Controls.Add(buttonAddStudent);
             tabPageAddStudent.Controls.Add(panel5);
@@ -122,187 +121,154 @@
             tabPageAddStudent.Controls.Add(textBoxName);
             tabPageAddStudent.Controls.Add(label1);
             tabPageAddStudent.Controls.Add(labelAddStudent);
-            tabPageAddStudent.Location = new Point(4, 4);
             tabPageAddStudent.Name = "tabPageAddStudent";
-            tabPageAddStudent.Padding = new Padding(3);
-            tabPageAddStudent.Size = new Size(1222, 827);
-            tabPageAddStudent.TabIndex = 0;
-            tabPageAddStudent.Text = "Add Student";
+            toolTip.SetToolTip(tabPageAddStudent, resources.GetString("tabPageAddStudent.ToolTip"));
             tabPageAddStudent.UseVisualStyleBackColor = true;
+            tabPageAddStudent.UseWaitCursor = true;
             tabPageAddStudent.Click += tabPageAddStudent_Click;
             tabPageAddStudent.Enter += tabPageAddStudent_Enter;
             tabPageAddStudent.Leave += tabPageAddStudent_Leave;
             // 
             // comboBoxClass
             // 
-            comboBoxClass.Anchor = AnchorStyles.None;
+            resources.ApplyResources(comboBoxClass, "comboBoxClass");
             comboBoxClass.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBoxClass.FlatStyle = FlatStyle.Flat;
             comboBoxClass.FormattingEnabled = true;
-            comboBoxClass.Items.AddRange(new object[] { "--Select--" });
-            comboBoxClass.Location = new Point(141, 419);
+            comboBoxClass.Items.AddRange(new object[] { resources.GetString("comboBoxClass.Items") });
             comboBoxClass.Name = "comboBoxClass";
-            comboBoxClass.Size = new Size(270, 35);
-            comboBoxClass.TabIndex = 0;
+            toolTip.SetToolTip(comboBoxClass, resources.GetString("comboBoxClass.ToolTip"));
+            comboBoxClass.UseWaitCursor = true;
             comboBoxClass.Click += comboBoxClass_Click;
             // 
             // buttonAddStudent
             // 
-            buttonAddStudent.Anchor = AnchorStyles.None;
+            resources.ApplyResources(buttonAddStudent, "buttonAddStudent");
             buttonAddStudent.BackColor = Color.LightBlue;
             buttonAddStudent.FlatAppearance.BorderSize = 0;
-            buttonAddStudent.FlatStyle = FlatStyle.Flat;
-            buttonAddStudent.Location = new Point(591, 420);
             buttonAddStudent.Name = "buttonAddStudent";
-            buttonAddStudent.Size = new Size(113, 37);
-            buttonAddStudent.TabIndex = 0;
-            buttonAddStudent.Text = "Add";
+            toolTip.SetToolTip(buttonAddStudent, resources.GetString("buttonAddStudent.ToolTip"));
             buttonAddStudent.UseVisualStyleBackColor = false;
+            buttonAddStudent.UseWaitCursor = true;
             buttonAddStudent.Click += buttonAddStudent_Click;
             // 
             // panel5
             // 
-            panel5.Anchor = AnchorStyles.None;
+            resources.ApplyResources(panel5, "panel5");
             panel5.BackColor = Color.LightGray;
-            panel5.Location = new Point(144, 455);
             panel5.Name = "panel5";
-            panel5.Size = new Size(270, 2);
-            panel5.TabIndex = 0;
+            toolTip.SetToolTip(panel5, resources.GetString("panel5.ToolTip"));
+            panel5.UseWaitCursor = true;
             // 
             // label5
             // 
-            label5.Anchor = AnchorStyles.None;
-            label5.AutoSize = true;
-            label5.Location = new Point(141, 388);
+            resources.ApplyResources(label5, "label5");
             label5.Name = "label5";
-            label5.Size = new Size(82, 28);
-            label5.TabIndex = 0;
-            label5.Text = "Class:";
+            toolTip.SetToolTip(label5, resources.GetString("label5.ToolTip"));
+            label5.UseWaitCursor = true;
             // 
             // panel4
             // 
-            panel4.Anchor = AnchorStyles.None;
+            resources.ApplyResources(panel4, "panel4");
             panel4.BackColor = Color.LightGray;
-            panel4.Location = new Point(591, 368);
             panel4.Name = "panel4";
-            panel4.Size = new Size(270, 2);
-            panel4.TabIndex = 0;
+            toolTip.SetToolTip(panel4, resources.GetString("panel4.ToolTip"));
+            panel4.UseWaitCursor = true;
             // 
             // textBoxPassword
             // 
-            textBoxPassword.Anchor = AnchorStyles.None;
+            resources.ApplyResources(textBoxPassword, "textBoxPassword");
             textBoxPassword.BorderStyle = BorderStyle.None;
-            textBoxPassword.Location = new Point(591, 342);
             textBoxPassword.Name = "textBoxPassword";
-            textBoxPassword.Size = new Size(270, 29);
-            textBoxPassword.TabIndex = 0;
+            toolTip.SetToolTip(textBoxPassword, resources.GetString("textBoxPassword.ToolTip"));
+            textBoxPassword.UseWaitCursor = true;
             // 
             // label4
             // 
-            label4.Anchor = AnchorStyles.None;
-            label4.AutoSize = true;
-            label4.Location = new Point(591, 310);
+            resources.ApplyResources(label4, "label4");
             label4.Name = "label4";
-            label4.Size = new Size(128, 28);
-            label4.TabIndex = 0;
-            label4.Text = "Password:";
+            toolTip.SetToolTip(label4, resources.GetString("label4.ToolTip"));
+            label4.UseWaitCursor = true;
             // 
             // panel3
             // 
-            panel3.Anchor = AnchorStyles.None;
+            resources.ApplyResources(panel3, "panel3");
             panel3.BackColor = Color.LightGray;
-            panel3.Location = new Point(144, 368);
             panel3.Name = "panel3";
-            panel3.Size = new Size(270, 2);
-            panel3.TabIndex = 0;
+            toolTip.SetToolTip(panel3, resources.GetString("panel3.ToolTip"));
+            panel3.UseWaitCursor = true;
             // 
             // textBoxEmail
             // 
-            textBoxEmail.Anchor = AnchorStyles.None;
+            resources.ApplyResources(textBoxEmail, "textBoxEmail");
             textBoxEmail.BorderStyle = BorderStyle.None;
-            textBoxEmail.Location = new Point(144, 341);
             textBoxEmail.Name = "textBoxEmail";
-            textBoxEmail.Size = new Size(270, 29);
-            textBoxEmail.TabIndex = 0;
+            toolTip.SetToolTip(textBoxEmail, resources.GetString("textBoxEmail.ToolTip"));
+            textBoxEmail.UseWaitCursor = true;
             // 
             // label3
             // 
-            label3.Anchor = AnchorStyles.None;
-            label3.AutoSize = true;
-            label3.Location = new Point(141, 310);
+            resources.ApplyResources(label3, "label3");
             label3.Name = "label3";
-            label3.Size = new Size(82, 28);
-            label3.TabIndex = 0;
-            label3.Text = "Email:";
+            toolTip.SetToolTip(label3, resources.GetString("label3.ToolTip"));
+            label3.UseWaitCursor = true;
             // 
             // panel2
             // 
-            panel2.Anchor = AnchorStyles.None;
+            resources.ApplyResources(panel2, "panel2");
             panel2.BackColor = Color.LightGray;
-            panel2.Location = new Point(594, 282);
             panel2.Name = "panel2";
-            panel2.Size = new Size(270, 2);
-            panel2.TabIndex = 0;
+            toolTip.SetToolTip(panel2, resources.GetString("panel2.ToolTip"));
+            panel2.UseWaitCursor = true;
             // 
             // textBoxAge
             // 
-            textBoxAge.Anchor = AnchorStyles.None;
+            resources.ApplyResources(textBoxAge, "textBoxAge");
             textBoxAge.BorderStyle = BorderStyle.None;
-            textBoxAge.Location = new Point(591, 255);
             textBoxAge.Name = "textBoxAge";
-            textBoxAge.Size = new Size(270, 29);
-            textBoxAge.TabIndex = 0;
+            toolTip.SetToolTip(textBoxAge, resources.GetString("textBoxAge.ToolTip"));
+            textBoxAge.UseWaitCursor = true;
             // 
             // label2
             // 
-            label2.Anchor = AnchorStyles.None;
-            label2.AutoSize = true;
-            label2.Location = new Point(591, 224);
+            resources.ApplyResources(label2, "label2");
             label2.Name = "label2";
-            label2.Size = new Size(68, 28);
-            label2.TabIndex = 0;
-            label2.Text = "Age:";
+            toolTip.SetToolTip(label2, resources.GetString("label2.ToolTip"));
+            label2.UseWaitCursor = true;
             // 
             // panel1
             // 
-            panel1.Anchor = AnchorStyles.None;
+            resources.ApplyResources(panel1, "panel1");
             panel1.BackColor = Color.LightGray;
-            panel1.Location = new Point(144, 283);
             panel1.Name = "panel1";
-            panel1.Size = new Size(270, 2);
-            panel1.TabIndex = 0;
+            toolTip.SetToolTip(panel1, resources.GetString("panel1.ToolTip"));
+            panel1.UseWaitCursor = true;
             // 
             // textBoxName
             // 
-            textBoxName.Anchor = AnchorStyles.None;
+            resources.ApplyResources(textBoxName, "textBoxName");
             textBoxName.BorderStyle = BorderStyle.None;
-            textBoxName.Location = new Point(144, 257);
             textBoxName.Name = "textBoxName";
-            textBoxName.Size = new Size(270, 29);
-            textBoxName.TabIndex = 0;
+            toolTip.SetToolTip(textBoxName, resources.GetString("textBoxName.ToolTip"));
+            textBoxName.UseWaitCursor = true;
             // 
             // label1
             // 
-            label1.Anchor = AnchorStyles.None;
-            label1.AutoSize = true;
-            label1.Location = new Point(141, 226);
+            resources.ApplyResources(label1, "label1");
             label1.Name = "label1";
-            label1.Size = new Size(91, 28);
-            label1.TabIndex = 0;
-            label1.Text = "Name:";
+            toolTip.SetToolTip(label1, resources.GetString("label1.ToolTip"));
+            label1.UseWaitCursor = true;
             // 
             // labelAddStudent
             // 
-            labelAddStudent.AutoSize = true;
+            resources.ApplyResources(labelAddStudent, "labelAddStudent");
             labelAddStudent.BackColor = Color.LightSkyBlue;
-            labelAddStudent.Location = new Point(6, 5);
             labelAddStudent.Name = "labelAddStudent";
-            labelAddStudent.Size = new Size(154, 28);
-            labelAddStudent.TabIndex = 0;
-            labelAddStudent.Text = "Add Student";
+            toolTip.SetToolTip(labelAddStudent, resources.GetString("labelAddStudent.ToolTip"));
+            labelAddStudent.UseWaitCursor = true;
             // 
             // tabPageSearchStudent
             // 
+            resources.ApplyResources(tabPageSearchStudent, "tabPageSearchStudent");
             tabPageSearchStudent.Controls.Add(comboBoxSearch);
             tabPageSearchStudent.Controls.Add(panel12);
             tabPageSearchStudent.Controls.Add(label16);
@@ -314,136 +280,116 @@
             tabPageSearchStudent.Controls.Add(panel6);
             tabPageSearchStudent.Controls.Add(label6);
             tabPageSearchStudent.Controls.Add(label7);
-            tabPageSearchStudent.Location = new Point(4, 4);
             tabPageSearchStudent.Name = "tabPageSearchStudent";
-            tabPageSearchStudent.Padding = new Padding(3);
-            tabPageSearchStudent.Size = new Size(1222, 827);
-            tabPageSearchStudent.TabIndex = 1;
-            tabPageSearchStudent.Text = "Search Student";
+            toolTip.SetToolTip(tabPageSearchStudent, resources.GetString("tabPageSearchStudent.ToolTip"));
             tabPageSearchStudent.UseVisualStyleBackColor = true;
+            tabPageSearchStudent.UseWaitCursor = true;
             tabPageSearchStudent.Enter += tabPageSearchStudent_Enter;
             // 
             // comboBoxSearch
             // 
-            comboBoxSearch.Anchor = AnchorStyles.None;
+            resources.ApplyResources(comboBoxSearch, "comboBoxSearch");
             comboBoxSearch.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBoxSearch.FlatStyle = FlatStyle.Flat;
             comboBoxSearch.FormattingEnabled = true;
-            comboBoxSearch.Items.AddRange(new object[] { "Name", "Email", "Class" });
-            comboBoxSearch.Location = new Point(734, 77);
+            comboBoxSearch.Items.AddRange(new object[] { resources.GetString("comboBoxSearch.Items"), resources.GetString("comboBoxSearch.Items1"), resources.GetString("comboBoxSearch.Items2") });
             comboBoxSearch.Name = "comboBoxSearch";
-            comboBoxSearch.Size = new Size(167, 35);
-            comboBoxSearch.TabIndex = 0;
+            toolTip.SetToolTip(comboBoxSearch, resources.GetString("comboBoxSearch.ToolTip"));
+            comboBoxSearch.UseWaitCursor = true;
             comboBoxSearch.SelectedValueChanged += comboBoxSearch_SelectedValueChanged;
             // 
             // panel12
             // 
-            panel12.Anchor = AnchorStyles.None;
+            resources.ApplyResources(panel12, "panel12");
             panel12.BackColor = Color.LightGray;
-            panel12.Location = new Point(734, 114);
             panel12.Name = "panel12";
-            panel12.Size = new Size(167, 2);
-            panel12.TabIndex = 0;
+            toolTip.SetToolTip(panel12, resources.GetString("panel12.ToolTip"));
+            panel12.UseWaitCursor = true;
             // 
             // label16
             // 
-            label16.Anchor = AnchorStyles.None;
-            label16.AutoSize = true;
-            label16.Location = new Point(734, 50);
+            resources.ApplyResources(label16, "label16");
             label16.Name = "label16";
-            label16.Size = new Size(134, 28);
-            label16.TabIndex = 0;
-            label16.Text = "Search By:";
+            toolTip.SetToolTip(label16, resources.GetString("label16.ToolTip"));
+            label16.UseWaitCursor = true;
             // 
             // labelCountStudents
             // 
-            labelCountStudents.AutoSize = true;
-            labelCountStudents.Font = new Font("Century Gothic", 12F);
-            labelCountStudents.Location = new Point(1181, 760);
+            resources.ApplyResources(labelCountStudents, "labelCountStudents");
             labelCountStudents.Name = "labelCountStudents";
-            labelCountStudents.Size = new Size(35, 23);
-            labelCountStudents.TabIndex = 0;
-            labelCountStudents.Text = "(0)";
+            toolTip.SetToolTip(labelCountStudents, resources.GetString("labelCountStudents.ToolTip"));
+            labelCountStudents.UseWaitCursor = true;
             // 
             // label8
             // 
-            label8.AutoSize = true;
-            label8.Location = new Point(1009, 757);
+            resources.ApplyResources(label8, "label8");
             label8.Name = "label8";
-            label8.Size = new Size(176, 28);
-            label8.TabIndex = 0;
-            label8.Text = "Total Students:";
+            toolTip.SetToolTip(label8, resources.GetString("label8.ToolTip"));
+            label8.UseWaitCursor = true;
             // 
             // dataGridViewStudents
             // 
+            resources.ApplyResources(dataGridViewStudents, "dataGridViewStudents");
             dataGridViewStudents.AllowUserToAddRows = false;
             dataGridViewStudents.AllowUserToDeleteRows = false;
             dataGridViewStudents.AllowUserToResizeColumns = false;
             dataGridViewStudents.AllowUserToResizeRows = false;
-            dataGridViewStudents.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             dataGridViewStudents.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewStudents.BackgroundColor = Color.White;
             dataGridViewStudents.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewStudents.Location = new Point(19, 131);
             dataGridViewStudents.Name = "dataGridViewStudents";
-            dataGridViewStudents.RowHeadersWidth = 51;
             dataGridViewStudents.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             dataGridViewStudents.ShowCellErrors = false;
             dataGridViewStudents.ShowEditingIcon = false;
             dataGridViewStudents.ShowRowErrors = false;
-            dataGridViewStudents.Size = new Size(1178, 620);
-            dataGridViewStudents.TabIndex = 0;
+            toolTip.SetToolTip(dataGridViewStudents, resources.GetString("dataGridViewStudents.ToolTip"));
+            dataGridViewStudents.UseWaitCursor = true;
             dataGridViewStudents.CellDoubleClick += dataGridViewStudents_CellDoubleClick;
             // 
             // textBoxSearch
             // 
+            resources.ApplyResources(textBoxSearch, "textBoxSearch");
             textBoxSearch.BorderStyle = BorderStyle.None;
-            textBoxSearch.Location = new Point(151, 83);
             textBoxSearch.Name = "textBoxSearch";
-            textBoxSearch.Size = new Size(252, 29);
-            textBoxSearch.TabIndex = 0;
+            toolTip.SetToolTip(textBoxSearch, resources.GetString("textBoxSearch.ToolTip"));
+            textBoxSearch.UseWaitCursor = true;
             textBoxSearch.TextChanged += textBoxSearch_TextChanged;
             // 
             // pictureBoxSearch
             // 
+            resources.ApplyResources(pictureBoxSearch, "pictureBoxSearch");
             pictureBoxSearch.Image = Properties.Resources.search;
-            pictureBoxSearch.Location = new Point(409, 82);
             pictureBoxSearch.Name = "pictureBoxSearch";
-            pictureBoxSearch.Size = new Size(19, 26);
-            pictureBoxSearch.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBoxSearch.TabIndex = 5;
             pictureBoxSearch.TabStop = false;
+            toolTip.SetToolTip(pictureBoxSearch, resources.GetString("pictureBoxSearch.ToolTip"));
+            pictureBoxSearch.UseWaitCursor = true;
             pictureBoxSearch.MouseHover += pictureBoxSearch_MouseHover;
             // 
             // panel6
             // 
+            resources.ApplyResources(panel6, "panel6");
             panel6.BackColor = Color.LightGray;
-            panel6.Location = new Point(151, 114);
             panel6.Name = "panel6";
-            panel6.Size = new Size(270, 2);
-            panel6.TabIndex = 0;
+            toolTip.SetToolTip(panel6, resources.GetString("panel6.ToolTip"));
+            panel6.UseWaitCursor = true;
             // 
             // label6
             // 
-            label6.AutoSize = true;
-            label6.Location = new Point(151, 50);
+            resources.ApplyResources(label6, "label6");
             label6.Name = "label6";
-            label6.Size = new Size(99, 28);
-            label6.TabIndex = 0;
-            label6.Text = "Search:";
+            toolTip.SetToolTip(label6, resources.GetString("label6.ToolTip"));
+            label6.UseWaitCursor = true;
             // 
             // label7
             // 
-            label7.AutoSize = true;
+            resources.ApplyResources(label7, "label7");
             label7.BackColor = Color.LightGreen;
-            label7.Location = new Point(6, 5);
             label7.Name = "label7";
-            label7.Size = new Size(184, 28);
-            label7.TabIndex = 0;
-            label7.Text = "Search Student";
+            toolTip.SetToolTip(label7, resources.GetString("label7.ToolTip"));
+            label7.UseWaitCursor = true;
             // 
             // tabPageUDStudent
             // 
+            resources.ApplyResources(tabPageUDStudent, "tabPageUDStudent");
             tabPageUDStudent.Controls.Add(comboBoxClassUD);
             tabPageUDStudent.Controls.Add(buttonDelete);
             tabPageUDStudent.Controls.Add(panel7);
@@ -462,205 +408,167 @@
             tabPageUDStudent.Controls.Add(textBoxName1);
             tabPageUDStudent.Controls.Add(label14);
             tabPageUDStudent.Controls.Add(label15);
-            tabPageUDStudent.Font = new Font("Century Gothic", 15F, FontStyle.Bold);
-            tabPageUDStudent.Location = new Point(4, 4);
             tabPageUDStudent.Name = "tabPageUDStudent";
-            tabPageUDStudent.Padding = new Padding(3);
-            tabPageUDStudent.Size = new Size(1222, 827);
-            tabPageUDStudent.TabIndex = 2;
-            tabPageUDStudent.Text = "Update and Delete";
+            toolTip.SetToolTip(tabPageUDStudent, resources.GetString("tabPageUDStudent.ToolTip"));
             tabPageUDStudent.UseVisualStyleBackColor = true;
+            tabPageUDStudent.UseWaitCursor = true;
             tabPageUDStudent.Leave += tabPageUDStudent_Leave;
             // 
             // comboBoxClassUD
             // 
-            comboBoxClassUD.Anchor = AnchorStyles.None;
+            resources.ApplyResources(comboBoxClassUD, "comboBoxClassUD");
             comboBoxClassUD.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBoxClassUD.FlatStyle = FlatStyle.Flat;
             comboBoxClassUD.FormattingEnabled = true;
-            comboBoxClassUD.Location = new Point(109, 413);
             comboBoxClassUD.Name = "comboBoxClassUD";
-            comboBoxClassUD.Size = new Size(270, 37);
-            comboBoxClassUD.TabIndex = 0;
+            toolTip.SetToolTip(comboBoxClassUD, resources.GetString("comboBoxClassUD.ToolTip"));
+            comboBoxClassUD.UseWaitCursor = true;
             // 
             // buttonDelete
             // 
-            buttonDelete.Anchor = AnchorStyles.None;
+            resources.ApplyResources(buttonDelete, "buttonDelete");
             buttonDelete.BackColor = Color.DarkRed;
             buttonDelete.FlatAppearance.BorderSize = 0;
-            buttonDelete.FlatStyle = FlatStyle.Flat;
-            buttonDelete.Location = new Point(722, 414);
             buttonDelete.Name = "buttonDelete";
-            buttonDelete.Size = new Size(113, 37);
-            buttonDelete.TabIndex = 0;
-            buttonDelete.Text = "Delete";
+            toolTip.SetToolTip(buttonDelete, resources.GetString("buttonDelete.ToolTip"));
             buttonDelete.UseVisualStyleBackColor = false;
+            buttonDelete.UseWaitCursor = true;
             buttonDelete.Click += buttonDelete_Click;
             // 
             // panel7
             // 
-            panel7.Anchor = AnchorStyles.None;
+            resources.ApplyResources(panel7, "panel7");
             panel7.BackColor = Color.LightGray;
-            panel7.Location = new Point(112, 449);
             panel7.Name = "panel7";
-            panel7.Size = new Size(270, 2);
-            panel7.TabIndex = 0;
+            toolTip.SetToolTip(panel7, resources.GetString("panel7.ToolTip"));
+            panel7.UseWaitCursor = true;
             // 
             // label10
             // 
-            label10.Anchor = AnchorStyles.None;
-            label10.AutoSize = true;
-            label10.Location = new Point(109, 382);
+            resources.ApplyResources(label10, "label10");
             label10.Name = "label10";
-            label10.Size = new Size(84, 29);
-            label10.TabIndex = 0;
-            label10.Text = "Class:";
+            toolTip.SetToolTip(label10, resources.GetString("label10.ToolTip"));
+            label10.UseWaitCursor = true;
             // 
             // buttonUpdate
             // 
-            buttonUpdate.Anchor = AnchorStyles.None;
+            resources.ApplyResources(buttonUpdate, "buttonUpdate");
             buttonUpdate.BackColor = Color.Wheat;
             buttonUpdate.FlatAppearance.BorderSize = 0;
-            buttonUpdate.FlatStyle = FlatStyle.Flat;
-            buttonUpdate.Location = new Point(562, 414);
             buttonUpdate.Name = "buttonUpdate";
-            buttonUpdate.Size = new Size(113, 37);
-            buttonUpdate.TabIndex = 0;
-            buttonUpdate.Text = "Update";
+            toolTip.SetToolTip(buttonUpdate, resources.GetString("buttonUpdate.ToolTip"));
             buttonUpdate.UseVisualStyleBackColor = false;
+            buttonUpdate.UseWaitCursor = true;
             buttonUpdate.Click += buttonUpdate_Click;
             // 
             // panel8
             // 
-            panel8.Anchor = AnchorStyles.None;
+            resources.ApplyResources(panel8, "panel8");
             panel8.BackColor = Color.LightGray;
-            panel8.Location = new Point(562, 362);
             panel8.Name = "panel8";
-            panel8.Size = new Size(270, 2);
-            panel8.TabIndex = 0;
+            toolTip.SetToolTip(panel8, resources.GetString("panel8.ToolTip"));
+            panel8.UseWaitCursor = true;
             // 
             // textBoxPassword1
             // 
-            textBoxPassword1.Anchor = AnchorStyles.None;
+            resources.ApplyResources(textBoxPassword1, "textBoxPassword1");
             textBoxPassword1.BorderStyle = BorderStyle.None;
-            textBoxPassword1.Location = new Point(562, 336);
             textBoxPassword1.Name = "textBoxPassword1";
-            textBoxPassword1.Size = new Size(270, 31);
-            textBoxPassword1.TabIndex = 0;
+            toolTip.SetToolTip(textBoxPassword1, resources.GetString("textBoxPassword1.ToolTip"));
+            textBoxPassword1.UseWaitCursor = true;
             // 
             // label11
             // 
-            label11.Anchor = AnchorStyles.None;
-            label11.AutoSize = true;
-            label11.Location = new Point(562, 304);
+            resources.ApplyResources(label11, "label11");
             label11.Name = "label11";
-            label11.Size = new Size(134, 29);
-            label11.TabIndex = 0;
-            label11.Text = "Password:";
+            toolTip.SetToolTip(label11, resources.GetString("label11.ToolTip"));
+            label11.UseWaitCursor = true;
             // 
             // panel9
             // 
-            panel9.Anchor = AnchorStyles.None;
+            resources.ApplyResources(panel9, "panel9");
             panel9.BackColor = Color.LightGray;
-            panel9.Location = new Point(115, 362);
             panel9.Name = "panel9";
-            panel9.Size = new Size(270, 2);
-            panel9.TabIndex = 0;
+            toolTip.SetToolTip(panel9, resources.GetString("panel9.ToolTip"));
+            panel9.UseWaitCursor = true;
             // 
             // textBoxEmail1
             // 
-            textBoxEmail1.Anchor = AnchorStyles.None;
+            resources.ApplyResources(textBoxEmail1, "textBoxEmail1");
             textBoxEmail1.BorderStyle = BorderStyle.None;
-            textBoxEmail1.Location = new Point(115, 335);
             textBoxEmail1.Name = "textBoxEmail1";
-            textBoxEmail1.Size = new Size(270, 31);
-            textBoxEmail1.TabIndex = 0;
+            toolTip.SetToolTip(textBoxEmail1, resources.GetString("textBoxEmail1.ToolTip"));
+            textBoxEmail1.UseWaitCursor = true;
             // 
             // label12
             // 
-            label12.Anchor = AnchorStyles.None;
-            label12.AutoSize = true;
-            label12.Location = new Point(112, 304);
+            resources.ApplyResources(label12, "label12");
             label12.Name = "label12";
-            label12.Size = new Size(85, 29);
-            label12.TabIndex = 0;
-            label12.Text = "Email:";
+            toolTip.SetToolTip(label12, resources.GetString("label12.ToolTip"));
+            label12.UseWaitCursor = true;
             // 
             // panel10
             // 
-            panel10.Anchor = AnchorStyles.None;
+            resources.ApplyResources(panel10, "panel10");
             panel10.BackColor = Color.LightGray;
-            panel10.Location = new Point(565, 276);
             panel10.Name = "panel10";
-            panel10.Size = new Size(270, 2);
-            panel10.TabIndex = 0;
+            toolTip.SetToolTip(panel10, resources.GetString("panel10.ToolTip"));
+            panel10.UseWaitCursor = true;
             // 
             // textBoxAge1
             // 
-            textBoxAge1.Anchor = AnchorStyles.None;
+            resources.ApplyResources(textBoxAge1, "textBoxAge1");
             textBoxAge1.BorderStyle = BorderStyle.None;
-            textBoxAge1.Location = new Point(562, 249);
             textBoxAge1.Name = "textBoxAge1";
-            textBoxAge1.Size = new Size(270, 31);
-            textBoxAge1.TabIndex = 0;
+            toolTip.SetToolTip(textBoxAge1, resources.GetString("textBoxAge1.ToolTip"));
+            textBoxAge1.UseWaitCursor = true;
             // 
             // label13
             // 
-            label13.Anchor = AnchorStyles.None;
-            label13.AutoSize = true;
-            label13.Location = new Point(562, 218);
+            resources.ApplyResources(label13, "label13");
             label13.Name = "label13";
-            label13.Size = new Size(71, 29);
-            label13.TabIndex = 0;
-            label13.Text = "Age:";
+            toolTip.SetToolTip(label13, resources.GetString("label13.ToolTip"));
+            label13.UseWaitCursor = true;
             // 
             // panel11
             // 
-            panel11.Anchor = AnchorStyles.None;
+            resources.ApplyResources(panel11, "panel11");
             panel11.BackColor = Color.LightGray;
-            panel11.Location = new Point(115, 277);
             panel11.Name = "panel11";
-            panel11.Size = new Size(270, 2);
-            panel11.TabIndex = 0;
+            toolTip.SetToolTip(panel11, resources.GetString("panel11.ToolTip"));
+            panel11.UseWaitCursor = true;
             // 
             // textBoxName1
             // 
-            textBoxName1.Anchor = AnchorStyles.None;
+            resources.ApplyResources(textBoxName1, "textBoxName1");
             textBoxName1.BorderStyle = BorderStyle.None;
-            textBoxName1.Location = new Point(115, 251);
             textBoxName1.Name = "textBoxName1";
-            textBoxName1.Size = new Size(270, 31);
-            textBoxName1.TabIndex = 0;
+            toolTip.SetToolTip(textBoxName1, resources.GetString("textBoxName1.ToolTip"));
+            textBoxName1.UseWaitCursor = true;
             // 
             // label14
             // 
-            label14.Anchor = AnchorStyles.None;
-            label14.AutoSize = true;
-            label14.Location = new Point(112, 220);
+            resources.ApplyResources(label14, "label14");
             label14.Name = "label14";
-            label14.Size = new Size(94, 29);
-            label14.TabIndex = 0;
-            label14.Text = "Name:";
+            toolTip.SetToolTip(label14, resources.GetString("label14.ToolTip"));
+            label14.UseWaitCursor = true;
             // 
             // label15
             // 
-            label15.AutoSize = true;
+            resources.ApplyResources(label15, "label15");
             label15.BackColor = Color.Bisque;
-            label15.Location = new Point(6, 5);
             label15.Name = "label15";
-            label15.Size = new Size(201, 29);
-            label15.TabIndex = 0;
-            label15.Text = "Update Student";
+            toolTip.SetToolTip(label15, resources.GetString("label15.ToolTip"));
+            label15.UseWaitCursor = true;
             // 
             // UserControlAddStudent
             // 
-            AutoScaleDimensions = new SizeF(12F, 23F);
+            resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             Controls.Add(tabControlAddStudent);
-            Font = new Font("Century Gothic", 12F, FontStyle.Bold);
             Name = "UserControlAddStudent";
-            Size = new Size(1230, 867);
+            toolTip.SetToolTip(this, resources.GetString("$this.ToolTip"));
+            UseWaitCursor = true;
             tabControlAddStudent.ResumeLayout(false);
             tabPageAddStudent.ResumeLayout(false);
             tabPageAddStudent.PerformLayout();

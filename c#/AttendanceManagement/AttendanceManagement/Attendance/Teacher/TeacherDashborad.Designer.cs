@@ -66,7 +66,6 @@ namespace AttendanceManagement.Attendance.Teacher
             panel1 = new Panel();
             timerDateAndTime = new System.Windows.Forms.Timer(components);
             panelTeacherPar = new Panel();
-            comboBox1 = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)pictureBoxExpand).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panelExpand.SuspendLayout();
@@ -232,6 +231,7 @@ namespace AttendanceManagement.Attendance.Teacher
             comboBox2.FormattingEnabled = true;
             comboBox2.Items.AddRange(new object[] { resources.GetString("comboBox2.Items"), resources.GetString("comboBox2.Items1") });
             comboBox2.Name = "comboBox2";
+            comboBox2.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // pictureBoxExp
             // 
@@ -363,18 +363,11 @@ namespace AttendanceManagement.Attendance.Teacher
             panelTeacherPar.Name = "panelTeacherPar";
             panelTeacherPar.Paint += panelTeacherPar_Paint;
             // 
-            // comboBox1
-            // 
-            resources.ApplyResources(comboBox1, "comboBox1");
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Name = "comboBox1";
-            // 
             // TeacherDashborad
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            Controls.Add(comboBox1);
             Controls.Add(panelTeacherPar);
             Controls.Add(panelBack);
             Controls.Add(panel1);
@@ -436,6 +429,5 @@ namespace AttendanceManagement.Attendance.Teacher
         private Label Course;
         private Label label2;
         private ComboBox comboBox2;
-        private ComboBox comboBox1;
     }
 }
