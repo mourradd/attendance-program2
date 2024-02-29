@@ -1,4 +1,4 @@
-﻿namespace AttendanceManagement.Attendance.Teacher
+namespace AttendanceManagement.Attendance.Teacher
 {
     partial class TeacherDashborad
     {
@@ -19,6 +19,8 @@
             }
             base.Dispose(disposing);
         }
+
+
 
         #region Windows Form Designer generated code
 
@@ -45,6 +47,7 @@
             Dashborad = new Button();
             panel4 = new Panel();
             panelBack = new Panel();
+            btnSwitchLanguage = new Button();
             pictureBoxExp = new PictureBox();
             panelExp = new Panel();
             buttonMinimiz = new Button();
@@ -287,6 +290,7 @@
             // 
             // panelBack
             // 
+            panelBack.Controls.Add(btnSwitchLanguage);
             panelBack.Controls.Add(pictureBoxExp);
             panelBack.Controls.Add(panelExp);
             panelBack.Controls.Add(pictureBox3);
@@ -301,6 +305,17 @@
             panelBack.Name = "panelBack";
             panelBack.Size = new Size(916, 175);
             panelBack.TabIndex = 1;
+            panelBack.Paint += panelBack_Paint;
+            // 
+            // btnSwitchLanguage
+            // 
+            btnSwitchLanguage.Location = new Point(416, 19);
+            btnSwitchLanguage.Name = "btnSwitchLanguage";
+            btnSwitchLanguage.Size = new Size(234, 32);
+            btnSwitchLanguage.TabIndex = 6;
+            btnSwitchLanguage.Text = "change language";
+            btnSwitchLanguage.UseVisualStyleBackColor = true;
+            btnSwitchLanguage.Click += btnSwitchLanguage_Click;
             // 
             // pictureBoxExp
             // 
@@ -407,17 +422,6 @@
             // 
             // CourseName
             // 
-
-            //label3.AutoSize = true;
-            //label3.BackColor = Color.FromArgb(51, 154, 240);
-            //label3.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
-            //label3.ForeColor = Color.White;
-            //label3.Location = new Point(490, 18);
-            //label3.Name = "label3";
-            //label3.Size = new Size(30, 19);
-            //label3.TabIndex = 2;
-            //label3.Text = "(?)";
-
             CourseName.AutoSize = true;
             CourseName.BackColor = Color.FromArgb(51, 154, 240);
             CourseName.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
@@ -427,6 +431,7 @@
             CourseName.Size = new Size(30, 19);
             CourseName.TabIndex = 2;
             CourseName.Text = "(?)";
+            CourseName.Visible = false;
             // 
             // Course
             // 
@@ -439,6 +444,7 @@
             Course.Size = new Size(66, 19);
             Course.TabIndex = 1;
             Course.Text = "Course:";
+            Course.Visible = false;
             // 
             // labelRole
             // 
@@ -514,6 +520,7 @@
             panelTeacherPar.Name = "panelTeacherPar";
             panelTeacherPar.Size = new Size(916, 545);
             panelTeacherPar.TabIndex = 3;
+            panelTeacherPar.Paint += panelTeacherPar_Paint;
             // 
             // TeacherDashborad
             // 
@@ -563,7 +570,7 @@
         private Panel panel2;
         private Panel panelSide;
         private Button buttonReport;
-        private Button buttonAttendance;
+        public Button buttonAttendance;
         private Button Dashborad;
         private Panel panel4;
         private Panel panelBack;
@@ -579,10 +586,11 @@
         private Panel panel6;
         private PictureBox pictureBoxExp;
         private Button buttonMinimiz;
-        private Label CourseName;
-        private Label Course;
         private System.Windows.Forms.Timer timerDateAndTime;
         private UserControlTeacherDashboard teacherDashboard1;
-        private Panel panelTeacherPar;
+        public Panel panelTeacherPar;
+        private Label CourseName;
+        private Label Course;
+        private Button btnSwitchLanguage;
     }
 }
