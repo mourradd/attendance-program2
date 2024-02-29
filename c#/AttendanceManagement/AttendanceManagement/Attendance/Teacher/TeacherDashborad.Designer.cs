@@ -23,17 +23,17 @@ namespace AttendanceManagement.Attendance.Teacher
             InitializeComponent();
             timerDateAndTime.Start();
             Username = name;
-            Text = "Attendance Backup";
+           // Text = "Attendance Backup";
 
-            string[] sourceFilePaths = new string[]
-            {
-            "..\\..\\..\\xml\\SystemData.xml",
-            "..\\..\\..\\xml\\AttendanceData.xml"
-            };
+          //  string[] sourceFilePaths = new string[]
+          //  {
+            //"..\\..\\..\\xml\\SystemData.xml",
+            //"..\\..\\..\\xml\\AttendanceData.xml"
+            //};
 
-            string backupDirPath = "..\\..\\..\\xml\\Backup";
+            //string backupDirPath = "..\\..\\..\\xml\\Backup";
 
-            AttendanceBackupService backupService = new AttendanceBackupService(sourceFilePaths, backupDirPath);
+            //AttendanceBackupService backupService = new AttendanceBackupService(sourceFilePaths, backupDirPath);
 
 
 
