@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,18 +19,17 @@ namespace AttendanceManagement.Attendance.Forms
         {
             InitializeComponent();
             DateTime timerDateAndTime = DateTime.Now;
-            
-             Text = "Attendance Backup";
-            
-             string[] sourceFilePaths = new string[]
-             {
+            Text = "Attendance Backup";
+
+            string[] sourceFilePaths = new string[]
+            {
              "..\\..\\..\\xml\\SystemData.xml",
              "..\\..\\..\\xml\\AttendanceData.xml"
-             };
-            
-             string backupDirPath = "..\\..\\..\\xml\\Backup";
-            
-             AttendanceBackupService backupService = new AttendanceBackupService(sourceFilePaths, backupDirPath);
+            };
+
+            string backupDirPath = "..\\..\\..\\xml\\Backup";
+
+            AttendanceBackupService backupService = new AttendanceBackupService(sourceFilePaths, backupDirPath);
         }
 
         private void FormLogin_Load(object sender, EventArgs e)
@@ -166,5 +165,21 @@ namespace AttendanceManagement.Attendance.Forms
             labelError.Show();
         }
 
+        private void FormLogin_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            DateTime timerDateAndTime = DateTime.Now;
+            Text = "Attendance Backup";
+
+            string[] sourceFilePaths = new string[]
+            {
+             "..\\..\\..\\xml\\SystemData.xml",
+             "..\\..\\..\\xml\\AttendanceData.xml"
+            };
+
+            string backupDirPath = "..\\..\\..\\xml\\Backup";
+
+            AttendanceBackupService backupService = new AttendanceBackupService(sourceFilePaths, backupDirPath);
+
+        }
     }
 }
