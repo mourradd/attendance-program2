@@ -30,12 +30,10 @@
         {
             components = new System.ComponentModel.Container();
             panel1 = new Panel();
-            buttonSetting = new Button();
             buttonReport = new Button();
             buttonAddCourse = new Button();
             buttonAddTeacher = new Button();
             buttonAddStudent = new Button();
-            buttonAttendance = new Button();
             Dashborad = new Button();
             panel4 = new Panel();
             panelSide = new Panel();
@@ -60,6 +58,7 @@
             userControlAdmin1 = new AdminDashborad.UserControlAdmin();
             userControlAddStudent1 = new AdminDashborad.UserControlAddStudent();
             userControlAddTeacher1 = new AdminDashborad.UserControlAddTeacher();
+            userControlCourses1 = new AdminDashborad.UserControlCourses();
             panel1.SuspendLayout();
             panel4.SuspendLayout();
             panel2.SuspendLayout();
@@ -74,12 +73,10 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(51, 154, 240);
-            panel1.Controls.Add(buttonSetting);
             panel1.Controls.Add(buttonReport);
             panel1.Controls.Add(buttonAddCourse);
             panel1.Controls.Add(buttonAddTeacher);
             panel1.Controls.Add(buttonAddStudent);
-            panel1.Controls.Add(buttonAttendance);
             panel1.Controls.Add(Dashborad);
             panel1.Controls.Add(panel4);
             panel1.Controls.Add(panel2);
@@ -90,26 +87,6 @@
             panel1.Size = new Size(303, 720);
             panel1.TabIndex = 0;
             // 
-            // buttonSetting
-            // 
-            buttonSetting.Cursor = Cursors.Hand;
-            buttonSetting.Dock = DockStyle.Top;
-            buttonSetting.FlatAppearance.BorderSize = 0;
-            buttonSetting.FlatStyle = FlatStyle.Flat;
-            buttonSetting.ForeColor = Color.White;
-            buttonSetting.Image = Properties.Resources.browser_settings1;
-            buttonSetting.ImageAlign = ContentAlignment.MiddleLeft;
-            buttonSetting.Location = new Point(9, 541);
-            buttonSetting.Margin = new Padding(4);
-            buttonSetting.Name = "buttonSetting";
-            buttonSetting.Size = new Size(294, 55);
-            buttonSetting.TabIndex = 0;
-            buttonSetting.Text = "     Setting";
-            buttonSetting.TextAlign = ContentAlignment.MiddleLeft;
-            buttonSetting.TextImageRelation = TextImageRelation.ImageBeforeText;
-            buttonSetting.UseVisualStyleBackColor = true;
-            buttonSetting.Click += buttonSetting_Click;
-            // 
             // buttonReport
             // 
             buttonReport.Cursor = Cursors.Hand;
@@ -119,7 +96,7 @@
             buttonReport.ForeColor = Color.White;
             buttonReport.Image = Properties.Resources.report;
             buttonReport.ImageAlign = ContentAlignment.MiddleLeft;
-            buttonReport.Location = new Point(9, 486);
+            buttonReport.Location = new Point(9, 431);
             buttonReport.Margin = new Padding(4);
             buttonReport.Name = "buttonReport";
             buttonReport.Size = new Size(294, 55);
@@ -139,7 +116,7 @@
             buttonAddCourse.ForeColor = Color.White;
             buttonAddCourse.Image = Properties.Resources.homework;
             buttonAddCourse.ImageAlign = ContentAlignment.MiddleLeft;
-            buttonAddCourse.Location = new Point(9, 431);
+            buttonAddCourse.Location = new Point(9, 376);
             buttonAddCourse.Margin = new Padding(4);
             buttonAddCourse.Name = "buttonAddCourse";
             buttonAddCourse.Size = new Size(294, 55);
@@ -159,7 +136,7 @@
             buttonAddTeacher.ForeColor = Color.White;
             buttonAddTeacher.Image = Properties.Resources.teacher;
             buttonAddTeacher.ImageAlign = ContentAlignment.MiddleLeft;
-            buttonAddTeacher.Location = new Point(9, 376);
+            buttonAddTeacher.Location = new Point(9, 321);
             buttonAddTeacher.Margin = new Padding(4);
             buttonAddTeacher.Name = "buttonAddTeacher";
             buttonAddTeacher.Size = new Size(294, 55);
@@ -179,7 +156,7 @@
             buttonAddStudent.ForeColor = Color.White;
             buttonAddStudent.Image = Properties.Resources.reading1;
             buttonAddStudent.ImageAlign = ContentAlignment.MiddleLeft;
-            buttonAddStudent.Location = new Point(9, 321);
+            buttonAddStudent.Location = new Point(9, 266);
             buttonAddStudent.Margin = new Padding(4);
             buttonAddStudent.Name = "buttonAddStudent";
             buttonAddStudent.Size = new Size(294, 55);
@@ -189,26 +166,6 @@
             buttonAddStudent.TextImageRelation = TextImageRelation.ImageBeforeText;
             buttonAddStudent.UseVisualStyleBackColor = true;
             buttonAddStudent.Click += buttonAddStudent_Click;
-            // 
-            // buttonAttendance
-            // 
-            buttonAttendance.Cursor = Cursors.Hand;
-            buttonAttendance.Dock = DockStyle.Top;
-            buttonAttendance.FlatAppearance.BorderSize = 0;
-            buttonAttendance.FlatStyle = FlatStyle.Flat;
-            buttonAttendance.ForeColor = Color.White;
-            buttonAttendance.Image = Properties.Resources.assessment;
-            buttonAttendance.ImageAlign = ContentAlignment.MiddleLeft;
-            buttonAttendance.Location = new Point(9, 266);
-            buttonAttendance.Margin = new Padding(4);
-            buttonAttendance.Name = "buttonAttendance";
-            buttonAttendance.Size = new Size(294, 55);
-            buttonAttendance.TabIndex = 0;
-            buttonAttendance.Text = "     Attendance";
-            buttonAttendance.TextAlign = ContentAlignment.MiddleLeft;
-            buttonAttendance.TextImageRelation = TextImageRelation.ImageBeforeText;
-            buttonAttendance.UseVisualStyleBackColor = true;
-            buttonAttendance.Click += buttonAttendance_Click;
             // 
             // Dashborad
             // 
@@ -515,6 +472,19 @@
             userControlAddTeacher1.Name = "userControlAddTeacher1";
             userControlAddTeacher1.Size = new Size(897, 509);
             userControlAddTeacher1.TabIndex = 0;
+            userControlAddTeacher1.Visible = false;
+            // 
+            // userControlCourses1
+            // 
+            userControlCourses1.BackColor = Color.White;
+            userControlCourses1.Dock = DockStyle.Fill;
+            userControlCourses1.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
+            userControlCourses1.Location = new Point(303, 211);
+            userControlCourses1.Margin = new Padding(0);
+            userControlCourses1.Name = "userControlCourses1";
+            userControlCourses1.Size = new Size(897, 509);
+            userControlCourses1.TabIndex = 1;
+            userControlCourses1.Visible = false;
             // 
             // FormDashborad
             // 
@@ -522,6 +492,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1200, 720);
+            Controls.Add(userControlCourses1);
             Controls.Add(userControlAddTeacher1);
             Controls.Add(userControlAddStudent1);
             Controls.Add(userControlAdmin1);
@@ -573,17 +544,16 @@
         private Panel panelSide;
         private Panel panel4;
         private Button Dashborad;
-        private Button buttonAttendance;
         private Button buttonReport;
         private Button buttonAddCourse;
         private Button buttonAddTeacher;
         private Button buttonAddStudent;
-        private Button buttonSetting;
         private System.Windows.Forms.Timer timerDateAndTime;
         private AdminDashborad.UserControlAdmin userControlAdmin1;
         private AdminDashborad.UserControlAddStudent userControlAddStudent1;
         private AdminDashborad.UserControlAddTeacher userControlAddTeacher1;
 
         private AdminDashborad.UserControlAdmin userControlAdmin2;
+        private AdminDashborad.UserControlCourses userControlCourses1;
     }
 }

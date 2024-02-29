@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lap0\\OneDrive\\Desktop\\FinalC#\\attendance-program2\\c#\\AttendanceManagement\\AttendanceManagement\\AttendanceManagement.csproj": {}
+    "C:\\Users\\lap0\\OneDrive\\Desktop\\FINAL\\attendance-program2\\c#\\AttendanceManagement\\AttendanceManagement\\AttendanceManagement.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lap0\\OneDrive\\Desktop\\FinalC#\\attendance-program2\\c#\\AttendanceManagement\\AttendanceManagement\\AttendanceManagement.csproj": {
+    "C:\\Users\\lap0\\OneDrive\\Desktop\\FINAL\\attendance-program2\\c#\\AttendanceManagement\\AttendanceManagement\\AttendanceManagement.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lap0\\OneDrive\\Desktop\\FinalC#\\attendance-program2\\c#\\AttendanceManagement\\AttendanceManagement\\AttendanceManagement.csproj",
+        "projectUniqueName": "C:\\Users\\lap0\\OneDrive\\Desktop\\FINAL\\attendance-program2\\c#\\AttendanceManagement\\AttendanceManagement\\AttendanceManagement.csproj",
         "projectName": "AttendanceManagement",
-        "projectPath": "C:\\Users\\lap0\\OneDrive\\Desktop\\FinalC#\\attendance-program2\\c#\\AttendanceManagement\\AttendanceManagement\\AttendanceManagement.csproj",
+        "projectPath": "C:\\Users\\lap0\\OneDrive\\Desktop\\FINAL\\attendance-program2\\c#\\AttendanceManagement\\AttendanceManagement\\AttendanceManagement.csproj",
         "packagesPath": "C:\\Users\\lap0\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lap0\\OneDrive\\Desktop\\FinalC#\\attendance-program2\\c#\\AttendanceManagement\\AttendanceManagement\\obj\\",
+        "outputPath": "C:\\Users\\lap0\\OneDrive\\Desktop\\FINAL\\attendance-program2\\c#\\AttendanceManagement\\AttendanceManagement\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\lap0\\AppData\\Roaming\\NuGet\\NuGet.Config",

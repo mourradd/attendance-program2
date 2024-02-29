@@ -10,7 +10,6 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
-using AttendanceManagement.AllClasses;
 
 
 
@@ -78,19 +77,19 @@ namespace AttendanceManagement.Attendance.Forms.AdminDashborad
                 if (!string.IsNullOrEmpty(classId))
                 {
                     // Create a student object
-                    AttendanceManagement.AllClasses.Student newStudent = new AttendanceManagement.AllClasses.Student
+                    ClassStudents newStudent = new ClassStudents
                     {
-                        Id = StudentsListGenerators.GenerateUniqueId(),
+                        Id = StudentsListGenerator.GenerateUniqueId(),
                         Name = textBoxName.Text,
                         Age = int.Parse(textBoxAge.Text),
                         DateOfJoining = DateTime.Now.ToString("yyyy-MM-dd"),
                         Email = textBoxEmail.Text,
                         Password = textBoxPassword.Text,
-                        ClassID = int.Parse(classId)
+                        ClassID = classId 
                     };
 
                     // Add the student to the XML file
-                    StudentsListGenerators.AddNewStudent(newStudent);
+                    StudentsListGenerator.AddNewStudent(newStudent);
 
                     
                     MessageBox.Show("The student has been added successfully.");
@@ -367,17 +366,17 @@ namespace AttendanceManagement.Attendance.Forms.AdminDashborad
                     Regex.IsMatch(textBoxPassword1.Text, passwordPattern) &&
                     comboBoxClassUD.SelectedItem != null)
                 {
-                    AttendanceManagement.AllClasses.Student updatedStudent = new AttendanceManagement.AllClasses.Student
+                    ClassStudents updatedStudent = new ClassStudents
                     {
                         Id = int.Parse(dataGridViewStudents.CurrentRow.Cells["Id"].Value.ToString()),
                         Name = updatedName,
                         Age = int.Parse(updatedAge),
                         Email = updatedEmail,
                         Password = updatedPassword,
-                        ClassID = int.Parse(updatedClass)
+                        ClassID = updatedClassId
                     };
 
-                    StudentsListGenerators.UpdateStudent(updatedStudent);
+                    StudentsListGenerator.UpdateStudent(updatedStudent);
 
                     MessageBox.Show("The data has been updated successfully.");
 
@@ -404,7 +403,7 @@ namespace AttendanceManagement.Attendance.Forms.AdminDashborad
             {
                 int studentId = int.Parse(dataGridViewStudents.CurrentRow.Cells["Id"].Value.ToString());
 
-                StudentsListGenerators.DeleteStudent(studentId);
+                StudentsListGenerator.DeleteStudent(studentId);
 
                 tabControlAddStudent.SelectedTab = tabPageSearchStudent;
             }

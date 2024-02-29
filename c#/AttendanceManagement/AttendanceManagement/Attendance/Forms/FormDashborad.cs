@@ -66,20 +66,14 @@ namespace AttendanceManagement.Attendance.Forms
             userControlAdmin1.Visible = true;
             userControlAddStudent1.Visible = false;
             userControlAddTeacher1.Visible = false;
+            userControlCourses1.Visible = false;
 
 
 
 
         }
 
-        private void buttonAttendance_Click(object sender, EventArgs e)
-        {
-            MoveSidePanel(buttonAttendance);
-            userControlAdmin1.Visible = false;
-            userControlAddStudent1.Visible = false;
-            userControlAddTeacher1.Visible = false;
-
-        }
+        
 
         private void buttonAddStudent_Click(object sender, EventArgs e)
         {
@@ -88,6 +82,8 @@ namespace AttendanceManagement.Attendance.Forms
             userControlAddStudent1.Visible = true;
 
             userControlAddTeacher1.Visible = false;
+            userControlCourses1.Visible = false;
+
 
 
 
@@ -99,6 +95,8 @@ namespace AttendanceManagement.Attendance.Forms
             userControlAdmin1.Visible = false;
             userControlAddStudent1.Visible = false;
             userControlAddTeacher1.Visible = true;
+            userControlCourses1.Visible = false;
+
 
 
 
@@ -110,6 +108,8 @@ namespace AttendanceManagement.Attendance.Forms
             userControlAdmin1.Visible = false;
             userControlAddStudent1.Visible = false;
             userControlAddTeacher1.Visible = false;
+            userControlCourses1.Visible = true;
+
 
 
 
@@ -122,22 +122,14 @@ namespace AttendanceManagement.Attendance.Forms
             userControlAdmin1.Visible = false;
             userControlAddStudent1.Visible = false;
             userControlAddTeacher1.Visible = false;
-
-
-
-        }
-
-        private void buttonSetting_Click(object sender, EventArgs e)
-        {
-            MoveSidePanel(buttonSetting);
-            userControlAdmin1.Visible = false;
-            userControlAddStudent1.Visible = false;
-            userControlAddTeacher1.Visible = false;
+            userControlCourses1.Visible = false;
 
 
 
 
         }
+
+
 
         private void pictureBoxExpand_Click(object sender, EventArgs e)
         {

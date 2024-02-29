@@ -46,7 +46,7 @@
         <date_of_joining>2022-09-01</date_of_joining>
         <email>student1@example.com</email>
         <password>Student1#</password>
-        <class_id>1000</class_id>
+        <class_id>1001</class_id>
       </student>
       <student>
         <id>202</id>
@@ -59,12 +59,12 @@
       </student>
       <student>
         <id>203</id>
-        <name>Student Name 3</name>
+        <name>Student Name100</name>
         <age>17</age>
         <date_of_joining>2023-01-15</date_of_joining>
         <email>student2@example.com</email>
         <password>Student3#</password>
-        <class_id>1002</class_id>
+        <class_id>1001</class_id>
       </student>
       <student>
         <id>1000</id>
@@ -73,7 +73,7 @@
         <date_of_joining>2024-02-16</date_of_joining>
         <email>ali@gmail.com.com</email>
         <password>AliEmad123#</password>
-        <class_id>1000</class_id>
+        <class_id>1001</class_id>
       </student>
     </students>
   </users>
