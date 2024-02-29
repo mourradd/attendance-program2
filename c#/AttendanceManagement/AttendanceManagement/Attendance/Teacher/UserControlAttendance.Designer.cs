@@ -52,11 +52,12 @@ namespace AttendanceManagement.Attendance.Teacher
             TAttendanceGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             TAttendanceGridView1.Columns.AddRange(new DataGridViewColumn[] { Student_name, status, status_written });
             TAttendanceGridView1.GridColor = SystemColors.InactiveCaptionText;
-            TAttendanceGridView1.Location = new Point(0, 125);
+            TAttendanceGridView1.Location = new Point(0, 208);
+            TAttendanceGridView1.Margin = new Padding(4, 5, 4, 5);
             TAttendanceGridView1.Name = "TAttendanceGridView1";
             TAttendanceGridView1.ReadOnly = true;
             TAttendanceGridView1.RowHeadersWidth = 51;
-            TAttendanceGridView1.Size = new Size(1014, 363);
+            TAttendanceGridView1.Size = new Size(1449, 413);
             TAttendanceGridView1.TabIndex = 0;
             TAttendanceGridView1.CellContentClick += TAttendanceGridView1_CellContentClick;
             // 
@@ -73,12 +74,14 @@ namespace AttendanceManagement.Attendance.Teacher
             // status
             // 
             status.HeaderText = "status";
+            status.MinimumWidth = 6;
             status.Name = "status";
             status.ReadOnly = true;
             // 
             // status_written
             // 
             status_written.HeaderText = "status_written";
+            status_written.MinimumWidth = 6;
             status_written.Name = "status_written";
             status_written.ReadOnly = true;
             // 
@@ -87,11 +90,11 @@ namespace AttendanceManagement.Attendance.Teacher
             CompoCourse.ForeColor = Color.FromArgb(51, 154, 240);
             CompoCourse.FormattingEnabled = true;
             CompoCourse.IntegralHeight = false;
-            CompoCourse.ItemHeight = 15;
-            CompoCourse.Location = new Point(239, 35);
-            CompoCourse.Margin = new Padding(3, 2, 3, 2);
+            CompoCourse.ItemHeight = 25;
+            CompoCourse.Location = new Point(341, 58);
+            CompoCourse.Margin = new Padding(4, 3, 4, 3);
             CompoCourse.Name = "CompoCourse";
-            CompoCourse.Size = new Size(145, 23);
+            CompoCourse.Size = new Size(205, 33);
             CompoCourse.TabIndex = 9;
             CompoCourse.SelectedIndexChanged += CompoClass_SelectedIndexChanged;
             // 
@@ -100,9 +103,10 @@ namespace AttendanceManagement.Attendance.Teacher
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.DarkSlateGray;
-            label1.Location = new Point(167, 38);
+            label1.Location = new Point(239, 63);
+            label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(36, 15);
+            label1.Size = new Size(45, 20);
             label1.TabIndex = 10;
             label1.Text = "Filter";
             // 
@@ -111,11 +115,11 @@ namespace AttendanceManagement.Attendance.Teacher
             CompoClass.ForeColor = Color.FromArgb(51, 154, 240);
             CompoClass.FormattingEnabled = true;
             CompoClass.IntegralHeight = false;
-            CompoClass.ItemHeight = 15;
-            CompoClass.Location = new Point(390, 35);
-            CompoClass.Margin = new Padding(3, 2, 3, 2);
+            CompoClass.ItemHeight = 25;
+            CompoClass.Location = new Point(557, 58);
+            CompoClass.Margin = new Padding(4, 3, 4, 3);
             CompoClass.Name = "CompoClass";
-            CompoClass.Size = new Size(145, 23);
+            CompoClass.Size = new Size(205, 33);
             CompoClass.TabIndex = 9;
             CompoClass.SelectedIndexChanged += CompoClass_SelectedIndexChanged;
             // 
@@ -124,9 +128,10 @@ namespace AttendanceManagement.Attendance.Teacher
             dateTimePicker1.CalendarForeColor = Color.FromArgb(51, 154, 240);
             dateTimePicker1.CalendarMonthBackground = Color.FromArgb(51, 154, 240);
             dateTimePicker1.CalendarTitleForeColor = Color.FromArgb(51, 154, 240);
-            dateTimePicker1.Location = new Point(580, 35);
+            dateTimePicker1.Location = new Point(829, 58);
+            dateTimePicker1.Margin = new Padding(4, 5, 4, 5);
             dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(200, 23);
+            dateTimePicker1.Size = new Size(284, 31);
             dateTimePicker1.TabIndex = 11;
             dateTimePicker1.ValueChanged += dateTimePicker1_ValueChanged;
             // 
@@ -134,9 +139,10 @@ namespace AttendanceManagement.Attendance.Teacher
             // 
             textBox1.BackColor = Color.FromArgb(51, 154, 240);
             textBox1.ForeColor = SystemColors.Window;
-            textBox1.Location = new Point(259, 7);
+            textBox1.Location = new Point(370, 12);
+            textBox1.Margin = new Padding(4, 5, 4, 5);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
+            textBox1.Size = new Size(141, 31);
             textBox1.TabIndex = 12;
             textBox1.Text = "courses";
             // 
@@ -144,9 +150,10 @@ namespace AttendanceManagement.Attendance.Teacher
             // 
             textBox2.BackColor = Color.FromArgb(51, 154, 240);
             textBox2.ForeColor = SystemColors.Window;
-            textBox2.Location = new Point(417, 7);
+            textBox2.Location = new Point(596, 12);
+            textBox2.Margin = new Padding(4, 5, 4, 5);
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(100, 23);
+            textBox2.Size = new Size(141, 31);
             textBox2.TabIndex = 13;
             textBox2.Text = "classes";
             // 
@@ -154,9 +161,10 @@ namespace AttendanceManagement.Attendance.Teacher
             // 
             buttonSave.BackColor = Color.FromArgb(51, 154, 240);
             buttonSave.ForeColor = Color.White;
-            buttonSave.Location = new Point(417, 509);
+            buttonSave.Location = new Point(536, 669);
+            buttonSave.Margin = new Padding(4, 5, 4, 5);
             buttonSave.Name = "buttonSave";
-            buttonSave.Size = new Size(141, 33);
+            buttonSave.Size = new Size(201, 55);
             buttonSave.TabIndex = 14;
             buttonSave.Tag = "";
             buttonSave.Text = "save";
@@ -165,9 +173,10 @@ namespace AttendanceManagement.Attendance.Teacher
             // 
             // btnPDF
             // 
-            btnPDF.Location = new Point(780, 549);
+            btnPDF.Location = new Point(859, 755);
+            btnPDF.Margin = new Padding(4, 5, 4, 5);
             btnPDF.Name = "btnPDF";
-            btnPDF.Size = new Size(152, 31);
+            btnPDF.Size = new Size(217, 52);
             btnPDF.TabIndex = 15;
             btnPDF.Text = "export PDF";
             btnPDF.UseVisualStyleBackColor = true;
@@ -175,9 +184,10 @@ namespace AttendanceManagement.Attendance.Teacher
             // 
             // btnEXCELL
             // 
-            btnEXCELL.Location = new Point(114, 549);
+            btnEXCELL.Location = new Point(88, 755);
+            btnEXCELL.Margin = new Padding(4, 5, 4, 5);
             btnEXCELL.Name = "btnEXCELL";
-            btnEXCELL.Size = new Size(152, 31);
+            btnEXCELL.Size = new Size(217, 52);
             btnEXCELL.TabIndex = 16;
             btnEXCELL.Text = "export EXCELL";
             btnEXCELL.UseVisualStyleBackColor = true;
@@ -185,7 +195,7 @@ namespace AttendanceManagement.Attendance.Teacher
             // 
             // UserControlAttendance
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.GradientActiveCaption;
             Controls.Add(btnEXCELL);
@@ -199,8 +209,9 @@ namespace AttendanceManagement.Attendance.Teacher
             Controls.Add(CompoCourse);
             Controls.Add(TAttendanceGridView1);
             ForeColor = Color.Cyan;
+            Margin = new Padding(4, 5, 4, 5);
             Name = "UserControlAttendance";
-            Size = new Size(1014, 622);
+            Size = new Size(1449, 1037);
             Load += UserControlAttendance_Load;
             ((System.ComponentModel.ISupportInitialize)TAttendanceGridView1).EndInit();
             ResumeLayout(false);

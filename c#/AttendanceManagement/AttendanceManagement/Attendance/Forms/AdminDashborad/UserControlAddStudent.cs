@@ -20,7 +20,7 @@ namespace AttendanceManagement.Attendance.Forms.AdminDashborad
     {
        
 
-        private readonly string xmlFilePath = "C:\\Users\\lap0\\OneDrive\\Desktop\\MainFinal\\attendance-program2\\c#\\AttendanceManagement\\AttendanceManagement\\xml\\SystemData.xml";
+        private readonly string xmlFilePath = "..\\..\\..\\xml\\SystemData.xml";
         public UserControlAddStudent()
         {
             InitializeComponent();
