@@ -18,7 +18,7 @@ namespace AttendanceManagement.Attendance.Forms
         public FormLogin()
         {
             InitializeComponent();
-             //timerDateAndTime.Start();
+            DateTime timerDateAndTime = DateTime.Now;
             
              Text = "Attendance Backup";
             
