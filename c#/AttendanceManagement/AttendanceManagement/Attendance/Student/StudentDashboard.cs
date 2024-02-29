@@ -47,56 +47,7 @@ namespace AttendanceManagement.Attendance.Student
 
 
 
-            #region Student Attendance Data
 
-            //var StudentClassAttendancesRawData=StudentsListGenerators.Attandances.Where(attend=> attend.CoursesAttendance.Any(y=>y.Class_id==Student.ClassID)).ToList();
-            //List<StudentCourseAttandance> studentAttendances= new List<StudentCourseAttandance>();
-            // foreach (var DayAttendace in StudentClassAttendancesRawData)
-            // {
-            //     bool findFlag = false;
-
-            //     foreach (var courseAttendance in DayAttendace.CoursesAttendance)
-            //     {
-
-            //         if(courseAttendance.Class_id==Student.ClassID)
-            //         {
-            //             var courseName= StudentsListGenerators.Courses.FirstOrDefault(x => x.ID == courseAttendance.Course_id).Name;
-            //             if (studentAttendances.Count > 0)
-            //             {
-            //                 foreach (var studentAttend in studentAttendances)
-            //                 {
-            //                     if (studentAttend.CourseName == courseName)
-            //                     {
-            //                         if (courseAttendance.Students.Any(studentID => studentID == Student.Id)) studentAttend.NumberOfAttendendLec++;
-            //                         else studentAttend.NumberOfAbsentedLec++;
-            //                         findFlag = true;
-            //                         break;
-            //                     }
-
-
-            //                 }
-            //                 if (findFlag) { continue; }
-            //             }
-
-
-
-
-            //             StudentCourseAttandance studentCourseAtt=new StudentCourseAttandance();
-            //             studentCourseAtt.CourseName = courseName;
-            //             studentCourseAtt.NumberOfLecture = Classes_Courses.FirstOrDefault(x => x.ClassId == Student.ClassID).Courses.FirstOrDefault(course => course.CourseId == courseAttendance.Course_id).LectureNumber;
-            //             if (courseAttendance.Students.Any(studentID => studentID == Student.Id)) studentCourseAtt.NumberOfAttendendLec++; 
-            //             else studentCourseAtt.NumberOfAbsentedLec++;
-
-            //             studentAttendances.Add(studentCourseAtt);
-            //             break;
-
-            //         }
-
-            //     }
-
-
-            // }
-            #endregion
 
 
             dataGridView1.DataSource = LoadAllStudentCoursesAttendance(Student);
@@ -104,18 +55,12 @@ namespace AttendanceManagement.Attendance.Student
 
 
         }
-        private void MoveSidePanel(Control button)
-        {
-            panelSide.Location = new Point(button.Location.X - button.Location.X, button.Location.Y - 211);
-            panelSide1.Location = new Point(button.Location.X, button.Location.Y);
-            panelSide2.Location = new Point(button.Location.X, button.Location.Y + 45);
-        }
 
+        public static void datainComponents() { }
 
 
         private void buttonAttendance_Click(object sender, EventArgs e)
         {
-            MoveSidePanel(buttonAttendance);
 
         }
 
@@ -176,12 +121,15 @@ namespace AttendanceManagement.Attendance.Student
             labelRole.Text = Role;
             ClassValue.Text = ClassName;
             JoiningDateValue.Text = JoinDate;
+            var comboBoxValues = new List<string>();
+            comboBoxValues.Add("EN");
+            comboBoxValues.Add("AR");
 
+            comboBox1.DataSource = comboBoxValues;
 
         }
         private void buttonReport_Click(object sender, EventArgs e)
         {
-            MoveSidePanel(buttonReport);
             if (dataGridView1.Rows.Count > 0)
             {
                 SaveFileDialog saveFileDialog = new SaveFileDialog();
@@ -320,6 +268,106 @@ namespace AttendanceManagement.Attendance.Student
             {
                 dataGridView1.DataSource = LoadAllStudentCoursesAttendance(Student);
             }
+
+        }
+
+        public static DataGridViewRow selectedRow;
+
+        private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                selectedRow = dataGridView1.Rows[e.RowIndex];
+                StudentCourseAttendaceDashboard.GetForm.ShowDialog();
+            }
+        }
+
+        private void panelTop_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox1.SelectedIndex == 0)
+            {
+                //change Language to English
+                Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("en");
+                Controls.Clear();
+                InitializeComponent();
+                RightToLeft = RightToLeft.No;
+                RightToLeftLayout = false;
+                Username = Student.Name;
+                Role = "Student";
+                ClassName = StudentsListGenerators.AllClasses.FirstOrDefault(x => x.ID == Student.ClassID).Name;
+                JoinDate = Student.DateOfJoining;
+                List<Courses> comboBoxValues = new List<Courses>();
+                comboBoxValues.Add(new Courses { ID = 0, Name = "All Courses", });
+                foreach (var item in LoadClassCourses(Student.ClassID, StudentsListGenerators.Courses))
+                {
+                    comboBoxValues.Add(item);
+
+                }
+                comboBox2.DataSource = comboBoxValues;
+
+                panelExpand.Hide();
+                labelUsername.Text = Username;
+                labelRole.Text = Role;
+                ClassValue.Text = ClassName;
+                JoiningDateValue.Text = JoinDate;
+                WindowState = FormWindowState.Maximized;
+
+            }
+            else if (comboBox1.SelectedIndex == 1)
+            {
+                WindowState = FormWindowState.Maximized;
+
+                //change Language to Arabic
+
+                Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("ar");
+                Controls.Clear();
+                InitializeComponent();
+                Username = Student.Name;
+                Role = "Student";
+                ClassName = StudentsListGenerators.AllClasses.FirstOrDefault(x => x.ID == Student.ClassID).Name;
+                JoinDate = Student.DateOfJoining;
+                List<Courses> comboBoxValues = new List<Courses>();
+                comboBoxValues.Add(new Courses { ID = 0, Name = "All Courses", });
+                foreach (var item in LoadClassCourses(Student.ClassID, StudentsListGenerators.Courses))
+                {
+                    comboBoxValues.Add(item);
+
+                }
+                comboBox2.DataSource = comboBoxValues;
+
+                panelExpand.Hide();
+                labelUsername.Text = Username;
+                labelRole.Text = Role;
+                ClassValue.Text = ClassName;
+                JoiningDateValue.Text = JoinDate;
+
+
+            }
+
+        }
+
+        private void labelTime_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelBack_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }

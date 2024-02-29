@@ -284,8 +284,10 @@ namespace AttendanceManagement.AllClasses
                         StudentCourseAttandance studentCourseAtt = new StudentCourseAttandance();
                         studentCourseAtt.CourseName = courseName;
                         studentCourseAtt.NumberOfLecture = Classes_Courses.FirstOrDefault(x => x.ClassId == std.ClassID).Courses.FirstOrDefault(course => course.CourseId == courseAttendance.Course_id).LectureNumber;
-                        if (courseAttendance.Students.Any(studentID => studentID == std.Id)) studentCourseAtt.NumberOfAttendendLec++;
-                        else studentCourseAtt.NumberOfAbsentedLec++;
+                        if (courseAttendance.Students.Any(studentID => studentID == std.Id) )studentCourseAtt.NumberOfAbsentedLec++;
+                        else studentCourseAtt.NumberOfAttendendLec++;
+                       
+
 
                         studentAttendances.Add(studentCourseAtt);
                         break;
