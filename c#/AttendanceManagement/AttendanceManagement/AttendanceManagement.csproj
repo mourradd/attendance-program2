@@ -9,6 +9,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="DocumentFormat.OpenXml" Version="3.0.1" />
+    <PackageReference Include="EPPlus" Version="7.0.9" />
     <PackageReference Include="iTextSharp" Version="5.5.13.3" />
   </ItemGroup>
 

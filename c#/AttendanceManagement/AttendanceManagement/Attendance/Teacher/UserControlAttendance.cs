@@ -154,7 +154,7 @@ namespace AttendanceManagement.Attendance.Teacher
         {
             DataBindings.Clear();
             TAttendanceGridView1.DataSource = null;
-            dateTimePicker1.Value = new DateTime(2024, 02, 20);
+            //dateTimePicker1.Value = new DateTime(2024, 02, 20);
             XmlDocument doc = new XmlDocument();
             doc.Load("..\\..\\..\\xml\\SystemData.xml");
 

@@ -18,7 +18,7 @@ namespace AttendanceManagement.Attendance.Forms
         public FormLogin()
         {
             InitializeComponent();
-             timerDateAndTime.Start();
+             //timerDateAndTime.Start();
             
              Text = "Attendance Backup";
             
@@ -102,7 +102,7 @@ namespace AttendanceManagement.Attendance.Forms
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-            string filepath = "C:\\Users\\lap0\\OneDrive\\Desktop\\Main\\attendance-program2\\c#\\AttendanceManagement\\AttendanceManagement\\xml\\SystemData.xml";
+            string filepath = "..\\..\\..\\xml\\SystemData.xml";
 
             List<User> allUsers = LoadUsersFromXml(filepath);
 
@@ -146,8 +146,8 @@ namespace AttendanceManagement.Attendance.Forms
 
         private void OpenTeacherDashboardForm(string username, string role)
         {
-            TeacherDashborad teacherDashboard = new TeacherDashborad();
-            teacherDashboard.Username = username;
+            TeacherDashborad teacherDashboard = new TeacherDashborad(username);
+            //teacherDashboard.Username = username;
             teacherDashboard.Role = role;
             teacherDashboard.ShowDialog();
         }

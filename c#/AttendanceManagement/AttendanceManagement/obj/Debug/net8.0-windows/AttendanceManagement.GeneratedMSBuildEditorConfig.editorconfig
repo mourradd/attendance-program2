@@ -14,6 +14,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = AttendanceManagement
-build_property.ProjectDir = D:\PD(ITI Mansoura)\C#\project-attendance Management\sprint2\attendance-program2\c#\AttendanceManagement\AttendanceManagement\
+build_property.ProjectDir = C:\Users\lap0\OneDrive\Desktop\FinalC#\attendance-program2\c#\AttendanceManagement\AttendanceManagement\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

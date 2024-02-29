@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\PD(ITI Mansoura)\\C#\\project-attendance Management\\sprint2\\attendance-program2\\c#\\AttendanceManagement\\AttendanceManagement\\AttendanceManagement.csproj": {}
+    "C:\\Users\\lap0\\OneDrive\\Desktop\\FinalC#\\attendance-program2\\c#\\AttendanceManagement\\AttendanceManagement\\AttendanceManagement.csproj": {}
   },
   "projects": {
-    "D:\\PD(ITI Mansoura)\\C#\\project-attendance Management\\sprint2\\attendance-program2\\c#\\AttendanceManagement\\AttendanceManagement\\AttendanceManagement.csproj": {
+    "C:\\Users\\lap0\\OneDrive\\Desktop\\FinalC#\\attendance-program2\\c#\\AttendanceManagement\\AttendanceManagement\\AttendanceManagement.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\PD(ITI Mansoura)\\C#\\project-attendance Management\\sprint2\\attendance-program2\\c#\\AttendanceManagement\\AttendanceManagement\\AttendanceManagement.csproj",
+        "projectUniqueName": "C:\\Users\\lap0\\OneDrive\\Desktop\\FinalC#\\attendance-program2\\c#\\AttendanceManagement\\AttendanceManagement\\AttendanceManagement.csproj",
         "projectName": "AttendanceManagement",
-        "projectPath": "D:\\PD(ITI Mansoura)\\C#\\project-attendance Management\\sprint2\\attendance-program2\\c#\\AttendanceManagement\\AttendanceManagement\\AttendanceManagement.csproj",
-        "packagesPath": "C:\\Users\\Elhamd Computer\\.nuget\\packages\\",
-        "outputPath": "D:\\PD(ITI Mansoura)\\C#\\project-attendance Management\\sprint2\\attendance-program2\\c#\\AttendanceManagement\\AttendanceManagement\\obj\\",
+        "projectPath": "C:\\Users\\lap0\\OneDrive\\Desktop\\FinalC#\\attendance-program2\\c#\\AttendanceManagement\\AttendanceManagement\\AttendanceManagement.csproj",
+        "packagesPath": "C:\\Users\\lap0\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\lap0\\OneDrive\\Desktop\\FinalC#\\attendance-program2\\c#\\AttendanceManagement\\AttendanceManagement\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Elhamd Computer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\lap0\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -43,6 +40,14 @@
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
           "dependencies": {
+            "DocumentFormat.OpenXml": {
+              "target": "Package",
+              "version": "[3.0.1, )"
+            },
+            "EPPlus": {
+              "target": "Package",
+              "version": "[7.0.9, )"
+            },
             "iTextSharp": {
               "target": "Package",
               "version": "[5.5.13.3, )"
