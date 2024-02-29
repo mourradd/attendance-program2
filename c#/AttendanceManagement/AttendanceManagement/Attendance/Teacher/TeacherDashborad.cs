@@ -1,11 +1,14 @@
-﻿using System;
+using AttendanceManagement.AllClasses;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Resources;
 using System.Text;
 using System.Threading.Tasks;
+using System.Globalization;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
@@ -13,19 +16,37 @@ namespace AttendanceManagement.Attendance.Teacher
 {
     public partial class TeacherDashborad : Form
     {
+        //private ResourceManager _resourceManager;
         public string Username, Role, course;
-        public TeacherDashborad()
+        public TeacherDashborad(string name)
         {
             InitializeComponent();
             timerDateAndTime.Start();
+            Username = name;
+           // Text = "Attendance Backup";
+
+          //  string[] sourceFilePaths = new string[]
+          //  {
+          //  "..\\..\\..\\xml\\SystemData.xml",
+          //  "..\\..\\..\\xml\\AttendanceData.xml"
+         //   };
+
+          //  string backupDirPath = "..\\..\\..\\xml\\Backup";
+
+         //   AttendanceBackupService backupService = new AttendanceBackupService(sourceFilePaths, backupDirPath);
+
+
+
         }
+
+
 
         private void TeacherDashborad_Load(object sender, EventArgs e)
         {
             panelExp.Hide();
             labelUsername.Text = Username;
             labelRole.Text = Role;
-            CourseName.Text = course;
+            //CourseName.Text = course;
         }
 
         private void MoveSidePanel(Control button)
@@ -40,7 +61,8 @@ namespace AttendanceManagement.Attendance.Teacher
         {
             MoveSidePanel(Dashborad);
             panelTeacherPar.Controls.Clear();
-            UserControlTeacherDashboard TeacherDashboard = new UserControlTeacherDashboard();
+            //    UserControlTeacherDashboard TeacherDashboard = new UserControlTeacherDashboard(Username);
+            UserControlTeacherDashboard TeacherDashboard = new UserControlTeacherDashboard(Username);
             panelTeacherPar.Controls.Add(TeacherDashboard);
 
         }
@@ -96,7 +118,7 @@ namespace AttendanceManagement.Attendance.Teacher
         {
             MoveSidePanel(buttonAttendance);
             panelTeacherPar.Controls.Clear();
-            UserControlAttendance USattendance = new UserControlAttendance();
+            UserControlAttendance USattendance = new UserControlAttendance(Username);
             panelTeacherPar.Controls.Add(USattendance);
 
         }
@@ -104,7 +126,11 @@ namespace AttendanceManagement.Attendance.Teacher
         private void buttonReport_Click(object sender, EventArgs e)
         {
             MoveSidePanel(buttonReport);
-            
+            panelTeacherPar.Controls.Clear();
+            // UserControTReoprt USReport = new UserControTReoprt(Username);
+            // panelTeacherPar.Controls.Add(USReport);
+
+
         }
 
 
@@ -115,5 +141,19 @@ namespace AttendanceManagement.Attendance.Teacher
 
         }
 
+        private void panelBack_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnSwitchLanguage_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelTeacherPar_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
