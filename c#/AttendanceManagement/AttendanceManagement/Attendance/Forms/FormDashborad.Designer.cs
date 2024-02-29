@@ -60,7 +60,6 @@
             userControlAdmin1 = new AdminDashborad.UserControlAdmin();
             userControlAddStudent1 = new AdminDashborad.UserControlAddStudent();
             userControlAddTeacher1 = new AdminDashborad.UserControlAddTeacher();
-
             panel1.SuspendLayout();
             panel4.SuspendLayout();
             panel2.SuspendLayout();
@@ -88,7 +87,7 @@
             panel1.Location = new Point(0, 0);
             panel1.Margin = new Padding(4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(303, 845);
+            panel1.Size = new Size(303, 720);
             panel1.TabIndex = 0;
             // 
             // buttonSetting
@@ -238,7 +237,7 @@
             panel4.Location = new Point(0, 211);
             panel4.Margin = new Padding(4);
             panel4.Name = "panel4";
-            panel4.Size = new Size(9, 634);
+            panel4.Size = new Size(9, 509);
             panel4.TabIndex = 0;
             // 
             // panelSide
@@ -271,7 +270,7 @@
             label2.Location = new Point(113, 164);
             label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(59, 18);
+            label2.Size = new Size(75, 23);
             label2.TabIndex = 0;
             label2.Text = "System";
             // 
@@ -283,7 +282,7 @@
             label1.Location = new Point(27, 135);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(199, 18);
+            label1.Size = new Size(251, 23);
             label1.TabIndex = 0;
             label1.Text = "Attendance Management";
             // 
@@ -309,7 +308,7 @@
             panelBack.Location = new Point(303, 0);
             panelBack.Margin = new Padding(4);
             panelBack.Name = "panelBack";
-            panelBack.Size = new Size(1097, 211);
+            panelBack.Size = new Size(897, 211);
             panelBack.TabIndex = 0;
             // 
             // panelExpand
@@ -320,7 +319,7 @@
             panelExpand.Controls.Add(buttonLogOut);
             panelExpand.Controls.Add(buttonMinimize);
             panelExpand.Controls.Add(panel3);
-            panelExpand.Location = new Point(849, 86);
+            panelExpand.Location = new Point(649, 86);
             panelExpand.Margin = new Padding(4);
             panelExpand.Name = "panelExpand";
             panelExpand.Size = new Size(233, 125);
@@ -381,7 +380,7 @@
             pictureBoxExpand.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             pictureBoxExpand.Cursor = Cursors.Hand;
             pictureBoxExpand.Image = Properties.Resources.down_arrow;
-            pictureBoxExpand.Location = new Point(927, 59);
+            pictureBoxExpand.Location = new Point(727, 59);
             pictureBoxExpand.Margin = new Padding(4);
             pictureBoxExpand.Name = "pictureBoxExpand";
             pictureBoxExpand.Size = new Size(31, 28);
@@ -394,7 +393,7 @@
             // 
             pictureBox2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             pictureBox2.Image = Properties.Resources.icons8_account_1001;
-            pictureBox2.Location = new Point(850, 19);
+            pictureBox2.Location = new Point(650, 19);
             pictureBox2.Margin = new Padding(4);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(70, 68);
@@ -410,7 +409,7 @@
             labelTime.Location = new Point(28, 27);
             labelTime.Margin = new Padding(4, 0, 4, 0);
             labelTime.Name = "labelTime";
-            labelTime.Size = new Size(28, 18);
+            labelTime.Size = new Size(35, 23);
             labelTime.TabIndex = 0;
             labelTime.Text = "(?)";
             // 
@@ -425,7 +424,7 @@
             panelTop.Location = new Point(0, 94);
             panelTop.Margin = new Padding(4);
             panelTop.Name = "panelTop";
-            panelTop.Size = new Size(1097, 117);
+            panelTop.Size = new Size(897, 117);
             panelTop.TabIndex = 0;
             // 
             // labelRole
@@ -437,7 +436,7 @@
             labelRole.Location = new Point(187, 66);
             labelRole.Margin = new Padding(4, 0, 4, 0);
             labelRole.Name = "labelRole";
-            labelRole.Size = new Size(30, 19);
+            labelRole.Size = new Size(37, 23);
             labelRole.TabIndex = 0;
             labelRole.Text = "(?)";
             // 
@@ -450,7 +449,7 @@
             label6.Location = new Point(58, 67);
             label6.Margin = new Padding(4, 0, 4, 0);
             label6.Name = "label6";
-            label6.Size = new Size(46, 19);
+            label6.Size = new Size(59, 23);
             label6.TabIndex = 0;
             label6.Text = "Role:";
             // 
@@ -463,7 +462,7 @@
             labelUsername.Location = new Point(187, 26);
             labelUsername.Margin = new Padding(4, 0, 4, 0);
             labelUsername.Name = "labelUsername";
-            labelUsername.Size = new Size(30, 19);
+            labelUsername.Size = new Size(37, 23);
             labelUsername.TabIndex = 0;
             labelUsername.Text = "(?)";
             // 
@@ -476,7 +475,7 @@
             label4.Location = new Point(58, 26);
             label4.Margin = new Padding(4, 0, 4, 0);
             label4.Name = "label4";
-            label4.Size = new Size(87, 19);
+            label4.Size = new Size(110, 23);
             label4.TabIndex = 0;
             label4.Text = "Welcome:";
             // 
@@ -492,7 +491,7 @@
             userControlAdmin1.Location = new Point(303, 211);
             userControlAdmin1.Margin = new Padding(4);
             userControlAdmin1.Name = "userControlAdmin1";
-            userControlAdmin1.Size = new Size(1097, 634);
+            userControlAdmin1.Size = new Size(897, 509);
             userControlAdmin1.TabIndex = 0;
             // 
             // userControlAddStudent1
@@ -502,22 +501,30 @@
             userControlAddStudent1.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
             userControlAddStudent1.Location = new Point(303, 211);
             userControlAddStudent1.Name = "userControlAddStudent1";
-            userControlAddStudent1.Size = new Size(1097, 634);
+            userControlAddStudent1.Size = new Size(897, 509);
             userControlAddStudent1.TabIndex = 0;
             userControlAddStudent1.Visible = false;
             userControlAddStudent1.Load += userControlAddStudent1_Load;
             // 
+            // userControlAddTeacher1
+            // 
+            userControlAddTeacher1.Dock = DockStyle.Fill;
+            userControlAddTeacher1.Font = new Font("Century Gothic", 14F, FontStyle.Bold);
+            userControlAddTeacher1.Location = new Point(303, 211);
+            userControlAddTeacher1.Margin = new Padding(4, 3, 4, 3);
+            userControlAddTeacher1.Name = "userControlAddTeacher1";
+            userControlAddTeacher1.Size = new Size(897, 509);
+            userControlAddTeacher1.TabIndex = 0;
+            // 
             // FormDashborad
             // 
-            AutoScaleDimensions = new SizeF(11F, 23F);
+            AutoScaleDimensions = new SizeF(14F, 27F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1400, 845);
+            ClientSize = new Size(1200, 720);
             Controls.Add(userControlAddTeacher1);
             Controls.Add(userControlAddStudent1);
             Controls.Add(userControlAdmin1);
-
-            Controls.Add(userControlAdmin2);
             Controls.Add(panelBack);
             Controls.Add(panel1);
             Font = new Font("Century Gothic", 14F, FontStyle.Bold);
@@ -526,6 +533,7 @@
             Name = "FormDashborad";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Dashborad";
+            WindowState = FormWindowState.Maximized;
             Load += FormDashborad_Load;
             panel1.ResumeLayout(false);
             panel4.ResumeLayout(false);

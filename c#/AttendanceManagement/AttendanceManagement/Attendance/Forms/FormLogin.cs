@@ -102,7 +102,7 @@ namespace AttendanceManagement.Attendance.Forms
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-            string filepath = "C:\\Users\\lap0\\OneDrive\\Desktop\\Main\\attendance-program2\\c#\\AttendanceManagement\\AttendanceManagement\\xml\\SystemData.xml";
+            string filepath = "..\\..\\..\\xml\\SystemData.xml";
 
             List<User> allUsers = LoadUsersFromXml(filepath);
 
