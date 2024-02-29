@@ -1,5 +1,6 @@
 using AttendanceManagement.Attendance.Student;
 using AttendanceManagement.Attendance.Teacher;
+using OfficeOpenXml;
 
 namespace AttendanceManagement.Attendance.Forms
 {
@@ -15,7 +16,7 @@ namespace AttendanceManagement.Attendance.Forms
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new FormLogin());
+            Application.Run(new StudentDashboard());
         }
     }
 }

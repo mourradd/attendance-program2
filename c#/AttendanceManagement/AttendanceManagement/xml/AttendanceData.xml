@@ -1,105 +1,131 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
 <students_Attendance xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="D:\PD(ITI Mansoura)\C#\project-attendance Management\sprint2\attendance-program2\xml\AttendanceData_Schema.xsd">
-  <attendace>
-    <date>2024-01-08</date>
-    <Courses_attendance>
-      <Course_attendance>
-        <Course_id>1</Course_id>
-        <Class_id>1000</Class_id>
-        <students>
-          <student_id>201</student_id>
-          <student_id>1000</student_id>
-        </students>
-      </Course_attendance>
-      <Course_attendance>
-        <Course_id>2</Course_id>
-        <Class_id>1001</Class_id>
-        <students>
-          <student_id>202</student_id>
-        </students>
-      </Course_attendance>
-    </Courses_attendance>
-  </attendace>
-  <attendace>
-    <date>2024-01-09</date>
-    <Courses_attendance>
-      <Course_attendance>
-        <Course_id>1</Course_id>
-        <Class_id>1000</Class_id>
-        <students>
-          <student_id>201</student_id>
-          <student_id>1000</student_id>
-        </students>
-      </Course_attendance>
-      <Course_attendance>
-        <Course_id>2</Course_id>
-        <Class_id>1001</Class_id>
-        <students>
-          <student_id>202</student_id>
-        </students>
-      </Course_attendance>
-    </Courses_attendance>
-  </attendace>
-  <attendace>
-    <date>2024-01-11</date>
-    <Courses_attendance>
-      <Course_attendance>
-        <Course_id>1</Course_id>
-        <Class_id>1000</Class_id>
-        <students>
-          <student_id>201</student_id>
-        </students>
-      </Course_attendance>
-    </Courses_attendance>
-  </attendace>
-  <students_Attendance>
-    <attendace>
-      <date>2024-02-27</date>
-      <Courses_attendance>
-        <Course_attendance>
-          <course>2</course>
-          <students>
-            <student_id>201</student_id>
-            <student_id>1000</student_id>
-          </students>
-        </Course_attendance>
-      </Courses_attendance>
-    </attendace>
-    <attendace>
-      <date>2024-02-20</date>
-      <Courses_attendance>
-        <Course_attendance>
-          <course>2</course>
-          <students>
-            <student_id>201</student_id>
-            <student_id>1000</student_id>
-          </students>
-        </Course_attendance>
-        <Course_attendance>
-          <course>1</course>
-          <students>
-            <student_id>201</student_id>
-            <student_id>1000</student_id>
-          </students>
-        </Course_attendance>
-      </Courses_attendance>
-    </attendace>
-    <attendace>
-      <date>2024-02-29</date>
-      <Courses_attendance>
-        <Course_attendance>
-          <course>2</course>
-          <students>
-            <student_id>1000</student_id>
-          </students>
-        </Course_attendance>
-        <Course_attendance>
-          <course>1</course>
-          <students>
-            <student_id>1000</student_id>
-          </students>
-        </Course_attendance>
-      </Courses_attendance>
-    </attendace>
-  </students_Attendance>
+	<attendace>
+	
+	
+	
+		<date>2024-01-08</date>
+		<Courses_attendance>
+		
+		
+		
+			<Course_attendance>
+				<Course_id>1</Course_id>
+				<Class_id>1000</Class_id>
+				<students>
+					<student_id>201</student_id>
+					<student_id>1000</student_id>
+				</students>
+			</Course_attendance>
+			
+			
+			
+			<Course_attendance>
+				<Course_id>2</Course_id>
+				<Class_id>1001</Class_id>
+				<students>
+					<student_id>202</student_id>
+				</students>
+			</Course_attendance>
+		</Courses_attendance>
+	</attendace>
+
+
+
+
+
+	<attendace>
+	
+	<date>2024-01-09</date>
+		<Courses_attendance>
+			<Course_attendance>
+				<Course_id>1</Course_id>
+				<Class_id>1000</Class_id>
+				<students>
+					<student_id>201</student_id>
+					<student_id>1000</student_id>
+				</students>
+			</Course_attendance>
+			<Course_attendance>
+				<Course_id>2</Course_id>
+				<Class_id>1001</Class_id>
+				<students>
+					<student_id>202</student_id>
+				</students>
+			</Course_attendance>
+		</Courses_attendance>
+	</attendace>
+	
+	
+	
+	
+	
+	<attendace>
+		<date>2024-01-11</date>
+		<Courses_attendance>
+			<Course_attendance>
+				<Course_id>2</Course_id>
+				<Class_id>1000</Class_id>
+				<students>
+					<student_id>201</student_id>
+				</students>
+			</Course_attendance>
+		</Courses_attendance>
+	</attendace>
+	
+	
+	
+		
+	<attendace>
+		<date>2024-01-28</date>
+		
+		<Courses_attendance>
+		
+			<Course_attendance>
+				<Course_id>3</Course_id>
+				<Class_id>1000</Class_id>
+				<students>
+					<student_id>201</student_id>
+				</students>
+			</Course_attendance>
+			
+		</Courses_attendance>
+		
+	</attendace>
+	
+		<attendace>
+		<date>2024-01-29</date>
+		
+		<Courses_attendance>
+		
+			<Course_attendance>
+				<Course_id>3</Course_id>
+				<Class_id>1000</Class_id>
+				<students>
+					<student_id>201</student_id>
+				</students>
+			</Course_attendance>
+			
+		</Courses_attendance>
+		
+		</attendace>
+	
+			<attendace>
+		<date>2024-01-30</date>
+		
+		<Courses_attendance>
+		
+			<Course_attendance>
+				<Course_id>1</Course_id>
+				<Class_id>1000</Class_id>
+				<students>
+					<student_id>201</student_id>
+				</students>
+			</Course_attendance>
+			
+		</Courses_attendance>
+		
+	</attendace>
+	
+	
+	
 </students_Attendance>

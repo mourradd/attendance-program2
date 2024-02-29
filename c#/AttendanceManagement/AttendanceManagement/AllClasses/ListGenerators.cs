@@ -17,7 +17,7 @@ namespace AttendanceManagement.AllClasses
         public static List<Class_Courses> Classes_Courses;
 
         //  public static readonly string filePath = "D:\\attendnce project\\attendance-program\\attendance-program2\\xml\\SystemData.xml";
-        public static readonly string filePath = "D:\\PD(ITI Mansoura)\\C#\\project-attendance Management\\sprint2\\attendance-program2\\xml\\SystemData.xml";
+        public static readonly string filePath = "..\\..\\..\\xml\\SystemData.xml";
         public static readonly string AttandanceDataFileBath = "D:\\PD(ITI Mansoura)\\C#\\project-attendance Management\\sprint2\\attendance-program2\\xml\\AttendanceData.xml";
 
         static StudentsListGenerators()

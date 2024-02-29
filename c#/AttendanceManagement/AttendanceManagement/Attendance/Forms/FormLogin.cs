@@ -18,7 +18,7 @@ namespace AttendanceManagement.Attendance.Forms
         public FormLogin()
         {
             InitializeComponent();
-             timerDateAndTime.Start();
+             //timerDateAndTime.Start();
             
              Text = "Attendance Backup";
             
@@ -146,8 +146,8 @@ namespace AttendanceManagement.Attendance.Forms
 
         private void OpenTeacherDashboardForm(string username, string role)
         {
-            TeacherDashborad teacherDashboard = new TeacherDashborad();
-            teacherDashboard.Username = username;
+            TeacherDashborad teacherDashboard = new TeacherDashborad(username);
+            //teacherDashboard.Username = username;
             teacherDashboard.Role = role;
             teacherDashboard.ShowDialog();
         }
